@@ -97,6 +97,17 @@ describe("Tarot", () => {
     );
   });
 
+  it("rejects invalid draw counts", () => {
+    const tarot = new Tarot();
+    tarot.initializeDeck(createDeck());
+
+    for (const count of [0, -1, 1.5, "2", NaN]) {
+      expect(() => tarot.drawCards(count)).toThrow(
+        "Card count must be a positive integer"
+      );
+    }
+  });
+
   it("performs a reading and stores the current spread", () => {
     const tarot = new Tarot();
     tarot.initializeDeck(createDeck());

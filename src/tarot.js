@@ -189,10 +189,14 @@ class Tarot {
    * Draw random cards from the deck
    * @param {number} count - Number of cards to draw
    * @returns {Object[]} Array of cards
-   * @throws {TarotError} Throws if count exceeds deck size
+   * @throws {TarotError} Throws if count is invalid or exceeds deck size
    */
   drawCards(count) {
     this.validateDeckInitialized();
+
+    if (!Number.isInteger(count) || count < 1) {
+      throw new TarotError("Card count must be a positive integer");
+    }
 
     if (count > this.deck.length) {
       throw new TarotError(
