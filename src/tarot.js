@@ -96,7 +96,7 @@ class Tarot {
     validateNonEmptyArray(cards, "Cards");
 
     const frozenCards = cards.map((card, index) => {
-      if (typeof card !== "object" || Array.isArray(card)) {
+      if (card === null || typeof card !== "object" || Array.isArray(card)) {
         throw new InvalidCardError(
           `Item at index ${index} is not a valid TarotCard object`
         );

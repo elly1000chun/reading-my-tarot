@@ -33,6 +33,9 @@ describe("Tarot", () => {
     expect(() => tarot.initializeDeck("cards")).toThrow(
       "Cards must be a non-empty array"
     );
+    expect(() => tarot.initializeDeck([null])).toThrow(
+      "Item at index 0 is not a valid TarotCard object"
+    );
     expect(() => tarot.initializeDeck([["The Fool"]])).toThrow(
       "Item at index 0 is not a valid TarotCard object"
     );
