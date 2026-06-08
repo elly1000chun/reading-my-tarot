@@ -96,7 +96,7 @@ class Tarot {
     validateNonEmptyArray(cards, "Cards");
 
     const frozenCards = cards.map((card, index) => {
-      if (typeof card !== "object" || Array.isArray(card)) {
+      if (card === null || typeof card !== "object" || Array.isArray(card)) {
         throw new InvalidCardError(
           `Item at index ${index} is not a valid TarotCard object`
         );
@@ -189,10 +189,14 @@ class Tarot {
    * Draw random cards from the deck
    * @param {number} count - Number of cards to draw
    * @returns {Object[]} Array of cards
-   * @throws {TarotError} Throws if count exceeds deck size
+   * @throws {TarotError} Throws if count is invalid or exceeds deck size
    */
   drawCards(count) {
     this.validateDeckInitialized();
+
+    if (!Number.isInteger(count) || count < 1) {
+      throw new TarotError("Card count must be a positive integer");
+    }
 
     if (count > this.deck.length) {
       throw new TarotError(

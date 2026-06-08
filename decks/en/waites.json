@@ -142,7 +142,10 @@
             "Compassion",
             "Inner strength"
         ],
-        "description": "The Strength card represents inner strength, courage, patience, and compassion. It encourages you to remain calm and composed in the face of adversity."
+        "description": "The Strength card represents inner strength, courage, patience, and compassion. It encourages you to remain calm and composed in the face of adversity.",
+        "type": "major",
+        "value": 8,
+        "suit": null
     },
     {
         "name": "The Hermit",
@@ -281,8 +284,7 @@
             "Loss",
             "Theft",
             "Privation",
-            "Abandonment; another reading says-hope and bright prospects",
-            ""
+            "Abandonment; another reading says-hope and bright prospects"
         ],
         "description": "A great, radiant star of eight rays, surrounded by seven lesser stars--also of eight rays. The female figure in the foreground is entirely naked. Her left knee is on the land and her right foot upon the water. She pours Water of Life from two great ewers, irrigating sea and land. Behind her is rising ground and on the right a shrub or tree, whereon a bird alights. The figure expresses eternal youth and beauty. The star is l'étoile flamboyante, which appears in Masonic symbolism, but has been confused therein. That which the figure communicates to the living scene is the substance of the heavens and the elements. It has been said truly that the mottoes of this card are \"Waters of Life freely\" and \"Gifts of the Spirit.\"\nThe summary of several tawdry explanations says that it is a card of hope. On other planes it has been certified as immortality and interior light. For the majority of prepared minds, the figure will appear as the type of Truth unveiled, glorious in undying beauty, pouring on the waters of the soul some part and measure of her priceless possession. But she is in reality the Great Mother in the Kabalistic Sephira Binah, which is supernal Understanding, who communicates to the Sephiroth that are below in the measure that they can receive her influx.",
         "type": "major",
@@ -330,7 +332,10 @@
             "Forgiveness",
             "Rebirth"
         ],
-        "description": "The Judgement card represents a time of reflection and self-evaluation, leading to a sense of awakening and rebirth. It encourages accountability and forgiveness."
+        "description": "The Judgement card represents a time of reflection and self-evaluation, leading to a sense of awakening and rebirth. It encourages accountability and forgiveness.",
+        "type": "major",
+        "value": 20,
+        "suit": null
     },
     {
         "name": "The World",
@@ -653,8 +658,7 @@
             "Victory",
             "Fulfilment",
             "Solace",
-            "Healing",
-            ""
+            "Healing"
         ],
         "description": "Maidens in a garden-ground with cups uplifted, as if pledging one another.",
         "type": "minor",
@@ -1437,7 +1441,10 @@
             "Impulsiveness",
             "Feeling overwhelmed"
         ],
-        "description": "The Strength Reversed card suggests that you may be dealing with self-doubt, lack of discipline, or feeling overwhelmed. It encourages you to find your inner strength and face your fears."
+        "description": "The Strength Reversed card suggests that you may be dealing with self-doubt, lack of discipline, or feeling overwhelmed. It encourages you to find your inner strength and face your fears.",
+        "type": "major",
+        "value": 8,
+        "suit": null
     },
     {
         "name": "The Hermit Reversed",
@@ -1603,7 +1610,10 @@
             "Denial",
             "Unresolved issues"
         ],
-        "description": "The Judgement Reversed card suggests that you may be experiencing self-doubt or avoiding accountability. It encourages you to confront unresolved issues and heed your inner call."
+        "description": "The Judgement Reversed card suggests that you may be experiencing self-doubt or avoiding accountability. It encourages you to confront unresolved issues and heed your inner call.",
+        "type": "major",
+        "value": 20,
+        "suit": null
     },
     {
         "name": "The World Reversed",

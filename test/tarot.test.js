@@ -33,6 +33,9 @@ describe("Tarot", () => {
     expect(() => tarot.initializeDeck("cards")).toThrow(
       "Cards must be a non-empty array"
     );
+    expect(() => tarot.initializeDeck([null])).toThrow(
+      "Item at index 0 is not a valid TarotCard object"
+    );
     expect(() => tarot.initializeDeck([["The Fool"]])).toThrow(
       "Item at index 0 is not a valid TarotCard object"
     );
@@ -92,6 +95,17 @@ describe("Tarot", () => {
     expect(() => tarot.drawCards(4)).toThrow(
       "Cannot draw 4 cards. Only 3 cards available"
     );
+  });
+
+  it("rejects invalid draw counts", () => {
+    const tarot = new Tarot();
+    tarot.initializeDeck(createDeck());
+
+    for (const count of [0, -1, 1.5, "2", NaN]) {
+      expect(() => tarot.drawCards(count)).toThrow(
+        "Card count must be a positive integer"
+      );
+    }
   });
 
   it("performs a reading and stores the current spread", () => {
