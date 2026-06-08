@@ -10,6 +10,15 @@
 - **Current Spread Tracking**: View the most recent spread and cards drawn for a convenient reference.
 - **Detailed Deck Information**: Retrieve full deck details, including card counts and each card’s metadata.
 
+## New Features
+ - **Display Card Images**: 카드 이미지를 표시 (2026-06-08)
+ - **Support Korean**: 한국어 지원 (2026-06-08)
+ - **Display Details**: 더 상세한 카드 해석을 제공 (2026-06-08)
+
+## Other Changes
+ - Added test code
+ - Refactoring
+
 ## ToDos
 - 프로젝트 구조 분석하여 문서로 저장
 - 테스트 코드 추가
