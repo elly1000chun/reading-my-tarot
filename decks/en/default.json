@@ -9,6 +9,7 @@
             "Free spirit"
         ],
         "description": "The Fool represents new beginnings, having faith in the future, being inexperienced, not knowing what to expect, having beginner's luck, improvisation and believing in the universe.",
+        "image": "rider-waite-major-arcana-00-the-fool_6234580670_l.jpg",
         "type": "major",
         "value": 0,
         "suit": null
@@ -23,6 +24,7 @@
             "Inspired action"
         ],
         "description": "The Magician card represents the power to manifest your desires, the ability to utilize the tools and resources at your disposal, and the inspiration to take action towards your goals.",
+        "image": "rider-waite-major-arcana-01-the-magician_6234582750_l.jpg",
         "type": "major",
         "value": 1,
         "suit": null
@@ -38,6 +40,7 @@
             "Spiritual enlightenment"
         ],
         "description": "The High Priestess represents intuition, mystery, and the subconscious. She encourages you to trust your inner voice and seek spiritual enlightenment.",
+        "image": "rider-waite-major-arcana-02-the-high-priestess_6234585244_l.jpg",
         "type": "major",
         "value": 2,
         "suit": null
@@ -53,6 +56,7 @@
             "Creativity"
         ],
         "description": "The Empress represents nurturing, abundance, creativity, and the beauty of life. She encourages you to connect with nature and embrace your own power to create and nurture.",
+        "image": "rider-waite-major-arcana-03-the-empress_6234588362_l.jpg",
         "type": "major",
         "value": 3,
         "suit": null
@@ -68,6 +72,7 @@
             "Leadership"
         ],
         "description": "The Emperor represents authority, structure, and control. It signifies leadership, fatherhood, and the ability to shape and manage your environment.",
+        "image": "rider-waite-major-arcana-04-the-emperor_6234066109_l.jpg",
         "type": "major",
         "value": 4,
         "suit": null
@@ -83,6 +88,7 @@
             "Spiritual wisdom"
         ],
         "description": "The Hierophant represents traditional values and moral judgment. This card suggests the need for social approval and conformity to norms. It can also symbolize seeking spiritual wisdom and guidance.",
+        "image": "rider-waite-major-arcana-05-the-hierophant_6234068727_l.jpg",
         "type": "major",
         "value": 5,
         "suit": null
@@ -98,6 +104,7 @@
             "Choices"
         ],
         "description": "The Lovers card represents love, harmony, and partnership, suggesting a union of some sort. This card is also about choices - the choices to love, the choices to be in a relationship, or the choices to align yourself to your values.",
+        "image": "rider-waite-major-arcana-06-the-lovers_6234595528_l.jpg",
         "type": "major",
         "value": 6,
         "suit": null
@@ -113,6 +120,7 @@
             "Determination"
         ],
         "description": "The Chariot represents overcoming conflicts or obstacles through determination and control. It signifies success and the will to take action.",
+        "image": "rider-waite-major-arcana-07-the-chariot_6234072405_l.jpg",
         "type": "major",
         "value": 7,
         "suit": null
@@ -128,6 +136,7 @@
             "Inner strength"
         ],
         "description": "The Strength card represents inner strength, courage, patience, and compassion. It encourages you to remain calm and composed in the face of adversity.",
+        "image": "rider-waite-major-arcana-08-strength_6234598040_l.jpg",
         "type": "major",
         "value": 8,
         "suit": null
@@ -142,6 +151,7 @@
             "Inner guidance"
         ],
         "description": "The Hermit represents a time of introspection and self-discovery. It encourages you to seek wisdom and guidance from within.",
+        "image": "rider-waite-major-arcana-09-the-hermit_6234075619_l.jpg",
         "type": "major",
         "value": 9,
         "suit": null
@@ -157,6 +167,7 @@
             "A turning point"
         ],
         "description": "The Wheel of Fortune represents a turning point in your life where new opportunities may become apparent. It signifies good luck, karma, life cycles, and destiny.",
+        "image": "rider-waite-major-arcana-10-wheel-of-fortune_6234602206_l.jpg",
         "type": "major",
         "value": 10,
         "suit": null
@@ -172,6 +183,7 @@
             "Accountability"
         ],
         "description": "The Justice card represents fairness, truth, and law. It suggests that actions have consequences and emphasizes the need for balance and integrity in life.",
+        "image": "rider-waite-major-arcana-11-justice_6234605714_l.jpg",
         "type": "major",
         "value": 11,
         "suit": null
@@ -187,6 +199,7 @@
             "Patience"
         ],
         "description": "The Hanged Man represents a period of suspension and sacrifice, encouraging you to let go, be patient, and see things from a new perspective.",
+        "image": "rider-waite-major-arcana-12-the-hanged-man_6234084897_l.jpg",
         "type": "major",
         "value": 12,
         "suit": null
@@ -201,6 +214,7 @@
             "Transition"
         ],
         "description": "The Death card signifies endings, but also new beginnings. It is a card of transformation and transition, suggesting that a significant change is coming.",
+        "image": "rider-waite-major-arcana-13-death_6234086467_l.jpg",
         "type": "major",
         "value": 13,
         "suit": null
@@ -216,6 +230,7 @@
             "Meaning"
         ],
         "description": "Temperance represents balance and moderation. This card encourages patience and calmness, suggesting that you should take the middle path and accommodate all perspectives. It also signifies a higher learning in life.",
+        "image": "rider-waite-major-arcana-14-temperance_6234088279_l.jpg",
         "type": "major",
         "value": 14,
         "suit": null
@@ -231,6 +246,7 @@
             "Hopelessness"
         ],
         "description": "The Devil card represents being trapped by materialism and superficiality. It suggests that you may be chained by an over-reliance on the material world. This card encourages you to examine what is holding you back and to free yourself from negative influences.",
+        "image": "rider-waite-major-arcana-15-the-devil_6234090311_l.jpg",
         "type": "major",
         "value": 15,
         "suit": null
@@ -246,6 +262,7 @@
             "Awakening"
         ],
         "description": "The Tower represents sudden, unexpected change. This can be a time of great turmoil, but also a time of truth and transformation.",
+        "image": "rider-waite-major-arcana-16-the-tower_6234092237_l.jpg",
         "type": "major",
         "value": 16,
         "suit": null
@@ -262,6 +279,7 @@
             "Spiritual insight"
         ],
         "description": "The Star card represents a sense of inspiration, hope, and serenity. It encourages you to have faith in the future and to trust in your own inner wisdom and intuition.",
+        "image": "rider-waite-major-arcana-17-the-star_6234094083_l.jpg",
         "type": "major",
         "value": 17,
         "suit": null
@@ -277,6 +295,7 @@
             "Intuition"
         ],
         "description": "The Moon card represents illusion, fear, and the subconscious. It suggests that things may not be as they seem, and encourages you to trust your intuition.",
+        "image": "rider-waite-major-arcana-18-the-moon_6234620480_l.jpg",
         "type": "major",
         "value": 18,
         "suit": null
@@ -292,6 +311,7 @@
             "Enlightenment"
         ],
         "description": "The Sun represents warmth, abundance, and positivity. It's a sign of success, joy, and an invitation to celebrate yourself and your achievements.",
+        "image": "rider-waite-major-arcana-19-the-sun_6234097611_l.jpg",
         "type": "major",
         "value": 19,
         "suit": null
@@ -307,6 +327,7 @@
             "Rebirth"
         ],
         "description": "The Judgement card represents a time of reflection and self-evaluation, leading to a sense of awakening and rebirth. It encourages accountability and forgiveness.",
+        "image": "rider-waite-major-arcana-20-judgement_6234099599_l.jpg",
         "type": "major",
         "value": 20,
         "suit": null
@@ -322,6 +343,7 @@
             "Travel"
         ],
         "description": "The World card signifies a major and inexorable change, the conclusion of a cycle and the start of a new one, and a new beginning. It suggests fulfillment, harmony, and completeness.",
+        "image": "rider-waite-major-arcana-21-the-world_6234101445_l.jpg",
         "type": "major",
         "value": 21,
         "suit": null
@@ -337,6 +359,7 @@
             "Creativity"
         ],
         "description": "The Ace of Wands represents a spark of inspiration, a new beginning, or the initial stages of a creative project or venture. It's a card of potential, motivating you to try something new.",
+        "image": "rider-waite-minor-arcana---wands-01-ace_6234634378_l.jpg",
         "type": "minor",
         "value": 1,
         "suit": "wands"
@@ -352,6 +375,7 @@
             "Personal goals"
         ],
         "description": "The Two of Wands represents the time of planning and decision-making. It encourages you to discover your authentic self and align your personal goals with your actions.",
+        "image": "rider-waite-minor-arcana---wands-02_6234636276_l.jpg",
         "type": "minor",
         "value": 2,
         "suit": "wands"
@@ -367,6 +391,7 @@
             "Future planning"
         ],
         "description": "The Three of Wands represents a period of preparation and looking ahead. It suggests expansion, possibly through travel or personal growth, and encourages planning for the future.",
+        "image": "rider-waite-minor-arcana---wands-03_6234113573_l.jpg",
         "type": "minor",
         "value": 3,
         "suit": "wands"
@@ -382,6 +407,7 @@
             "Community"
         ],
         "description": "The Four of Wands represents a time of joy and satisfaction in life. It often signifies a period of harmony and stability, and can also indicate a happy event such as a marriage or housewarming.",
+        "image": "rider-waite-minor-arcana---wands-04_6234115553_l.jpg",
         "type": "minor",
         "value": 4,
         "suit": "wands"
@@ -397,6 +423,7 @@
             "Struggle"
         ],
         "description": "The Five of Wands represents a situation of conflict, tension, or competition. It suggests a struggle or disagreement that needs to be resolved.",
+        "image": "rider-waite-minor-arcana---wands-05_6234117635_l.jpg",
         "type": "minor",
         "value": 5,
         "suit": "wands"
@@ -412,6 +439,7 @@
             "Self-confidence"
         ],
         "description": "The Six of Wands represents success, victory, and public recognition. It signifies progress and self-confidence. It's a card of triumph, leadership, and achieving your goals.",
+        "image": "rider-waite-minor-arcana---wands-06_6234119573_l.jpg",
         "type": "minor",
         "value": 6,
         "suit": "wands"
@@ -427,6 +455,7 @@
             "Challenged"
         ],
         "description": "The Seven of Wands represents a time of challenge and adversity. It encourages you to stand your ground, maintain control, and persevere through difficulties.",
+        "image": "rider-waite-minor-arcana---wands-07_6234645990_l.jpg",
         "type": "minor",
         "value": 7,
         "suit": "wands"
@@ -442,6 +471,7 @@
             "Rapid change"
         ],
         "description": "The Eight of Wands represents a period of rapid change, action, and movement. It may also indicate air travel or swift communication.",
+        "image": "rider-waite-minor-arcana---wands-08_6234123431_l.jpg",
         "type": "minor",
         "value": 8,
         "suit": "wands"
@@ -457,6 +487,7 @@
             "Preparedness"
         ],
         "description": "The Nine of Wands represents resilience and persistence in the face of adversity. It encourages you to stay strong, set boundaries, and prepare for any challenges that may come your way.",
+        "image": "rider-waite-minor-arcana---wands-09_6234125333_l.jpg",
         "type": "minor",
         "value": 9,
         "suit": "wands"
@@ -472,6 +503,7 @@
             "Achievement"
         ],
         "description": "The Ten of Wands represents carrying a heavy burden, feeling overwhelmed with responsibilities, or being overcommitted. It can also signify achievement through hard work.",
+        "image": "rider-waite-minor-arcana---wands-10_6234651626_l.jpg",
         "type": "minor",
         "value": 10,
         "suit": "wands"
@@ -486,6 +518,7 @@
             "Free spirit"
         ],
         "description": "The Page of Wands represents a free spirit, full of enthusiasm and energy. It encourages exploration, discovery, and the pursuit of your passions.",
+        "image": "rider-waite-minor-arcana---wands-11-page_6234129705_l.jpg",
         "type": "minor",
         "value": 11,
         "suit": "wands"
@@ -501,6 +534,7 @@
             "Impulsiveness"
         ],
         "description": "The Knight of Wands represents a passionate, adventurous, and impulsive energy. It encourages you to take risks and embrace the unknown, but also warns against acting too hastily without considering the consequences.",
+        "image": "rider-waite-minor-arcana---wands-12-knight_6234131585_l.jpg",
         "type": "minor",
         "value": 12,
         "suit": "wands"
@@ -516,6 +550,7 @@
             "Determination"
         ],
         "description": "The Queen of Wands represents a strong, independent, and confident energy. She encourages you to be bold, courageous, and determined in your pursuits.",
+        "image": "rider-waite-minor-arcana---wands-13-queen_6234133349_l.jpg",
         "type": "minor",
         "value": 13,
         "suit": "wands"
@@ -531,6 +566,7 @@
             "Motivation"
         ],
         "description": "The King of Wands represents a natural-born leader who is visionary, honorable, and entrepreneurial. This card encourages you to take charge and lead with passion and motivation.",
+        "image": "rider-waite-minor-arcana---wands-14-king_6234659884_l.jpg",
         "type": "minor",
         "value": 14,
         "suit": "wands"
@@ -546,6 +582,7 @@
             "Love"
         ],
         "description": "The Ace of Cups represents the beginning of new emotions, intuition, or creative endeavors. It is a symbol of possibility in the area of deep feelings, intimacy, attunement, compassion and love.",
+        "image": "rider-waite-minor-arcana---cups-01-ace_6234141143_l.jpg",
         "type": "minor",
         "value": 1,
         "suit": "cups"
@@ -561,6 +598,7 @@
             "Harmony"
         ],
         "description": "The Two of Cups represents a strong bond or partnership, mutual attraction, and a sense of unity and love. It encourages harmony and balance in relationships.",
+        "image": "rider-waite-minor-arcana---cups-02_6234669216_l.jpg",
         "type": "minor",
         "value": 2,
         "suit": "cups"
@@ -575,6 +613,7 @@
             "Community"
         ],
         "description": "The Three of Cups represents a time of happiness, joy, and celebration, often with friends and family. It encourages you to embrace your creativity and enjoy the company of others.",
+        "image": "rider-waite-minor-arcana---cups-03_6234672074_l.jpg",
         "type": "minor",
         "value": 3,
         "suit": "cups"
@@ -590,6 +629,7 @@
             "Boredom"
         ],
         "description": "The Four of Cups represents a time of introspection and reevaluation, suggesting that you may be feeling discontent or bored with your current situation.",
+        "image": "rider-waite-minor-arcana---cups-04_6234675624_l.jpg",
         "type": "minor",
         "value": 4,
         "suit": "cups"
@@ -605,6 +645,7 @@
             "Focusing on the negative"
         ],
         "description": "The Five of Cups represents a period of grief or disappointment. It suggests a need to acknowledge your losses and learn to accept them, while also remembering the positive aspects of your life.",
+        "image": "rider-waite-minor-arcana---cups-05_6234679202_l.jpg",
         "type": "minor",
         "value": 5,
         "suit": "cups"
@@ -619,6 +660,7 @@
             "Reunion"
         ],
         "description": "The Six of Cups represents a journey into the past, nostalgia, and happy memories. It may also suggest a reunion with someone from your past.",
+        "image": "rider-waite-minor-arcana---cups-06_6234681960_l.jpg",
         "type": "minor",
         "value": 6,
         "suit": "cups"
@@ -634,6 +676,7 @@
             "Options"
         ],
         "description": "The Seven of Cups represents a time of choices and illusions. It suggests that you have many options and need to think carefully before making a decision.",
+        "image": "rider-waite-minor-arcana---cups-07_6234162753_l.jpg",
         "type": "minor",
         "value": 7,
         "suit": "cups"
@@ -649,6 +692,7 @@
             "Self-discovery"
         ],
         "description": "The Eight of Cups suggests a time of introspection and soul-searching, often brought on by a sense of disappointment or dissatisfaction. It encourages you to leave behind what no longer serves you and embark on a new journey of self-discovery.",
+        "image": "rider-waite-minor-arcana---cups-08_6234165989_l.jpg",
         "type": "minor",
         "value": 8,
         "suit": "cups"
@@ -664,6 +708,7 @@
             "Comfort"
         ],
         "description": "The Nine of Cups is a card of emotional fulfillment, happiness, and satisfaction. It suggests that you are in a place where you feel content and satisfied with what you have achieved.",
+        "image": "rider-waite-minor-arcana---cups-09_6234168247_l.jpg",
         "type": "minor",
         "value": 9,
         "suit": "cups"
@@ -679,6 +724,7 @@
             "Completion"
         ],
         "description": "The Ten of Cups represents a sense of harmony, alignment, and happiness in your relationships and family life. It signifies a time of joy, contentment, and emotional fulfillment.",
+        "image": "rider-waite-minor-arcana---cups-10_6234171803_l.jpg",
         "type": "minor",
         "value": 10,
         "suit": "cups"
@@ -694,6 +740,7 @@
             "Innocence"
         ],
         "description": "The Page of Cups represents a creative and intuitive energy, suggesting new opportunities for emotional growth and the exploration of your creative potential.",
+        "image": "rider-waite-minor-arcana---cups-11-page_6234174547_l.jpg",
         "type": "minor",
         "value": 11,
         "suit": "cups"
@@ -709,6 +756,7 @@
             "Idealism"
         ],
         "description": "The Knight of Cups represents a romantic, charming, and imaginative energy. This card encourages you to follow your heart and dreams, and to embrace your creative and artistic side.",
+        "image": "rider-waite-minor-arcana---cups-12-knight_6234177439_l.jpg",
         "type": "minor",
         "value": 12,
         "suit": "cups"
@@ -724,6 +772,7 @@
             "Nurturing"
         ],
         "description": "The Queen of Cups represents emotional maturity, compassion, and a strong intuition. She encourages nurturing of self and others, and understanding emotions on a deep level.",
+        "image": "rider-waite-minor-arcana---cups-13-queen_6234181309_l.jpg",
         "type": "minor",
         "value": 13,
         "suit": "cups"
@@ -739,6 +788,7 @@
             "Calm in a storm"
         ],
         "description": "The King of Cups represents emotional intelligence, balance, and control. He is a symbol of balance and wisdom, and he handles all situations with kindness and understanding.",
+        "image": "rider-waite-minor-arcana---cups-14-king_6234708876_l.jpg",
         "type": "minor",
         "value": 14,
         "suit": "cups"
@@ -754,6 +804,7 @@
             "Victory"
         ],
         "description": "The Ace of Swords represents a breakthrough or a new beginning in terms of clarity, ideas, or truth. It signifies victory through mental power and clear thinking.",
+        "image": "rider-waite-minor-arcana---swords-01-ace_6234712912_l.jpg",
         "type": "minor",
         "value": 1,
         "suit": "swords"
@@ -769,6 +820,7 @@
             "Balance"
         ],
         "description": "The Two of Swords represents a decision that needs to be made. It suggests that you are in a state of balance or stalemate, where you cannot or do not want to make a move or decision. This card is often a sign that you are avoiding making a tough choice.",
+        "image": "rider-waite-minor-arcana---swords-02_6234716234_l.jpg",
         "type": "minor",
         "value": 2,
         "suit": "swords"
@@ -784,6 +836,7 @@
             "Loss"
         ],
         "description": "The Three of Swords represents emotional pain, heartbreak, sorrow, grief, and betrayal. It suggests a period of difficulty and emotional turmoil.",
+        "image": "rider-waite-minor-arcana---swords-03_6234719796_l.jpg",
         "type": "minor",
         "value": 3,
         "suit": "swords"
@@ -799,6 +852,7 @@
             "Solitude"
         ],
         "description": "The Four of Swords suggests a period of rest, recovery, and contemplation. It's a time to recharge and prepare quietly for what's to come.",
+        "image": "rider-waite-minor-arcana---swords-04_6234722694_l.jpg",
         "type": "minor",
         "value": 4,
         "suit": "swords"
@@ -814,6 +868,7 @@
             "Win at all costs mentality"
         ],
         "description": "The Five of Swords suggests that you may have won a recent battle or conflict, but it could be a hollow victory. It warns against the 'win at all costs' mentality and suggests a need for compromise and diplomacy.",
+        "image": "rider-waite-minor-arcana---swords-05_6234201033_l.jpg",
         "type": "minor",
         "value": 5,
         "suit": "swords"
@@ -829,6 +884,7 @@
             "Relief"
         ],
         "description": "The Six of Swords represents a journey or transition, often after a difficult period. It signifies moving on, healing, and finding relief.",
+        "image": "rider-waite-minor-arcana---swords-06_6234729032_l.jpg",
         "type": "minor",
         "value": 6,
         "suit": "swords"
@@ -844,6 +900,7 @@
             "Getting away with something"
         ],
         "description": "The Seven of Swords suggests a need for strategy and stealth. It may indicate deception or getting away with something. It also represents resourcefulness.",
+        "image": "rider-waite-minor-arcana---swords-07_6234207565_l.jpg",
         "type": "minor",
         "value": 7,
         "suit": "swords"
@@ -858,6 +915,7 @@
             "Imprisonment"
         ],
         "description": "The Eight of Swords suggests that you may be holding yourself back due to fear or uncertainty. You may feel trapped or restricted, but these limitations are often self-imposed.",
+        "image": "rider-waite-minor-arcana---swords-08_6234210379_l.jpg",
         "type": "minor",
         "value": 8,
         "suit": "swords"
@@ -873,6 +931,7 @@
             "Nightmares"
         ],
         "description": "The Nine of Swords represents a period of anxiety, worry, and fear. It suggests that you may be letting your fears and worries consume you, leading to sleepless nights and a sense of guilt or dread.",
+        "image": "rider-waite-minor-arcana---swords-09_6234213789_l.jpg",
         "type": "minor",
         "value": 9,
         "suit": "swords"
@@ -888,6 +947,7 @@
             "Crisis"
         ],
         "description": "The Ten of Swords represents a painful ending, betrayal, or crisis. It's a sign that you may be feeling backstabbed or defeated, but it also signifies the end of this difficult situation and the start of a new, more positive cycle.",
+        "image": "rider-waite-minor-arcana---swords-10_6234741256_l.jpg",
         "type": "minor",
         "value": 10,
         "suit": "swords"
@@ -903,6 +963,7 @@
             "Quick thinking"
         ],
         "description": "The Page of Swords represents a thirst for knowledge, curiosity, and mental energy. It suggests that you are ready to confront the challenges that lie ahead with a new perspective and quick thinking.",
+        "image": "rider-waite-minor-arcana---swords-11-page_6234743864_l.jpg",
         "type": "minor",
         "value": 11,
         "suit": "swords"
@@ -918,6 +979,7 @@
             "Determination"
         ],
         "description": "The Knight of Swords represents a fast-paced environment, ambition, and the drive to pursue your goals. It can also indicate a tendency to be defensive or overly aggressive.",
+        "image": "rider-waite-minor-arcana---swords-12-knight_6234222761_l.jpg",
         "type": "minor",
         "value": 12,
         "suit": "swords"
@@ -933,6 +995,7 @@
             "Clear boundaries"
         ],
         "description": "The Queen of Swords represents a strong, independent, and wise individual who is realistic and maintains clear boundaries. She encourages you to use your intellect and communication skills to express your truth and establish independence.",
+        "image": "rider-waite-minor-arcana---swords-13-queen_6234749846_l.jpg",
         "type": "minor",
         "value": 13,
         "suit": "swords"
@@ -948,6 +1011,7 @@
             "Objectivity"
         ],
         "description": "The King of Swords represents intellectual power, authority, and truth-seeking. It encourages clear thinking, objectivity, and the use of intellect to navigate situations.",
+        "image": "rider-waite-minor-arcana---swords-14-king_6234228441_l.jpg",
         "type": "minor",
         "value": 14,
         "suit": "swords"
@@ -963,6 +1027,7 @@
             "Stability"
         ],
         "description": "The Ace of Pentacles represents a new opportunity for growth, particularly in the areas of wealth, career, or overall stability. It encourages you to plant the seeds for your future and nurture them to fruition.",
+        "image": "rider-waite-minor-arcana---pentacles-01-ace_6234755746_l.jpg",
         "type": "minor",
         "value": 1,
         "suit": "pentacles"
@@ -978,6 +1043,7 @@
             "Juggling responsibilities"
         ],
         "description": "The Two of Pentacles represents the need to balance multiple responsibilities or priorities. It encourages adaptability and effective time management.",
+        "image": "rider-waite-minor-arcana---pentacles-02_6234759442_l.jpg",
         "type": "minor",
         "value": 2,
         "suit": "pentacles"
@@ -992,6 +1058,7 @@
             "Implementation"
         ],
         "description": "The Three of Pentacles represents the importance of teamwork, planning, and implementation. It suggests that you are working towards a common goal with others and you are learning from each other.",
+        "image": "rider-waite-minor-arcana---pentacles-03_6234238151_l.jpg",
         "type": "minor",
         "value": 3,
         "suit": "pentacles"
@@ -1007,6 +1074,7 @@
             "Conservatism"
         ],
         "description": "The Four of Pentacles represents a desire for control and security, often in relation to finances or possessions. It encourages a careful and conservative approach to resources.",
+        "image": "rider-waite-minor-arcana---pentacles-04_6234766364_l.jpg",
         "type": "minor",
         "value": 4,
         "suit": "pentacles"
@@ -1022,6 +1090,7 @@
             "Worry"
         ],
         "description": "The Five of Pentacles suggests a period of financial hardship or loss. It may also indicate feelings of isolation, worry, and insecurity.",
+        "image": "rider-waite-minor-arcana---pentacles-05_6234768838_l.jpg",
         "type": "minor",
         "value": 5,
         "suit": "pentacles"
@@ -1037,6 +1106,7 @@
             "Prosperity"
         ],
         "description": "The Six of Pentacles represents generosity, charity, and the cycle of giving and receiving. It encourages sharing wealth and prosperity with others.",
+        "image": "rider-waite-minor-arcana---pentacles-06_6234772038_l.jpg",
         "type": "minor",
         "value": 6,
         "suit": "pentacles"
@@ -1052,6 +1122,7 @@
             "Patience"
         ],
         "description": "The Seven of Pentacles represents the need for patience and long-term planning. It suggests that you are in the process of cultivating your efforts and investments, and that sustainable results are on the horizon.",
+        "image": "rider-waite-minor-arcana---pentacles-07_6234250873_l.jpg",
         "type": "minor",
         "value": 7,
         "suit": "pentacles"
@@ -1067,6 +1138,7 @@
             "Commitment"
         ],
         "description": "The Eight of Pentacles represents dedication, hard work, and the commitment to mastering your skills. It encourages you to keep going and pay attention to the details.",
+        "image": "rider-waite-minor-arcana---pentacles-08_6234777816_l.jpg",
         "type": "minor",
         "value": 8,
         "suit": "pentacles"
@@ -1082,6 +1154,7 @@
             "Financial stability"
         ],
         "description": "The Nine of Pentacles represents abundance, luxury, self-sufficiency, and financial independence. This card suggests that you have worked hard to create abundance in your life and it is now time to enjoy your material success.",
+        "image": "rider-waite-minor-arcana---pentacles-09_6234255825_l.jpg",
         "type": "minor",
         "value": 9,
         "suit": "pentacles"
@@ -1097,6 +1170,7 @@
             "Stability"
         ],
         "description": "The Ten of Pentacles signifies wealth, financial security, and family. It suggests a time of stability and abundance, and may also indicate receiving an inheritance or establishing long-term financial security.",
+        "image": "rider-waite-minor-arcana---pentacles-10_6234259139_l.jpg",
         "type": "minor",
         "value": 10,
         "suit": "pentacles"
@@ -1112,6 +1186,7 @@
             "Ambition"
         ],
         "description": "The Page of Pentacles represents the potential for new opportunities, particularly in the realm of finance or career. It encourages dedication, ambition, and the development of new skills.",
+        "image": "rider-waite-minor-arcana---pentacles-11-page_6234261387_l.jpg",
         "type": "minor",
         "value": 11,
         "suit": "pentacles"
@@ -1127,6 +1202,7 @@
             "Reliability"
         ],
         "description": "The Knight of Pentacles represents a methodical, reliable, and efficient approach to tasks. It encourages you to stick to routines and remain consistent in your efforts.",
+        "image": "rider-waite-minor-arcana---pentacles-12-knight_6234264177_l.jpg",
         "type": "minor",
         "value": 12,
         "suit": "pentacles"
@@ -1142,6 +1218,7 @@
             "Groundedness"
         ],
         "description": "The Queen of Pentacles represents a nurturing and grounded energy, encouraging stability, generosity, and practical support for yourself and others.",
+        "image": "rider-waite-minor-arcana---pentacles-13-queen_6234266673_l.jpg",
         "type": "minor",
         "value": 13,
         "suit": "pentacles"
@@ -1157,6 +1234,7 @@
             "Abundance"
         ],
         "description": "The King of Pentacles represents a successful leader who has achieved financial stability and security. This card encourages you to be practical, organized, and to make your dreams a reality.",
+        "image": "rider-waite-minor-arcana---pentacles-14-king_6234270179_l.jpg",
         "type": "minor",
         "value": 14,
         "suit": "pentacles"
@@ -1172,6 +1250,7 @@
             "Lack of direction"
         ],
         "description": "The Fool Reversed suggests a need for caution and careful consideration before making decisions. It warns against reckless behavior and encourages you to think before you act.",
+        "image": "rider-waite-major-arcana-00-the-fool_6234580670_l.jpg",
         "type": "major",
         "value": 0,
         "suit": null
@@ -1187,6 +1266,7 @@
             "Deception"
         ],
         "description": "The Magician Reversed suggests that you may be missing opportunities due to poor planning or manipulation. It encourages you to tap into your full potential and avoid deception.",
+        "image": "rider-waite-major-arcana-01-the-magician_6234582750_l.jpg",
         "type": "major",
         "value": 1,
         "suit": null
@@ -1202,6 +1282,7 @@
             "Lack of self-awareness"
         ],
         "description": "The High Priestess reversed suggests that you are not listening to your intuition and ignoring the wisdom within you. It may also indicate repressed feelings or hidden secrets.",
+        "image": "rider-waite-major-arcana-02-the-high-priestess_6234585244_l.jpg",
         "type": "major",
         "value": 2,
         "suit": null
@@ -1217,6 +1298,7 @@
             "Financial hardship"
         ],
         "description": "The Empress Reversed suggests a need for self-care and independence, and warns against smothering love or financial hardship.",
+        "image": "rider-waite-major-arcana-03-the-empress_6234588362_l.jpg",
         "type": "major",
         "value": 3,
         "suit": null
@@ -1232,6 +1314,7 @@
             "Chaos"
         ],
         "description": "The Emperor Reversed suggests a misuse of power, lack of discipline, and inflexibility. It may also indicate a situation of chaos or lack of authority.",
+        "image": "rider-waite-major-arcana-04-the-emperor_6234066109_l.jpg",
         "type": "major",
         "value": 4,
         "suit": null
@@ -1247,6 +1330,7 @@
             "Personal beliefs"
         ],
         "description": "The Hierophant Reversed represents breaking free from established conventions, challenging the status quo, and following your own unique path or beliefs.",
+        "image": "rider-waite-major-arcana-05-the-hierophant_6234068727_l.jpg",
         "type": "major",
         "value": 5,
         "suit": null
@@ -1262,6 +1346,7 @@
             "Confusion"
         ],
         "description": "The Lovers Reversed suggests a period of imbalance and disharmony in relationships, or a misalignment of personal values. It encourages introspection and reassessment of personal relationships and values.",
+        "image": "rider-waite-major-arcana-06-the-lovers_6234595528_l.jpg",
         "type": "major",
         "value": 6,
         "suit": null
@@ -1277,6 +1362,7 @@
             "Self-doubt"
         ],
         "description": "The Chariot Reversed suggests a lack of control or direction, possible aggression, and self-doubt. It's a call to reassess your path and obstacles, and to regain control with determination and self-confidence.",
+        "image": "rider-waite-major-arcana-07-the-chariot_6234072405_l.jpg",
         "type": "major",
         "value": 7,
         "suit": null
@@ -1292,6 +1378,7 @@
             "Feeling overwhelmed"
         ],
         "description": "The Strength Reversed card suggests that you may be dealing with self-doubt, lack of discipline, or feeling overwhelmed. It encourages you to find your inner strength and face your fears.",
+        "image": "rider-waite-major-arcana-08-strength_6234598040_l.jpg",
         "type": "major",
         "value": 8,
         "suit": null
@@ -1307,6 +1394,7 @@
             "Ignoring advice"
         ],
         "description": "The Hermit Reversed suggests a period of excessive isolation, withdrawal, or ignoring the advice and wisdom of others. It may be time to reconnect with the world and seek guidance.",
+        "image": "rider-waite-major-arcana-09-the-hermit_6234075619_l.jpg",
         "type": "major",
         "value": 9,
         "suit": null
@@ -1322,6 +1410,7 @@
             "Delays"
         ],
         "description": "The Wheel of Fortune Reversed suggests that you may be experiencing a run of bad luck or unexpected changes. It encourages you to let go of resistance and accept the cycles of life.",
+        "image": "rider-waite-major-arcana-10-wheel-of-fortune_6234602206_l.jpg",
         "type": "major",
         "value": 10,
         "suit": null
@@ -1337,6 +1426,7 @@
             "Injustice"
         ],
         "description": "The Justice Reversed card suggests a situation of unfairness, dishonesty, or avoidance of consequences. It may indicate a lack of accountability or an unjust outcome.",
+        "image": "rider-waite-major-arcana-11-justice_6234605714_l.jpg",
         "type": "major",
         "value": 11,
         "suit": null
@@ -1352,6 +1442,7 @@
             "Self-sacrifice"
         ],
         "description": "The Hanged Man Reversed suggests a resistance to necessary change, a fear of sacrifice, or a period of indecision and delay. It encourages you to let go and accept the things you cannot change.",
+        "image": "rider-waite-major-arcana-12-the-hanged-man_6234084897_l.jpg",
         "type": "major",
         "value": 12,
         "suit": null
@@ -1366,6 +1457,7 @@
             "Inability to move on"
         ],
         "description": "The Death Reversed card suggests that you may be resisting or fearing change, leading to stagnation. It encourages you to confront these fears and embrace the transformation that comes with change.",
+        "image": "rider-waite-major-arcana-13-death_6234086467_l.jpg",
         "type": "major",
         "value": 13,
         "suit": null
@@ -1381,6 +1473,7 @@
             "Rushing"
         ],
         "description": "The reversed Temperance card suggests a lack of balance or harmony, possibly due to impatience or rushing into decisions. It encourages you to slow down, be patient, and consider the long-term consequences of your actions.",
+        "image": "rider-waite-major-arcana-14-temperance_6234088279_l.jpg",
         "type": "major",
         "value": 14,
         "suit": null
@@ -1396,6 +1489,7 @@
             "Personal growth"
         ],
         "description": "The Devil Reversed represents breaking free from bondage and limitations. It suggests overcoming negative habits and addictions, and reclaiming personal power.",
+        "image": "rider-waite-major-arcana-15-the-devil_6234090311_l.jpg",
         "type": "major",
         "value": 15,
         "suit": null
@@ -1411,6 +1505,7 @@
             "Resistance to change"
         ],
         "description": "The Tower Reversed suggests that you are resisting or delaying some necessary change, often out of fear. It encourages you to face these changes head-on for personal growth and transformation.",
+        "image": "rider-waite-major-arcana-16-the-tower_6234092237_l.jpg",
         "type": "major",
         "value": 16,
         "suit": null
@@ -1426,6 +1521,7 @@
             "Insecurity"
         ],
         "description": "The Star Reversed suggests a period of self-doubt and insecurity. It's a reminder to reconnect with your inner self and regain your self-confidence.",
+        "image": "rider-waite-major-arcana-17-the-star_6234094083_l.jpg",
         "type": "major",
         "value": 17,
         "suit": null
@@ -1441,6 +1537,7 @@
             "Increased intuition"
         ],
         "description": "The Moon Reversed suggests a time of inner confusion and repressed emotions. It's a call to release fears and illusions, and trust your intuition.",
+        "image": "rider-waite-major-arcana-18-the-moon_6234620480_l.jpg",
         "type": "major",
         "value": 18,
         "suit": null
@@ -1455,6 +1552,7 @@
             "Inner child"
         ],
         "description": "The Sun Reversed suggests a period of negativity or depression, or a lack of success. It encourages you to reconnect with your inner child and find joy and positivity in your life.",
+        "image": "rider-waite-major-arcana-19-the-sun_6234097611_l.jpg",
         "type": "major",
         "value": 19,
         "suit": null
@@ -1470,6 +1568,7 @@
             "Unresolved issues"
         ],
         "description": "The Judgement Reversed card suggests that you may be experiencing self-doubt or avoiding accountability. It encourages you to confront unresolved issues and heed your inner call.",
+        "image": "rider-waite-major-arcana-20-judgement_6234099599_l.jpg",
         "type": "major",
         "value": 20,
         "suit": null
@@ -1485,6 +1584,7 @@
             "Resistance to change"
         ],
         "description": "The World Reversed suggests that you may be striving for completion and accomplishment, but are faced with delays, resistance, or lack of closure. It encourages you to reassess your goals and approach.",
+        "image": "rider-waite-major-arcana-21-the-world_6234101445_l.jpg",
         "type": "major",
         "value": 21,
         "suit": null
@@ -1500,6 +1600,7 @@
             "Pessimism"
         ],
         "description": "The Ace of Wands reversed suggests a lack of motivation or energy, delays in new beginnings, and missed opportunities. It encourages you to reignite your passion and optimism.",
+        "image": "rider-waite-minor-arcana---wands-01-ace_6234634378_l.jpg",
         "type": "minor",
         "value": 1,
         "suit": "wands"
@@ -1515,6 +1616,7 @@
             "Indecision"
         ],
         "description": "The Two of Wands Reversed suggests that you may be experiencing fear of the unknown, lack of planning, unexpected delays, or indecision. It's a call to reassess your plans and consider different paths.",
+        "image": "rider-waite-minor-arcana---wands-02_6234636276_l.jpg",
         "type": "minor",
         "value": 2,
         "suit": "wands"
@@ -1530,6 +1632,7 @@
             "Disappointment"
         ],
         "description": "The reversed Three of Wands suggests you may be experiencing delays or setbacks, and encourages you to plan more effectively to avoid missed opportunities.",
+        "image": "rider-waite-minor-arcana---wands-03_6234113573_l.jpg",
         "type": "minor",
         "value": 3,
         "suit": "wands"
@@ -1545,6 +1648,7 @@
             "Lack of harmony"
         ],
         "description": "The Four of Wands reversed suggests a lack of harmony or changes in your home or community. It can also represent a breakdown in communication or instability.",
+        "image": "rider-waite-minor-arcana---wands-04_6234115553_l.jpg",
         "type": "minor",
         "value": 4,
         "suit": "wands"
@@ -1560,6 +1664,7 @@
             "Compromise"
         ],
         "description": "The Five of Wands Reversed suggests that you are working to avoid conflict and bring about harmony. It encourages cooperation and compromise.",
+        "image": "rider-waite-minor-arcana---wands-05_6234117635_l.jpg",
         "type": "minor",
         "value": 5,
         "suit": "wands"
@@ -1575,6 +1680,7 @@
             "Egoism"
         ],
         "description": "The reversed Six of Wands suggests you may be doubting your abilities or facing delays in achieving your goals. It can also indicate a lack of recognition or an inflated ego.",
+        "image": "rider-waite-minor-arcana---wands-06_6234119573_l.jpg",
         "type": "minor",
         "value": 6,
         "suit": "wands"
@@ -1590,6 +1696,7 @@
             "Being defensive"
         ],
         "description": "The Seven of Wands Reversed suggests that you may be feeling overwhelmed and lacking in self-confidence. It can also indicate a tendency to avoid conflict or challenges.",
+        "image": "rider-waite-minor-arcana---wands-07_6234645990_l.jpg",
         "type": "minor",
         "value": 7,
         "suit": "wands"
@@ -1605,6 +1712,7 @@
             "Lack of motivation"
         ],
         "description": "The Eight of Wands Reversed suggests that you may be experiencing delays or obstacles in your path. It encourages patience and persistence, reminding you that progress may be slow but it is still happening.",
+        "image": "rider-waite-minor-arcana---wands-08_6234123431_l.jpg",
         "type": "minor",
         "value": 8,
         "suit": "wands"
@@ -1620,6 +1728,7 @@
             "Resistance to change"
         ],
         "description": "The Nine of Wands reversed suggests that you may be feeling defensive, paranoid, or resistant to change. It can also indicate burnout or stubbornness.",
+        "image": "rider-waite-minor-arcana---wands-09_6234125333_l.jpg",
         "type": "minor",
         "value": 9,
         "suit": "wands"
@@ -1634,6 +1743,7 @@
             "Stress relief"
         ],
         "description": "The Ten of Wands Reversed suggests that you are starting to free yourself from the burdens and responsibilities that have been weighing you down. It's time to delegate tasks and lighten your load.",
+        "image": "rider-waite-minor-arcana---wands-10_6234651626_l.jpg",
         "type": "minor",
         "value": 10,
         "suit": "wands"
@@ -1649,6 +1759,7 @@
             "Unrealistic goals"
         ],
         "description": "The reversed Page of Wands suggests you may be experiencing delays or frustrations, and may need to reassess your goals or direction.",
+        "image": "rider-waite-minor-arcana---wands-11-page_6234129705_l.jpg",
         "type": "minor",
         "value": 11,
         "suit": "wands"
@@ -1664,6 +1775,7 @@
             "Frustration"
         ],
         "description": "The reversed Knight of Wands suggests you are acting on impulse and not fully considering the consequences of your actions. It may also indicate frustration and lack of direction.",
+        "image": "rider-waite-minor-arcana---wands-12-knight_6234131585_l.jpg",
         "type": "minor",
         "value": 12,
         "suit": "wands"
@@ -1679,6 +1791,7 @@
             "Dependence"
         ],
         "description": "The Queen of Wands reversed suggests a period of self-doubt and insecurity. It may indicate a time of introversion, jealousy, or dependence on others. It's a call to regain confidence and independence.",
+        "image": "rider-waite-minor-arcana---wands-13-queen_6234133349_l.jpg",
         "type": "minor",
         "value": 13,
         "suit": "wands"
@@ -1694,6 +1807,7 @@
             "Hasty decisions"
         ],
         "description": "The King of Wands reversed suggests a need to control impulsive actions, manage expectations, and avoid making hasty decisions. It can also indicate a person who is domineering or ruthless.",
+        "image": "rider-waite-minor-arcana---wands-14-king_6234659884_l.jpg",
         "type": "minor",
         "value": 14,
         "suit": "wands"
@@ -1708,6 +1822,7 @@
             "Unfulfilled potential"
         ],
         "description": "The Ace of Cups reversed suggests that you may be holding back your emotions or struggling with a blockage in your emotional life or creativity. It's a call to reconnect with your inner self and express your feelings openly.",
+        "image": "rider-waite-minor-arcana---cups-01-ace_6234141143_l.jpg",
         "type": "minor",
         "value": 1,
         "suit": "cups"
@@ -1723,6 +1838,7 @@
             "Breakup"
         ],
         "description": "The Two of Cups Reversed suggests there may be an imbalance or conflict in a close relationship. It encourages open communication and understanding to resolve any issues.",
+        "image": "rider-waite-minor-arcana---cups-02_6234669216_l.jpg",
         "type": "minor",
         "value": 2,
         "suit": "cups"
@@ -1738,6 +1854,7 @@
             "Lack of teamwork"
         ],
         "description": "The reversed Three of Cups suggests a need for solitude or withdrawal. It can also indicate gossip, conflict, or a lack of cooperation among friends or colleagues.",
+        "image": "rider-waite-minor-arcana---cups-03_6234672074_l.jpg",
         "type": "minor",
         "value": 3,
         "suit": "cups"
@@ -1752,6 +1869,7 @@
             "Embracing change"
         ],
         "description": "The Four of Cups reversed suggests a new awareness or acceptance of a situation. It encourages taking action and embracing change.",
+        "image": "rider-waite-minor-arcana---cups-04_6234675624_l.jpg",
         "type": "minor",
         "value": 4,
         "suit": "cups"
@@ -1767,6 +1885,7 @@
             "Hope"
         ],
         "description": "The Five of Cups Reversed suggests a period of healing and forgiveness. It's time to move on from past disappointments and find hope and peace.",
+        "image": "rider-waite-minor-arcana---cups-05_6234679202_l.jpg",
         "type": "minor",
         "value": 5,
         "suit": "cups"
@@ -1782,6 +1901,7 @@
             "Disconnection from the past"
         ],
         "description": "The Six of Cups reversed suggests that you may be stuck in the past and not accepting the realities of the present. It's time to move forward and embrace the present.",
+        "image": "rider-waite-minor-arcana---cups-06_6234681960_l.jpg",
         "type": "minor",
         "value": 6,
         "suit": "cups"
@@ -1797,6 +1917,7 @@
             "Overcoming temptations"
         ],
         "description": "The reversed Seven of Cups suggests that you are breaking through illusions and beginning to focus on what is truly important. It's time to make a decision and stick to it.",
+        "image": "rider-waite-minor-arcana---cups-07_6234162753_l.jpg",
         "type": "minor",
         "value": 7,
         "suit": "cups"
@@ -1812,6 +1933,7 @@
             "Personal confusion"
         ],
         "description": "The Eight of Cups Reversed suggests a fear of change or moving on, possibly leading to stagnation or avoidance of personal issues. It encourages introspection and facing problems head-on.",
+        "image": "rider-waite-minor-arcana---cups-08_6234165989_l.jpg",
         "type": "minor",
         "value": 8,
         "suit": "cups"
@@ -1827,6 +1949,7 @@
             "Complacency"
         ],
         "description": "The reversed Nine of Cups suggests a time of unfulfilled wishes, discontent, and a lack of appreciation. It warns against greed and complacency.",
+        "image": "rider-waite-minor-arcana---cups-09_6234168247_l.jpg",
         "type": "minor",
         "value": 9,
         "suit": "cups"
@@ -1842,6 +1965,7 @@
             "Unfulfilled dreams"
         ],
         "description": "The Ten of Cups reversed suggests a disruption in the harmony of a relationship or family, possibly due to misaligned values or unfulfilled dreams. It encourages you to seek resolution and realignment.",
+        "image": "rider-waite-minor-arcana---cups-10_6234171803_l.jpg",
         "type": "minor",
         "value": 10,
         "suit": "cups"
@@ -1857,6 +1981,7 @@
             "Creative blocks"
         ],
         "description": "The reversed Page of Cups suggests a need to face your insecurities and disappointments, and to manage your expectations more realistically. It may also indicate a creative block.",
+        "image": "rider-waite-minor-arcana---cups-11-page_6234174547_l.jpg",
         "type": "minor",
         "value": 11,
         "suit": "cups"
@@ -1872,6 +1997,7 @@
             "Disappointment"
         ],
         "description": "The reversed Knight of Cups suggests you may be letting your emotions control you too much, and warns against unrealistic expectations and mood swings.",
+        "image": "rider-waite-minor-arcana---cups-12-knight_6234177439_l.jpg",
         "type": "minor",
         "value": 12,
         "suit": "cups"
@@ -1887,6 +2013,7 @@
             "Overly sensitive"
         ],
         "description": "The Queen of Cups reversed suggests a need to manage emotions, avoid dependence on others, and address any feelings of insecurity or emotional instability.",
+        "image": "rider-waite-minor-arcana---cups-13-queen_6234181309_l.jpg",
         "type": "minor",
         "value": 13,
         "suit": "cups"
@@ -1902,6 +2029,7 @@
             "Dishonesty"
         ],
         "description": "The King of Cups reversed suggests a lack of emotional maturity or control, and may indicate manipulation or dishonesty. It's a call to develop emotional intelligence and honesty.",
+        "image": "rider-waite-minor-arcana---cups-14-king_6234708876_l.jpg",
         "type": "minor",
         "value": 14,
         "suit": "cups"
@@ -1917,6 +2045,7 @@
             "Delays"
         ],
         "description": "The Ace of Swords reversed suggests a period of confusion or chaos. It may indicate miscommunication, lack of clarity, or delays in your plans.",
+        "image": "rider-waite-minor-arcana---swords-01-ace_6234712912_l.jpg",
         "type": "minor",
         "value": 1,
         "suit": "swords"
@@ -1932,6 +2061,7 @@
             "Avoidance"
         ],
         "description": "The Two of Swords reversed suggests that you are avoiding a difficult decision or are confused due to information overload. It encourages you to seek clarity and face the situation head-on.",
+        "image": "rider-waite-minor-arcana---swords-02_6234716234_l.jpg",
         "type": "minor",
         "value": 2,
         "suit": "swords"
@@ -1946,6 +2076,7 @@
             "Release of pain"
         ],
         "description": "The Three of Swords Reversed signifies a time of healing and recovery. It suggests that you are beginning to work through your pain and heartache, and are on the path towards forgiveness and emotional release.",
+        "image": "rider-waite-minor-arcana---swords-03_6234719796_l.jpg",
         "type": "minor",
         "value": 3,
         "suit": "swords"
@@ -1961,6 +2092,7 @@
             "Need for rest"
         ],
         "description": "The Four of Swords reversed suggests that you may be pushing yourself too hard and not allowing yourself the rest and relaxation you need. It's a reminder to take care of your mental and physical health.",
+        "image": "rider-waite-minor-arcana---swords-04_6234722694_l.jpg",
         "type": "minor",
         "value": 4,
         "suit": "swords"
@@ -1976,6 +2108,7 @@
             "Forgiveness"
         ],
         "description": "The Five of Swords Reversed suggests a time of reconciliation and forgiveness. It's a time to learn from past mistakes, make amends, and move on.",
+        "image": "rider-waite-minor-arcana---swords-05_6234201033_l.jpg",
         "type": "minor",
         "value": 5,
         "suit": "swords"
@@ -1991,6 +2124,7 @@
             "Feeling stuck"
         ],
         "description": "The Six of Swords Reversed suggests that you may be resisting necessary change, or finding it difficult to move on from past situations. It encourages you to let go of what no longer serves you and to embrace the potential for growth and transformation.",
+        "image": "rider-waite-minor-arcana---swords-06_6234729032_l.jpg",
         "type": "minor",
         "value": 6,
         "suit": "swords"
@@ -2005,6 +2139,7 @@
             "Breaking free from deception"
         ],
         "description": "The Seven of Swords Reversed suggests a time of confession, accepting responsibility, and breaking free from deception or manipulation.",
+        "image": "rider-waite-minor-arcana---swords-07_6234207565_l.jpg",
         "type": "minor",
         "value": 7,
         "suit": "swords"
@@ -2020,6 +2155,7 @@
             "Fear of the unknown"
         ],
         "description": "The Eight of Swords reversed suggests that you may be feeling trapped or limited by your own beliefs or fears. It encourages you to break free from these self-imposed restrictions and regain your confidence.",
+        "image": "rider-waite-minor-arcana---swords-08_6234210379_l.jpg",
         "type": "minor",
         "value": 8,
         "suit": "swords"
@@ -2035,6 +2171,7 @@
             "Nightmares"
         ],
         "description": "The Nine of Swords reversed indicates a period of stress, anxiety, and fear. It suggests that you may be allowing your worries to consume you, leading to a cycle of negative thinking and possibly even depression.",
+        "image": "rider-waite-minor-arcana---swords-09_6234213789_l.jpg",
         "type": "minor",
         "value": 9,
         "suit": "swords"
@@ -2050,6 +2187,7 @@
             "Prolonged suffering"
         ],
         "description": "The Ten of Swords Reversed suggests that you are finally ready to release the pain and hurt, and move on. It can also indicate a fear of endings or ruin, or a resistance to letting go.",
+        "image": "rider-waite-minor-arcana---swords-10_6234741256_l.jpg",
         "type": "minor",
         "value": 10,
         "suit": "swords"
@@ -2065,6 +2203,7 @@
             "Miscommunication"
         ],
         "description": "The reversed Page of Swords suggests that you may be acting hastily without thinking things through. It can also indicate gossip, deception, or miscommunication.",
+        "image": "rider-waite-minor-arcana---swords-11-page_6234743864_l.jpg",
         "type": "minor",
         "value": 11,
         "suit": "swords"
@@ -2080,6 +2219,7 @@
             "Lack of direction"
         ],
         "description": "The reversed Knight of Swords suggests a tendency towards impulsiveness and recklessness. It advises to think before acting and consider the potential consequences.",
+        "image": "rider-waite-minor-arcana---swords-12-knight_6234222761_l.jpg",
         "type": "minor",
         "value": 12,
         "suit": "swords"
@@ -2095,6 +2235,7 @@
             "Miscommunication"
         ],
         "description": "The Queen of Swords reversed suggests that you may be allowing your emotions to cloud your judgement, leading to miscommunication or resentment. It's important to clear your mind and communicate your feelings honestly and directly.",
+        "image": "rider-waite-minor-arcana---swords-13-queen_6234749846_l.jpg",
         "type": "minor",
         "value": 13,
         "suit": "swords"
@@ -2110,6 +2251,7 @@
             "Cold-heartedness"
         ],
         "description": "The King of Swords reversed represents a misuse of power, manipulation, and a lack of emotional intelligence. It warns against becoming ruthless or cold-hearted.",
+        "image": "rider-waite-minor-arcana---swords-14-king_6234228441_l.jpg",
         "type": "minor",
         "value": 14,
         "suit": "swords"
@@ -2124,6 +2266,7 @@
             "Instability"
         ],
         "description": "The Ace of Pentacles Reversed suggests a period of financial instability or missed opportunities. It encourages careful planning and consideration of potential risks.",
+        "image": "rider-waite-minor-arcana---pentacles-01-ace_6234755746_l.jpg",
         "type": "minor",
         "value": 1,
         "suit": "pentacles"
@@ -2138,6 +2281,7 @@
             "Financial disarray"
         ],
         "description": "The Two of Pentacles Reversed suggests that you may be juggling too many things at once and feeling overwhelmed. It's a sign to reassess your priorities and bring balance back into your life.",
+        "image": "rider-waite-minor-arcana---pentacles-02_6234759442_l.jpg",
         "type": "minor",
         "value": 2,
         "suit": "pentacles"
@@ -2153,6 +2297,7 @@
             "Disputes"
         ],
         "description": "The reversed Three of Pentacles suggests a lack of harmony or a breakdown in teamwork. It can indicate that you are working towards a goal but with a lack of coordination and communication.",
+        "image": "rider-waite-minor-arcana---pentacles-03_6234238151_l.jpg",
         "type": "minor",
         "value": 3,
         "suit": "pentacles"
@@ -2168,6 +2313,7 @@
             "Insecurity"
         ],
         "description": "The Four of Pentacles reversed suggests a need to let go, be generous, and not hold on too tightly to material possessions or situations. It can also indicate feelings of insecurity.",
+        "image": "rider-waite-minor-arcana---pentacles-04_6234766364_l.jpg",
         "type": "minor",
         "value": 4,
         "suit": "pentacles"
@@ -2183,6 +2329,7 @@
             "Overcoming hardship"
         ],
         "description": "The Five of Pentacles Reversed signifies recovery from financial or health problems, spiritual growth, and positive changes. It suggests overcoming hardship and adversity.",
+        "image": "rider-waite-minor-arcana---pentacles-05_6234768838_l.jpg",
         "type": "minor",
         "value": 5,
         "suit": "pentacles"
@@ -2198,6 +2345,7 @@
             "Financial imbalance"
         ],
         "description": "The reversed Six of Pentacles suggests a period of financial imbalance, debt, or selfishness. It may also indicate a one-sided charity or unpaid loans.",
+        "image": "rider-waite-minor-arcana---pentacles-06_6234772038_l.jpg",
         "type": "minor",
         "value": 6,
         "suit": "pentacles"
@@ -2213,6 +2361,7 @@
             "Unrewarded efforts"
         ],
         "description": "The Seven of Pentacles Reversed suggests that you may be feeling frustrated with the lack of progress or rewards. It encourages patience, effort, and reevaluation of your long-term goals.",
+        "image": "rider-waite-minor-arcana---pentacles-07_6234250873_l.jpg",
         "type": "minor",
         "value": 7,
         "suit": "pentacles"
@@ -2227,6 +2376,7 @@
             "Overly detailed"
         ],
         "description": "The Eight of Pentacles reversed suggests that you may be focusing too much on the small details and missing the bigger picture. It can also indicate a lack of reward for your efforts or a tendency towards perfectionism that is hindering progress.",
+        "image": "rider-waite-minor-arcana---pentacles-08_6234777816_l.jpg",
         "type": "minor",
         "value": 8,
         "suit": "pentacles"
@@ -2242,6 +2392,7 @@
             "Insecurity"
         ],
         "description": "The reversed Nine of Pentacles suggests that you may be over-investing in work to the detriment of your personal life, or experiencing financial instability. It encourages you to seek balance and cultivate self-sufficiency.",
+        "image": "rider-waite-minor-arcana---pentacles-09_6234255825_l.jpg",
         "type": "minor",
         "value": 9,
         "suit": "pentacles"
@@ -2257,6 +2408,7 @@
             "Inheritance issues"
         ],
         "description": "The Ten of Pentacles reversed suggests a period of financial instability or family discord. It may also indicate issues related to inheritance or a sense of isolation.",
+        "image": "rider-waite-minor-arcana---pentacles-10_6234259139_l.jpg",
         "type": "minor",
         "value": 10,
         "suit": "pentacles"
@@ -2272,6 +2424,7 @@
             "Lack of direction"
         ],
         "description": "The reversed Page of Pentacles suggests a need to focus, avoid procrastination, and seize opportunities. It may also indicate a lack of direction or progress.",
+        "image": "rider-waite-minor-arcana---pentacles-11-page_6234261387_l.jpg",
         "type": "minor",
         "value": 11,
         "suit": "pentacles"
@@ -2287,6 +2440,7 @@
             "Resistance to change"
         ],
         "description": "The reversed Knight of Pentacles suggests a time of feeling stuck or resistant to change. It may indicate procrastination, laziness, or a lack of progress in your financial or material world.",
+        "image": "rider-waite-minor-arcana---pentacles-12-knight_6234264177_l.jpg",
         "type": "minor",
         "value": 12,
         "suit": "pentacles"
@@ -2302,6 +2456,7 @@
             "Imbalance"
         ],
         "description": "The reversed Queen of Pentacles suggests a need to regain balance in your life, particularly in areas of finance and material possessions. It may also indicate a tendency towards over-dependency on others or neglect of personal needs and responsibilities.",
+        "image": "rider-waite-minor-arcana---pentacles-13-queen_6234266673_l.jpg",
         "type": "minor",
         "value": 13,
         "suit": "pentacles"
@@ -2317,6 +2472,7 @@
             "Materialistic"
         ],
         "description": "The King of Pentacles reversed suggests a misuse of power, wealth, or resources. It can also indicate a stubborn or materialistic attitude.",
+        "image": "rider-waite-minor-arcana---pentacles-14-king_6234270179_l.jpg",
         "type": "minor",
         "value": 14,
         "suit": "pentacles"
