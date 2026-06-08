@@ -25,6 +25,11 @@ const loadImageFilenames = async () => {
   return new Set(await readdir(imageDir));
 };
 
+const loadDetailsHtmlFilenames = async () => {
+  const detailsHtmlDir = new URL("../decks/ko/details-html/", import.meta.url);
+  return new Set(await readdir(detailsHtmlDir));
+};
+
 describe.each(deckFiles)("deck schema: %s", (deckFile) => {
   it("contains a complete upright and reversed deck", async () => {
     const deck = await loadDeck(deckFile);
@@ -96,5 +101,30 @@ describe("localized deck parity", () => {
       expect(koreanCard.meanings).not.toEqual(englishCard.meanings);
       expect(koreanCard.description).not.toBe(englishCard.description);
     });
+  });
+});
+
+describe("Korean deck details HTML", () => {
+  it("maps every Korean card to an existing details HTML file", async () => {
+    const koreanDeck = await loadDeck("decks/ko/default.json");
+    const detailsHtmlFilenames = await loadDetailsHtmlFilenames();
+
+    for (const card of koreanDeck) {
+      expectNonEmptyString(card["details-html"]);
+      expect(detailsHtmlFilenames.has(card["details-html"])).toBe(true);
+    }
+  });
+
+  it("uses the same details HTML for upright and reversed card pairs", async () => {
+    const koreanDeck = await loadDeck("decks/ko/default.json");
+    const cardsByName = new Map(koreanDeck.map((card) => [card.name, card]));
+
+    for (const card of koreanDeck.filter((card) => card.name.endsWith(" Reversed"))) {
+      const uprightName = card.name.replace(/ Reversed$/, "");
+      const uprightCard = cardsByName.get(uprightName);
+
+      expect(uprightCard).toBeDefined();
+      expect(card["details-html"]).toBe(uprightCard["details-html"]);
+    }
   });
 });
