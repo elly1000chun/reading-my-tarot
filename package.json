@@ -22,7 +22,7 @@
     "url": "https://github.com/MarketingPipeline/Tarot.js.git"
   },
   "scripts": {
-    "build": "webpack --config ./src/webpack.config.babel.js",
+    "build": "webpack --config ./src/webpack.config.js",
     "test": "vitest run",
     "test:watch": "vitest"
   },

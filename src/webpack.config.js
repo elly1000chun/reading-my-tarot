@@ -1,10 +1,14 @@
 // webpack.config.js - created by Jared Van Valkengoed
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 import packageCONFIG from './license.config.js';
 
 import TerserPlugin from 'terser-webpack-plugin';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
  
 class AddLicenseAfterTerserPlugin {
     constructor(options) {
@@ -56,6 +60,7 @@ class RemoveLicenseFilePlugin {
 
 
 const commonConfig = {
+  mode: 'production',
   entry: `./src/${packageCONFIG.FILENAME}.js`, // Common entry point for all outputs
   module: {
     rules: [
@@ -99,7 +104,7 @@ const commonConfig = {
   },
 };
 
-module.exports = [
+export default [
   // UMD Bundle (.min.js) - Only add if packageCONFIG.umdOutput is true
   ...(packageCONFIG.umdOutput ? [{
     ...commonConfig, // Include common configuration

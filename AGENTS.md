@@ -5,7 +5,7 @@
 This repository is a small JavaScript library for Tarot deck management and readings.
 
 - `src/tarot.js`: main library source and default export.
-- `src/webpack.config.babel.js`: Webpack build configuration for UMD, ESM, and CommonJS bundles.
+- `src/webpack.config.js`: Webpack build configuration for UMD, ESM, and CommonJS bundles.
 - `src/license.config.js`: build-time package metadata and license banner configuration.
 - `dist/`: generated distributable bundles referenced by `package.json`.
 - `decks/`: bundled Tarot deck JSON data, organized by language such as `decks/en/default.json`.
