@@ -69,6 +69,10 @@
       <h1 class="text-4xl font-bold mb-4 text-purple-400">
         <i class="fas fa-moon mr-2"></i>Mystic Tarot
       </h1>
+      <div class="inline-flex rounded-lg border border-purple-500 overflow-hidden" id="languageSelector">
+        <button class="language-btn px-4 py-2 text-sm transition-colors" data-language="en">English</button>
+        <button class="language-btn px-4 py-2 text-sm transition-colors" data-language="ko">한국어</button>
+      </div>
     </header>
 
     <!-- Spread Selection -->
@@ -115,61 +119,108 @@
   
 <script type="module">
 import Tarot from "./src/tarot.js";
-// Load a existing tarot deck via ES6 assert import or via fetch etc...
-async function fetchEnglishDeck() {
-  const response = await fetch("./decks/en/default.json");
+
+const deckPaths = {
+  en: "./decks/en/default.json",
+  ko: "./decks/ko/default.json"
+};
+
+let currentLanguage = "ko";
+let tarot = null;
+let viewToken = 0;
+let languageLoadToken = 0;
+
+// Load an existing tarot deck via fetch.
+async function fetchDeck(language) {
+  const response = await fetch(deckPaths[language]);
   if (!response.ok) {
     throw new Error(`HTTP error! Status: ${response.status}`);
   }
-  const englishDeck = await response.json();
-  return englishDeck;
+  return response.json();
 }
-
-
-function initApp(deck){
-    
-// Initialize a Tarot instance and deck
-const tarot = new Tarot();
-tarot.initializeDeck(deck);
-
-// Add a spread (e.g., Past, Present, Future)
-
-tarot.addSpread("single", {
-  positions: ["Your card"],
-  description: "A simple one-card reading for quick insights",
-  cardCount: 1
-});
-
-tarot.addSpread("Three-Card Spread", {
-  positions: ["Past", "Present", "Future"],
-  description: "Insight into past, present, and future aspects."
-});
-
-tarot.addSpread("celtic-cross", {
-  positions: [
-    "Yourself",
-    "Your obstacle",
-    "Root of the question",
-    "The past",
-    "Hopes/fears",
-    "The future",
-    "Root of the outcome",
-    "Others in the outcome",
-    "Hopes/fears for outcome",
-    "Outcome"
-  ],
-  description: "Traditional Celtic Cross spread for in-depth readings",
-  cardCount: 10
-});
 
 // DOM Elements
 const loadingAnimation = document.getElementById("loadingAnimation");
 const readingResults = document.getElementById("readingResults");
 const spreadContainer = document.getElementById("spreadContainer");
-
 const spreadSelection = document.getElementById("spreadSelection");
 const newReadingBtn = document.getElementById("newReadingBtn");
 const spreadButtons = document.querySelectorAll(".spread-btn");
+const languageButtons = document.querySelectorAll(".language-btn");
+
+function registerSpreads(tarotInstance) {
+  tarotInstance.addSpread("single", {
+    positions: ["Your card"],
+    description: "A simple one-card reading for quick insights",
+    cardCount: 1
+  });
+
+  tarotInstance.addSpread("Three-Card Spread", {
+    positions: ["Past", "Present", "Future"],
+    description: "Insight into past, present, and future aspects."
+  });
+
+  tarotInstance.addSpread("celtic-cross", {
+    positions: [
+      "Yourself",
+      "Your obstacle",
+      "Root of the question",
+      "The past",
+      "Hopes/fears",
+      "The future",
+      "Root of the outcome",
+      "Others in the outcome",
+      "Hopes/fears for outcome",
+      "Outcome"
+    ],
+    description: "Traditional Celtic Cross spread for in-depth readings",
+    cardCount: 10
+  });
+}
+
+function initializeTarot(deck) {
+  tarot = new Tarot();
+  tarot.initializeDeck(deck);
+  registerSpreads(tarot);
+}
+
+function resetReadingView() {
+  viewToken += 1;
+  loadingAnimation.classList.add("hidden");
+  readingResults.classList.add("hidden");
+  newReadingBtn.classList.add("hidden");
+  spreadContainer.innerHTML = "";
+  spreadSelection.classList.remove("hidden", "fade-out");
+  spreadSelection.classList.add("fade-in");
+}
+
+function updateLanguageButtons() {
+  languageButtons.forEach((button) => {
+    const isActive = button.dataset.language === currentLanguage;
+    button.classList.toggle("bg-purple-600", isActive);
+    button.classList.toggle("text-white", isActive);
+    button.classList.toggle("bg-gray-800", !isActive);
+    button.classList.toggle("text-purple-200", !isActive);
+    button.disabled = isActive;
+  });
+}
+
+async function setLanguage(language) {
+  if (language === currentLanguage && tarot) {
+    return;
+  }
+
+  const token = ++languageLoadToken;
+  viewToken += 1;
+  currentLanguage = language;
+  updateLanguageButtons();
+  const deck = await fetchDeck(language);
+  if (token !== languageLoadToken) {
+    return;
+  }
+  initializeTarot(deck);
+  resetReadingView();
+}
 
 // Helper function to create card element
 function createCardElement(card, position) {
@@ -201,6 +252,7 @@ function createCardElement(card, position) {
 
 // Function to perform reading
 async function performReading(spreadType) {
+  const token = viewToken;
   // Show loading animation
   loadingAnimation.classList.remove("hidden");
   readingResults.classList.add("hidden");
@@ -210,6 +262,9 @@ async function performReading(spreadType) {
 
   // Simulate loading time
   await new Promise((resolve) => setTimeout(resolve, 1500));
+  if (token !== viewToken) {
+    return;
+  }
 
   // Get reading
   const reading = tarot.doReading(spreadType);
@@ -232,11 +287,17 @@ async function performReading(spreadType) {
   // Reveal cards one by one
   for (let i = 0; i < reading.length; i++) {
     await new Promise((resolve) => setTimeout(resolve, 500));
+    if (token !== viewToken) {
+      return;
+    }
     const cardElement = createCardElement(reading[i].card, reading[i].position);
     spreadContainer.appendChild(cardElement);
   }
 
   setTimeout(() => {
+    if (token !== viewToken) {
+      return;
+    }
     newReadingBtn.classList.remove("hidden");
   }, 500); // Delay of 500 milliseconds (smooth things out)
 }
@@ -245,9 +306,13 @@ async function performReading(spreadType) {
 
 spreadButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
+    const token = viewToken;
     spreadSelection.classList.add("fade-out");
     spreadSelection.classList.remove("fade-in");
     setTimeout(() => {
+      if (token !== viewToken) {
+        return;
+      }
       spreadSelection.classList.add("hidden", "fade-in");
       spreadSelection.classList.remove("fade-out");
       //newReadingBtn.classList.remove('hidden');
@@ -263,16 +328,20 @@ newReadingBtn.addEventListener("click", () => {
   newReadingBtn.classList.add("hidden");
   spreadSelection.classList.remove("hidden");
 });
-}
+
+languageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setLanguage(button.dataset.language).catch((error) => {
+      console.error("Failed to switch language:", error);
+    });
+  });
+});
 
   
 (async () => {
   try {
-    // Fetch the tarot deck
-    const deck = await fetchEnglishDeck();
-
-    // Initialize the app with the fetched deck
-    initApp(deck);
+    updateLanguageButtons();
+    await setLanguage(currentLanguage);
 
     // Handle page loader fade-out
     const loader = document.getElementById("pageLoader");

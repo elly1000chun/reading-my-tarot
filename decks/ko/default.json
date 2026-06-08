@@ -1,0 +1,2480 @@
+[
+    {
+        "name": "The Fool",
+        "symbol": "🃏",
+        "meanings": [
+            "새로운 시작",
+            "무죄",
+            "자발성",
+            "자유로운 영혼"
+        ],
+        "description": "바보는 새로운 시작, 미래에 대한 믿음, 경험이 없음, 무엇을 기대해야 할지 알 수 없음, 초보자의 행운, 즉흥적이며 우주에 대한 믿음을 나타냅니다.",
+        "image": "rider-waite-major-arcana-00-the-fool_6234580670_l.jpg",
+        "type": "major",
+        "value": 0,
+        "suit": null
+    },
+    {
+        "name": "The Magician",
+        "symbol": "🎩✨",
+        "meanings": [
+            "표명",
+            "지략",
+            "힘",
+            "영감을 받은 액션"
+        ],
+        "description": "마술사 카드는 당신의 욕구를 표현하는 힘, 도구와 자원을 마음대로 활용할 수 있는 능력, 목표를 향해 행동을 취하는 영감을 나타냅니다.",
+        "image": "rider-waite-major-arcana-01-the-magician_6234582750_l.jpg",
+        "type": "major",
+        "value": 1,
+        "suit": null
+    },
+    {
+        "name": "The High Priestess",
+        "symbol": "👸🌙",
+        "meanings": [
+            "직관",
+            "신비",
+            "잠재의식",
+            "내면의 목소리",
+            "영적 깨달음"
+        ],
+        "description": "대제사장은 직관, 신비, 잠재의식을 상징합니다. 그녀는 내면의 목소리를 믿고 영적인 깨달음을 구하도록 격려합니다.",
+        "image": "rider-waite-major-arcana-02-the-high-priestess_6234585244_l.jpg",
+        "type": "major",
+        "value": 2,
+        "suit": null
+    },
+    {
+        "name": "The Empress",
+        "symbol": "👑🌺",
+        "meanings": [
+            "비옥",
+            "풍부",
+            "어머니",
+            "자연",
+            "창의성"
+        ],
+        "description": "황후는 양육, 풍요, 창의성, 삶의 아름다움을 상징합니다. 그녀는 당신이 자연과 연결되고 창조하고 양육하는 자신의 힘을 받아들이도록 격려합니다.",
+        "image": "rider-waite-major-arcana-03-the-empress_6234588362_l.jpg",
+        "type": "major",
+        "value": 3,
+        "suit": null
+    },
+    {
+        "name": "The Emperor",
+        "symbol": "👑",
+        "meanings": [
+            "권한",
+            "구조",
+            "제어",
+            "아버지가 됨",
+            "지도"
+        ],
+        "description": "황제는 권위, 구조, 통제를 상징합니다. 이는 리더십, 부성애, 환경을 형성하고 관리하는 능력을 의미합니다.",
+        "image": "rider-waite-major-arcana-04-the-emperor_6234066109_l.jpg",
+        "type": "major",
+        "value": 4,
+        "suit": null
+    },
+    {
+        "name": "The Hierophant",
+        "symbol": "🔮",
+        "meanings": [
+            "전통",
+            "적합성",
+            "도덕",
+            "윤리학",
+            "영적인 지혜"
+        ],
+        "description": "Hierophant는 전통적인 가치와 도덕적 판단을 나타냅니다. 이 카드는 사회적 승인과 규범 준수의 필요성을 시사합니다. 또한 영적인 지혜와 인도를 구하는 것을 상징할 수도 있습니다.",
+        "image": "rider-waite-major-arcana-05-the-hierophant_6234068727_l.jpg",
+        "type": "major",
+        "value": 5,
+        "suit": null
+    },
+    {
+        "name": "The Lovers",
+        "symbol": "💑",
+        "meanings": [
+            "사랑",
+            "조화",
+            "파트너십",
+            "가치관 정렬",
+            "선택"
+        ],
+        "description": "연인 카드는 사랑, 조화, 파트너십을 나타내며 일종의 결합을 암시합니다. 이 카드는 또한 선택에 관한 것입니다. 사랑할 선택, 관계를 맺을 선택, 자신의 가치관에 자신을 맞추는 선택 등이 있습니다.",
+        "image": "rider-waite-major-arcana-06-the-lovers_6234595528_l.jpg",
+        "type": "major",
+        "value": 6,
+        "suit": null
+    },
+    {
+        "name": "The Chariot",
+        "symbol": "🏎️",
+        "meanings": [
+            "제어",
+            "의지력",
+            "성공",
+            "행동",
+            "결정"
+        ],
+        "description": "전차는 결단과 통제를 통해 갈등이나 장애물을 극복하는 것을 나타냅니다. 이는 성공과 행동을 취하려는 의지를 의미합니다.",
+        "image": "rider-waite-major-arcana-07-the-chariot_6234072405_l.jpg",
+        "type": "major",
+        "value": 7,
+        "suit": null
+    },
+    {
+        "name": "Strength",
+        "symbol": "🦁",
+        "meanings": [
+            "용기",
+            "인내심",
+            "침착",
+            "동정심",
+            "내면의 힘"
+        ],
+        "description": "힘 카드는 내면의 힘, 용기, 인내, 연민을 나타냅니다. 역경 속에서도 침착함과 침착함을 유지하도록 격려합니다.",
+        "image": "rider-waite-major-arcana-08-strength_6234598040_l.jpg",
+        "type": "major",
+        "value": 8,
+        "suit": null
+    },
+    {
+        "name": "The Hermit",
+        "symbol": "🧙‍♂️",
+        "meanings": [
+            "영혼 탐색",
+            "내성",
+            "혼자 있는 것",
+            "내부 안내"
+        ],
+        "description": "은둔자는 성찰과 자기 발견의 시간을 나타냅니다. 그것은 당신이 내면으로부터 지혜와 지도를 구하도록 격려합니다.",
+        "image": "rider-waite-major-arcana-09-the-hermit_6234075619_l.jpg",
+        "type": "major",
+        "value": 9,
+        "suit": null
+    },
+    {
+        "name": "Wheel of Fortune",
+        "symbol": "🎡",
+        "meanings": [
+            "행운을 빌어요",
+            "업",
+            "수명주기",
+            "운명",
+            "전환점"
+        ],
+        "description": "행운의 수레바퀴는 새로운 기회가 명백해질 수 있는 인생의 전환점을 나타냅니다. 이는 행운, 카르마, 삶의 순환, 운명을 의미합니다.",
+        "image": "rider-waite-major-arcana-10-wheel-of-fortune_6234602206_l.jpg",
+        "type": "major",
+        "value": 10,
+        "suit": null
+    },
+    {
+        "name": "Justice",
+        "symbol": "⚖️",
+        "meanings": [
+            "공평",
+            "진실",
+            "법",
+            "원인과 결과",
+            "책임"
+        ],
+        "description": "정의 카드는 공정성, 진실, 법을 나타냅니다. 이는 행동에 결과가 따른다는 점을 시사하고 삶의 균형과 성실성의 필요성을 강조합니다.",
+        "image": "rider-waite-major-arcana-11-justice_6234605714_l.jpg",
+        "type": "major",
+        "value": 11,
+        "suit": null
+    },
+    {
+        "name": "The Hanged Man",
+        "symbol": "🙃",
+        "meanings": [
+            "희생",
+            "놓아주기",
+            "보류",
+            "새로운 관점",
+            "인내심"
+        ],
+        "description": "매달린 남자(Hanged Man)는 정지와 희생의 기간을 나타내며, 포기하고 인내심을 갖고 새로운 관점에서 사물을 보도록 격려합니다.",
+        "image": "rider-waite-major-arcana-12-the-hanged-man_6234084897_l.jpg",
+        "type": "major",
+        "value": 12,
+        "suit": null
+    },
+    {
+        "name": "Death",
+        "symbol": "💀",
+        "meanings": [
+            "엔딩",
+            "변화",
+            "변환",
+            "이행"
+        ],
+        "description": "죽음 카드는 결말을 의미하지만 새로운 시작도 의미합니다. 변화와 전환의 카드로, 중요한 변화가 다가오고 있음을 암시합니다.",
+        "image": "rider-waite-major-arcana-13-death_6234086467_l.jpg",
+        "type": "major",
+        "value": 13,
+        "suit": null
+    },
+    {
+        "name": "Temperance",
+        "symbol": "⚖️",
+        "meanings": [
+            "균형",
+            "절도",
+            "인내심",
+            "목적",
+            "의미"
+        ],
+        "description": "절제는 균형과 절제를 나타냅니다. 이 카드는 인내심과 평온함을 장려하며, 중도를 택하고 모든 관점을 수용해야 한다고 제안합니다. 그것은 또한 인생에서 더 높은 배움을 의미합니다.",
+        "image": "rider-waite-major-arcana-14-temperance_6234088279_l.jpg",
+        "type": "major",
+        "value": 14,
+        "suit": null
+    },
+    {
+        "name": "The Devil",
+        "symbol": "😈",
+        "meanings": [
+            "속박",
+            "탐닉",
+            "유물론",
+            "무지",
+            "가망 없음"
+        ],
+        "description": "악마 카드는 물질주의와 피상성에 사로잡혀 있음을 나타냅니다. 이는 당신이 물질 세계에 대한 과도한 의존에 묶여 있을 수 있음을 시사합니다. 이 카드는 당신을 방해하는 것이 무엇인지 살펴보고 부정적인 영향으로부터 벗어나도록 격려합니다.",
+        "image": "rider-waite-major-arcana-15-the-devil_6234090311_l.jpg",
+        "type": "major",
+        "value": 15,
+        "suit": null
+    },
+    {
+        "name": "The Tower",
+        "symbol": "🗼",
+        "meanings": [
+            "급전",
+            "분열",
+            "혼돈",
+            "시현",
+            "각성"
+        ],
+        "description": "타워는 갑작스럽고 예상치 못한 변화를 나타냅니다. 지금은 큰 혼란의 시기일 수도 있지만 진실과 변화의 시기이기도 합니다.",
+        "image": "rider-waite-major-arcana-16-the-tower_6234092237_l.jpg",
+        "type": "major",
+        "value": 16,
+        "suit": null
+    },
+    {
+        "name": "The Star",
+        "symbol": "⭐",
+        "meanings": [
+            "희망",
+            "영감",
+            "창의성",
+            "침착한",
+            "평온",
+            "영적인 통찰력"
+        ],
+        "description": "스타 카드는 영감, 희망, 평온함을 나타냅니다. 이는 당신이 미래에 대한 믿음을 갖고 자신의 내면의 지혜와 직관을 신뢰하도록 격려합니다.",
+        "image": "rider-waite-major-arcana-17-the-star_6234094083_l.jpg",
+        "type": "major",
+        "value": 17,
+        "suit": null
+    },
+    {
+        "name": "The Moon",
+        "symbol": "🌙",
+        "meanings": [
+            "환각",
+            "두려움",
+            "불안",
+            "잠재의식",
+            "직관"
+        ],
+        "description": "달 카드는 환상, 두려움, 잠재의식을 나타냅니다. 이는 상황이 보이는 것과 다를 수 있음을 암시하고 직관을 믿도록 격려합니다.",
+        "image": "rider-waite-major-arcana-18-the-moon_6234620480_l.jpg",
+        "type": "major",
+        "value": 18,
+        "suit": null
+    },
+    {
+        "name": "The Sun",
+        "symbol": "☀️",
+        "meanings": [
+            "양성",
+            "기쁨",
+            "성공",
+            "축하",
+            "계발"
+        ],
+        "description": "태양은 따뜻함, 풍요, 긍정을 상징합니다. 이는 성공과 기쁨의 표시이자 자신과 성취를 축하하라는 초대입니다.",
+        "image": "rider-waite-major-arcana-19-the-sun_6234097611_l.jpg",
+        "type": "major",
+        "value": 19,
+        "suit": null
+    },
+    {
+        "name": "Judgement",
+        "symbol": "🔔",
+        "meanings": [
+            "반사",
+            "각성",
+            "책임",
+            "용서",
+            "갱생"
+        ],
+        "description": "심판 카드는 각성과 부활의 감각으로 이어지는 성찰과 자기 평가의 시간을 나타냅니다. 그것은 책임과 용서를 장려합니다.",
+        "image": "rider-waite-major-arcana-20-judgement_6234099599_l.jpg",
+        "type": "major",
+        "value": 20,
+        "suit": null
+    },
+    {
+        "name": "The World",
+        "symbol": "🌍",
+        "meanings": [
+            "완성",
+            "성취",
+            "이행",
+            "소속감",
+            "여행하다"
+        ],
+        "description": "월드 카드는 중요하고 거침없는 변화, 순환의 종결과 새로운 순환의 시작, 그리고 새로운 시작을 의미합니다. 그것은 성취, 조화, 완전성을 암시합니다.",
+        "image": "rider-waite-major-arcana-21-the-world_6234101445_l.jpg",
+        "type": "major",
+        "value": 21,
+        "suit": null
+    },
+    {
+        "name": "Ace of Wands",
+        "symbol": "🔥",
+        "meanings": [
+            "영감",
+            "새로운 시작",
+            "성장",
+            "잠재적인",
+            "창의성"
+        ],
+        "description": "Ace of Wands는 영감의 불꽃, 새로운 시작, 창의적인 프로젝트나 벤처의 초기 단계를 나타냅니다. 새로운 것을 시도하도록 동기를 부여하는 잠재력의 카드입니다.",
+        "image": "rider-waite-minor-arcana---wands-01-ace_6234634378_l.jpg",
+        "type": "minor",
+        "value": 1,
+        "suit": "wands"
+    },
+    {
+        "name": "Two of Wands",
+        "symbol": "2️⃣🔥",
+        "meanings": [
+            "미래 계획",
+            "진전",
+            "결정",
+            "발견",
+            "개인적인 목표"
+        ],
+        "description": "Two of Wands는 계획과 의사 결정의 시간을 나타냅니다. 그것은 당신이 진정한 자아를 발견하고 개인적인 목표를 당신의 행동과 일치시키도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---wands-02_6234636276_l.jpg",
+        "type": "minor",
+        "value": 2,
+        "suit": "wands"
+    },
+    {
+        "name": "Three of Wands",
+        "symbol": "🔥3️⃣",
+        "meanings": [
+            "준비",
+            "앞을 내다보며",
+            "확장",
+            "여행하다",
+            "미래 계획"
+        ],
+        "description": "Three of Wands는 준비와 미래를 내다보는 기간을 나타냅니다. 이는 여행이나 개인적인 성장을 통한 확장을 제안하고 미래에 대한 계획을 장려합니다.",
+        "image": "rider-waite-minor-arcana---wands-03_6234113573_l.jpg",
+        "type": "minor",
+        "value": 3,
+        "suit": "wands"
+    },
+    {
+        "name": "Four of Wands",
+        "symbol": "🏰",
+        "meanings": [
+            "축하",
+            "조화",
+            "결혼",
+            "집",
+            "지역 사회"
+        ],
+        "description": "Four of Wands는 삶의 기쁨과 만족의 시간을 나타냅니다. 화합과 안정의 시기를 의미하는 경우가 많으며, 결혼이나 집들이 등 행복한 행사를 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---wands-04_6234115553_l.jpg",
+        "type": "minor",
+        "value": 4,
+        "suit": "wands"
+    },
+    {
+        "name": "Five of Wands",
+        "symbol": "5⚔️",
+        "meanings": [
+            "갈등",
+            "긴장",
+            "경쟁",
+            "불쾌한 일",
+            "고심하다"
+        ],
+        "description": "Five of Wands는 갈등, 긴장 또는 경쟁의 상황을 나타냅니다. 이는 해결해야 할 투쟁이나 불일치를 암시합니다.",
+        "image": "rider-waite-minor-arcana---wands-05_6234117635_l.jpg",
+        "type": "minor",
+        "value": 5,
+        "suit": "wands"
+    },
+    {
+        "name": "Six of Wands",
+        "symbol": "6️⃣🔥",
+        "meanings": [
+            "승리",
+            "성공",
+            "대중의 인정",
+            "진전",
+            "자신감"
+        ],
+        "description": "Six of Wands는 성공, 승리, 대중의 인정을 나타냅니다. 이는 발전과 자신감을 의미합니다. 승리, 리더십, 목표 달성의 카드입니다.",
+        "image": "rider-waite-minor-arcana---wands-06_6234119573_l.jpg",
+        "type": "minor",
+        "value": 6,
+        "suit": "wands"
+    },
+    {
+        "name": "Seven of Wands",
+        "symbol": "7️⃣🔥",
+        "meanings": [
+            "인내",
+            "방어적",
+            "통제력 유지",
+            "당신의 입장을 고수하세요",
+            "도전하다"
+        ],
+        "description": "Seven of Wands는 도전과 역경의 시간을 나타냅니다. 그것은 당신이 자신의 입장을 고수하고 통제력을 유지하며 어려움을 인내하도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---wands-07_6234645990_l.jpg",
+        "type": "minor",
+        "value": 7,
+        "suit": "wands"
+    },
+    {
+        "name": "Eight of Wands",
+        "symbol": "8️⃣🔥",
+        "meanings": [
+            "속도",
+            "행동",
+            "항공 여행",
+            "움직임",
+            "급속한 변화"
+        ],
+        "description": "Eight of Wands는 급격한 변화, 행동 및 움직임의 기간을 나타냅니다. 또한 항공 여행이나 신속한 의사소통을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---wands-08_6234123431_l.jpg",
+        "type": "minor",
+        "value": 8,
+        "suit": "wands"
+    },
+    {
+        "name": "Nine of Wands",
+        "symbol": "9️⃣🔥",
+        "meanings": [
+            "회복력",
+            "고집",
+            "믿음의 시험",
+            "경계 설정",
+            "대비"
+        ],
+        "description": "Nine of Wands는 역경에 맞서는 회복력과 끈기를 나타냅니다. 이는 당신이 강인함을 유지하고, 경계를 설정하고, 당신에게 닥칠 수 있는 모든 도전에 대비하도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---wands-09_6234125333_l.jpg",
+        "type": "minor",
+        "value": 9,
+        "suit": "wands"
+    },
+    {
+        "name": "Ten of Wands",
+        "symbol": "🔟🔥",
+        "meanings": [
+            "부담",
+            "책임",
+            "스트레스",
+            "과잉 약속",
+            "성취"
+        ],
+        "description": "Ten of Wands는 무거운 짐을 지고 있거나, 책임감에 압도당하거나, 지나치게 헌신적인 모습을 나타냅니다. 이는 또한 노력을 통한 성취를 의미할 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---wands-10_6234651626_l.jpg",
+        "type": "minor",
+        "value": 10,
+        "suit": "wands"
+    },
+    {
+        "name": "Page of Wands",
+        "symbol": "📜🔥",
+        "meanings": [
+            "열광",
+            "탐구",
+            "발견",
+            "자유로운 영혼"
+        ],
+        "description": "Page of Wands는 열정과 에너지로 가득 찬 자유로운 정신을 나타냅니다. 이는 탐구, 발견 및 열정 추구를 장려합니다.",
+        "image": "rider-waite-minor-arcana---wands-11-page_6234129705_l.jpg",
+        "type": "minor",
+        "value": 11,
+        "suit": "wands"
+    },
+    {
+        "name": "Knight of Wands",
+        "symbol": "🏇🔥",
+        "meanings": [
+            "에너지",
+            "열정",
+            "모험",
+            "위험 감수",
+            "충동성"
+        ],
+        "description": "Knight of Wands는 열정적이고 모험적이며 충동적인 에너지를 나타냅니다. 이는 위험을 감수하고 미지의 것을 포용하도록 권장하지만 결과를 고려하지 않고 너무 성급하게 행동하는 것에 대해서도 경고합니다.",
+        "image": "rider-waite-minor-arcana---wands-12-knight_6234131585_l.jpg",
+        "type": "minor",
+        "value": 12,
+        "suit": "wands"
+    },
+    {
+        "name": "Queen of Wands",
+        "symbol": "👸🔥",
+        "meanings": [
+            "용기",
+            "신뢰",
+            "독립",
+            "소셜 나비",
+            "결정"
+        ],
+        "description": "지팡이의 여왕은 강력하고 독립적이며 자신감 넘치는 에너지를 상징합니다. 그녀는 당신이 추구하는 일에 대담하고 용기 있고 결단력을 갖도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---wands-13-queen_6234133349_l.jpg",
+        "type": "minor",
+        "value": 13,
+        "suit": "wands"
+    },
+    {
+        "name": "King of Wands",
+        "symbol": "🤴🔥",
+        "meanings": [
+            "타고난 리더",
+            "비전",
+            "기업가 정신",
+            "명예",
+            "동기 부여"
+        ],
+        "description": "King of Wands는 비전이 있고 명예롭고 기업가적인 타고난 리더를 나타냅니다. 이 카드는 당신이 열정과 동기를 갖고 책임을 지고 리더십을 발휘하도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---wands-14-king_6234659884_l.jpg",
+        "type": "minor",
+        "value": 14,
+        "suit": "wands"
+    },
+    {
+        "name": "Ace of Cups",
+        "symbol": "🏆",
+        "meanings": [
+            "새로운 감정",
+            "영적 각성",
+            "창의성",
+            "직관",
+            "사랑"
+        ],
+        "description": "Ace of Cups는 새로운 감정, 직관 또는 창의적인 노력의 시작을 나타냅니다. 이는 깊은 감정, 친밀감, 조율, 연민 및 사랑 분야의 가능성을 상징합니다.",
+        "image": "rider-waite-minor-arcana---cups-01-ace_6234141143_l.jpg",
+        "type": "minor",
+        "value": 1,
+        "suit": "cups"
+    },
+    {
+        "name": "Two of Cups",
+        "symbol": "2️⃣🍷",
+        "meanings": [
+            "단일성",
+            "공동",
+            "상호 매력",
+            "사랑",
+            "조화"
+        ],
+        "description": "Two of Cups는 강한 유대감이나 파트너십, 상호 매력, 단결과 사랑의 감각을 나타냅니다. 관계의 조화와 균형을 장려합니다.",
+        "image": "rider-waite-minor-arcana---cups-02_6234669216_l.jpg",
+        "type": "minor",
+        "value": 2,
+        "suit": "cups"
+    },
+    {
+        "name": "Three of Cups",
+        "symbol": "🍷🍷🍷",
+        "meanings": [
+            "축하",
+            "우정",
+            "창의성",
+            "지역 사회"
+        ],
+        "description": "Three of Cups는 종종 친구와 가족과 함께 행복, 기쁨, 축하의 시간을 나타냅니다. 이는 귀하의 창의성을 포용하고 다른 사람들과 함께 즐거운 시간을 보내도록 권장합니다.",
+        "image": "rider-waite-minor-arcana---cups-03_6234672074_l.jpg",
+        "type": "minor",
+        "value": 3,
+        "suit": "cups"
+    },
+    {
+        "name": "Four of Cups",
+        "symbol": "🍷🍷🍷🍷",
+        "meanings": [
+            "심사 숙고",
+            "묵상",
+            "재평가",
+            "불만",
+            "지루함"
+        ],
+        "description": "Four of Cups는 성찰과 재평가의 시간을 나타내며, 현재 상황에 불만이나 지루함을 느낄 수 있음을 암시합니다.",
+        "image": "rider-waite-minor-arcana---cups-04_6234675624_l.jpg",
+        "type": "minor",
+        "value": 4,
+        "suit": "cups"
+    },
+    {
+        "name": "Five of Cups",
+        "symbol": "5️⃣🍷",
+        "meanings": [
+            "손실",
+            "후회",
+            "실망",
+            "고통",
+            "부정적인 것에 집중하기"
+        ],
+        "description": "Five of Cups는 슬픔이나 실망의 기간을 나타냅니다. 이는 자신의 상실을 인정하고 이를 받아들이는 동시에 삶의 긍정적인 측면도 기억해야 한다는 것을 의미합니다.",
+        "image": "rider-waite-minor-arcana---cups-05_6234679202_l.jpg",
+        "type": "minor",
+        "value": 5,
+        "suit": "cups"
+    },
+    {
+        "name": "Six of Cups",
+        "symbol": "6️⃣🏆",
+        "meanings": [
+            "노스탤지어",
+            "어린 시절의 추억",
+            "무죄",
+            "재결합"
+        ],
+        "description": "Six of Cups는 과거로의 여행, 향수, 행복한 추억을 나타냅니다. 또한 과거의 누군가와의 재회를 암시할 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---cups-06_6234681960_l.jpg",
+        "type": "minor",
+        "value": 6,
+        "suit": "cups"
+    },
+    {
+        "name": "Seven of Cups",
+        "symbol": "7️⃣🍷",
+        "meanings": [
+            "선택",
+            "공상",
+            "환각",
+            "희망적인 생각",
+            "옵션"
+        ],
+        "description": "Seven of Cups는 선택과 환상의 시간을 나타냅니다. 이는 선택 사항이 많으며 결정을 내리기 전에 신중하게 생각해야 함을 의미합니다.",
+        "image": "rider-waite-minor-arcana---cups-07_6234162753_l.jpg",
+        "type": "minor",
+        "value": 7,
+        "suit": "cups"
+    },
+    {
+        "name": "Eight of Cups",
+        "symbol": "8️⃣🍷",
+        "meanings": [
+            "실망",
+            "포기",
+            "철수",
+            "현실도피",
+            "자기 발견"
+        ],
+        "description": "Eight of Cups는 종종 실망감이나 불만으로 인해 발생하는 성찰과 자기 성찰의 시간을 암시합니다. 그것은 더 이상 당신에게 도움이 되지 않는 것을 버리고 자기 발견을 위한 새로운 여정을 시작하도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---cups-08_6234165989_l.jpg",
+        "type": "minor",
+        "value": 8,
+        "suit": "cups"
+    },
+    {
+        "name": "Nine of Cups",
+        "symbol": "9️⃣🍷",
+        "meanings": [
+            "만족",
+            "만족",
+            "고마움",
+            "소원 성취",
+            "편안"
+        ],
+        "description": "Nine of Cups는 정서적 성취, 행복, 만족을 나타내는 카드입니다. 이는 당신이 성취한 것에 만족하고 만족감을 느끼는 곳에 있다는 것을 암시합니다.",
+        "image": "rider-waite-minor-arcana---cups-09_6234168247_l.jpg",
+        "type": "minor",
+        "value": 9,
+        "suit": "cups"
+    },
+    {
+        "name": "Ten of Cups",
+        "symbol": "🔟🍷",
+        "meanings": [
+            "조화",
+            "결혼",
+            "행복",
+            "조정",
+            "완성"
+        ],
+        "description": "10개의 컵은 관계와 가족 생활의 조화, 조화, 행복을 나타냅니다. 이는 기쁨, 만족, 정서적 성취의 시간을 의미합니다.",
+        "image": "rider-waite-minor-arcana---cups-10_6234171803_l.jpg",
+        "type": "minor",
+        "value": 10,
+        "suit": "cups"
+    },
+    {
+        "name": "Page of Cups",
+        "symbol": "👦🏽🍷",
+        "meanings": [
+            "창의성",
+            "직관",
+            "정서적 성장",
+            "새로운 기회",
+            "무죄"
+        ],
+        "description": "Page of Cups는 창의적이고 직관적인 에너지를 나타내며 정서적 성장과 창의적 잠재력 탐구를 위한 새로운 기회를 제안합니다.",
+        "image": "rider-waite-minor-arcana---cups-11-page_6234174547_l.jpg",
+        "type": "minor",
+        "value": 11,
+        "suit": "cups"
+    },
+    {
+        "name": "Knight of Cups",
+        "symbol": "🏇🏽🍷",
+        "meanings": [
+            "로맨스",
+            "매력",
+            "상상력",
+            "예술적 기교",
+            "이상주의"
+        ],
+        "description": "Knight of Cups는 낭만적이고 매력적이며 상상력이 풍부한 에너지를 나타냅니다. 이 카드는 당신이 마음과 꿈을 따르고 창의적이고 예술적인 면을 포용하도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---cups-12-knight_6234177439_l.jpg",
+        "type": "minor",
+        "value": 12,
+        "suit": "cups"
+    },
+    {
+        "name": "Queen of Cups",
+        "symbol": "👸🏽🍷",
+        "meanings": [
+            "동정심",
+            "정서적 안정",
+            "직관",
+            "공감",
+            "육성"
+        ],
+        "description": "컵의 여왕은 정서적 성숙, 연민, 강한 직관을 상징합니다. 그녀는 자신과 타인을 양육하고 깊은 수준에서 감정을 이해하도록 권장합니다.",
+        "image": "rider-waite-minor-arcana---cups-13-queen_6234181309_l.jpg",
+        "type": "minor",
+        "value": 13,
+        "suit": "cups"
+    },
+    {
+        "name": "King of Cups",
+        "symbol": "🤴🍷",
+        "meanings": [
+            "정서적 균형",
+            "관대",
+            "외교",
+            "지혜",
+            "폭풍 속에서도 침착함"
+        ],
+        "description": "컵의 왕(King of Cups)은 감성 지능, 균형 및 통제력을 나타냅니다. 그는 균형과 지혜의 상징이며 모든 상황을 친절과 이해심으로 처리합니다.",
+        "image": "rider-waite-minor-arcana---cups-14-king_6234708876_l.jpg",
+        "type": "minor",
+        "value": 14,
+        "suit": "cups"
+    },
+    {
+        "name": "Ace of Swords",
+        "symbol": "🗡️",
+        "meanings": [
+            "정신적 명확성",
+            "돌파구",
+            "진실",
+            "새로운 아이디어",
+            "승리"
+        ],
+        "description": "Ace of Swords는 명확성, 아이디어 또는 진실 측면에서 돌파구 또는 새로운 시작을 나타냅니다. 정신력과 명료한 사고를 통한 승리를 의미합니다.",
+        "image": "rider-waite-minor-arcana---swords-01-ace_6234712912_l.jpg",
+        "type": "minor",
+        "value": 1,
+        "suit": "swords"
+    },
+    {
+        "name": "Two of Swords",
+        "symbol": "⚔️",
+        "meanings": [
+            "우유 부단",
+            "선택",
+            "수가 막히게 하다",
+            "착란",
+            "균형"
+        ],
+        "description": "Two of Swords는 내려야 할 결정을 나타냅니다. 이는 당신이 움직이거나 결정을 내릴 수 없거나 하고 싶지 않은 균형 상태나 교착 상태에 있음을 암시합니다. 이 카드는 종종 어려운 선택을 피하고 있다는 신호입니다.",
+        "image": "rider-waite-minor-arcana---swords-02_6234716234_l.jpg",
+        "type": "minor",
+        "value": 2,
+        "suit": "swords"
+    },
+    {
+        "name": "Three of Swords",
+        "symbol": "🗡️🗡️🗡️",
+        "meanings": [
+            "비탄",
+            "고통",
+            "배신",
+            "분리",
+            "손실"
+        ],
+        "description": "Three of Swords는 정서적 고통, 비통함, 슬픔, 슬픔, 배신을 나타냅니다. 이는 어려움과 감정적 혼란의 시기를 암시합니다.",
+        "image": "rider-waite-minor-arcana---swords-03_6234719796_l.jpg",
+        "type": "minor",
+        "value": 3,
+        "suit": "swords"
+    },
+    {
+        "name": "Four of Swords",
+        "symbol": "🗡️🗡️🗡️🗡️",
+        "meanings": [
+            "나머지",
+            "회복",
+            "묵상",
+            "조용한 준비",
+            "고독"
+        ],
+        "description": "Four of Swords는 휴식, 회복 및 묵상의 기간을 제안합니다. 재충전하고 다가올 일을 조용히 준비하는 시간입니다.",
+        "image": "rider-waite-minor-arcana---swords-04_6234722694_l.jpg",
+        "type": "minor",
+        "value": 4,
+        "suit": "swords"
+    },
+    {
+        "name": "Five of Swords",
+        "symbol": "🗡️5️⃣",
+        "meanings": [
+            "갈등",
+            "긴장",
+            "손실",
+            "배신",
+            "어떤 대가를 치르더라도 승리할 수 있는 사고방식"
+        ],
+        "description": "Five of Swords는 당신이 최근의 전투나 갈등에서 승리했을 수도 있지만 공허한 승리일 수도 있음을 암시합니다. 이는 '어떤 대가를 치르더라도 승리한다'는 사고방식에 대해 경고하고 타협과 외교의 필요성을 시사합니다.",
+        "image": "rider-waite-minor-arcana---swords-05_6234201033_l.jpg",
+        "type": "minor",
+        "value": 5,
+        "suit": "swords"
+    },
+    {
+        "name": "Six of Swords",
+        "symbol": "6⚔️",
+        "meanings": [
+            "이행",
+            "계속해서",
+            "치유",
+            "여행",
+            "안도"
+        ],
+        "description": "Six of Swords는 종종 어려운 시기 이후의 여정이나 전환을 나타냅니다. 이는 계속 나아가고, 치유하고, 안도감을 찾는 것을 의미합니다.",
+        "image": "rider-waite-minor-arcana---swords-06_6234729032_l.jpg",
+        "type": "minor",
+        "value": 6,
+        "suit": "swords"
+    },
+    {
+        "name": "Seven of Swords",
+        "symbol": "7⚔️",
+        "meanings": [
+            "기만",
+            "전략",
+            "몰래 하기",
+            "지략",
+            "무언가를 가지고 도망가는 것"
+        ],
+        "description": "Seven of Swords는 전략과 스텔스의 필요성을 암시합니다. 그것은 속임수나 무언가로부터 도망치는 것을 나타낼 수 있습니다. 또한 수완을 나타냅니다.",
+        "image": "rider-waite-minor-arcana---swords-07_6234207565_l.jpg",
+        "type": "minor",
+        "value": 7,
+        "suit": "swords"
+    },
+    {
+        "name": "Eight of Swords",
+        "symbol": "8⚔️",
+        "meanings": [
+            "격리",
+            "스스로 부과한 제한",
+            "피해자의 사고방식",
+            "투옥"
+        ],
+        "description": "The Eight of Swords는 당신이 두려움이나 불확실성으로 인해 자신을 억제하고 있을 수 있음을 암시합니다. 당신은 갇혀 있거나 제한되어 있다고 느낄 수 있지만 이러한 제한은 종종 스스로 부과됩니다.",
+        "image": "rider-waite-minor-arcana---swords-08_6234210379_l.jpg",
+        "type": "minor",
+        "value": 8,
+        "suit": "swords"
+    },
+    {
+        "name": "Nine of Swords",
+        "symbol": "🗡️9️⃣",
+        "meanings": [
+            "불안",
+            "걱정하다",
+            "두려움",
+            "죄",
+            "악몽"
+        ],
+        "description": "Nine of Swords는 불안, 걱정, 두려움의 기간을 나타냅니다. 이는 두려움과 걱정이 당신을 사로잡아 잠 못 이루는 밤과 죄책감이나 두려움으로 이어질 수 있음을 암시합니다.",
+        "image": "rider-waite-minor-arcana---swords-09_6234213789_l.jpg",
+        "type": "minor",
+        "value": 9,
+        "suit": "swords"
+    },
+    {
+        "name": "Ten of Swords",
+        "symbol": "🗡️x10",
+        "meanings": [
+            "엔딩",
+            "중상모략",
+            "배신",
+            "손실",
+            "위기"
+        ],
+        "description": "Ten of Swords는 고통스러운 결말, 배신 또는 위기를 나타냅니다. 이는 당신이 중상모략을 당하거나 패배감을 느낄 수도 있다는 신호이지만, 이 어려운 상황이 끝나고 새롭고 보다 긍정적인 순환이 시작된다는 의미이기도 합니다.",
+        "image": "rider-waite-minor-arcana---swords-10_6234741256_l.jpg",
+        "type": "minor",
+        "value": 10,
+        "suit": "swords"
+    },
+    {
+        "name": "Page of Swords",
+        "symbol": "🗡️📚",
+        "meanings": [
+            "호기심",
+            "불안",
+            "정신 에너지",
+            "새로운 아이디어",
+            "빠른 생각"
+        ],
+        "description": "검의 페이지(Page of Swords)는 지식, 호기심, 정신적 에너지에 대한 갈증을 나타냅니다. 이는 당신이 새로운 관점과 빠른 사고로 앞에 놓인 도전에 맞설 준비가 되어 있음을 의미합니다.",
+        "image": "rider-waite-minor-arcana---swords-11-page_6234743864_l.jpg",
+        "type": "minor",
+        "value": 11,
+        "suit": "swords"
+    },
+    {
+        "name": "Knight of Swords",
+        "symbol": "🗡️🏇",
+        "meanings": [
+            "큰 뜻",
+            "빠르게 진행되는 변화",
+            "행동",
+            "방어력",
+            "결정"
+        ],
+        "description": "Knight of Swords는 빠르게 변화하는 환경, 야망, 목표를 추구하려는 추진력을 나타냅니다. 또한 방어적이거나 지나치게 공격적인 경향을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---swords-12-knight_6234222761_l.jpg",
+        "type": "minor",
+        "value": 12,
+        "suit": "swords"
+    },
+    {
+        "name": "Queen of Swords",
+        "symbol": "👸⚔️",
+        "meanings": [
+            "독립",
+            "감정이 없다",
+            "지혜로운",
+            "현실적",
+            "명확한 경계"
+        ],
+        "description": "검의 여왕은 현실적이고 명확한 경계를 유지하는 강하고 독립적이며 현명한 개인을 나타냅니다. 그녀는 당신의 지성과 의사소통 기술을 사용하여 진실을 표현하고 독립성을 확립하도록 권장합니다.",
+        "image": "rider-waite-minor-arcana---swords-13-queen_6234749846_l.jpg",
+        "type": "minor",
+        "value": 13,
+        "suit": "swords"
+    },
+    {
+        "name": "King of Swords",
+        "symbol": "🤴⚔️",
+        "meanings": [
+            "지적 힘",
+            "진실 추구",
+            "권한",
+            "명쾌함",
+            "객관성"
+        ],
+        "description": "검의 왕은 지적 힘, 권위, 진실 추구를 상징합니다. 상황을 헤쳐나가기 위해 명확한 사고, 객관성, 지능의 사용을 장려합니다.",
+        "image": "rider-waite-minor-arcana---swords-14-king_6234228441_l.jpg",
+        "type": "minor",
+        "value": 14,
+        "suit": "swords"
+    },
+    {
+        "name": "Ace of Pentacles",
+        "symbol": "🌱",
+        "meanings": [
+            "새로운 재정적 또는 직업적 기회",
+            "표명",
+            "풍부",
+            "번영",
+            "안정"
+        ],
+        "description": "Ace of Pentacles는 특히 부, 경력 또는 전반적인 안정성 분야에서 성장을 위한 새로운 기회를 나타냅니다. 미래를 위한 씨앗을 심고 결실을 맺도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-01-ace_6234755746_l.jpg",
+        "type": "minor",
+        "value": 1,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Two of Pentacles",
+        "symbol": "2️⃣🌱",
+        "meanings": [
+            "균형",
+            "적응성",
+            "시간 관리",
+            "우선순위",
+            "저글링 책임"
+        ],
+        "description": "Two of Pentacles는 여러 책임이나 우선 순위의 균형을 유지해야 하는 필요성을 나타냅니다. 적응성과 효과적인 시간 관리를 장려합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-02_6234759442_l.jpg",
+        "type": "minor",
+        "value": 2,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Three of Pentacles",
+        "symbol": "🔨🌱",
+        "meanings": [
+            "팀워크",
+            "협동",
+            "학습",
+            "구현"
+        ],
+        "description": "Three of Pentacles는 팀워크, 계획 및 구현의 중요성을 나타냅니다. 이는 다른 사람들과 공통의 목표를 향해 노력하고 있으며 서로에게서 배우고 있음을 의미합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-03_6234238151_l.jpg",
+        "type": "minor",
+        "value": 3,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Four of Pentacles",
+        "symbol": "4️⃣🌱",
+        "meanings": [
+            "보안",
+            "제어",
+            "소유욕",
+            "안정",
+            "보수주의"
+        ],
+        "description": "Four of Pentacles는 종종 재정이나 소유물과 관련된 통제 및 보안에 대한 욕구를 나타냅니다. 이는 자원에 대해 신중하고 보수적인 접근 방식을 장려합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-04_6234766364_l.jpg",
+        "type": "minor",
+        "value": 4,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Five of Pentacles",
+        "symbol": "5️⃣🌱",
+        "meanings": [
+            "재정적 손실",
+            "빈곤",
+            "부족",
+            "격리",
+            "걱정하다"
+        ],
+        "description": "Five of Pentacles는 재정적 어려움이나 손실의 기간을 암시합니다. 이는 또한 고립감, 걱정, 불안감을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-05_6234768838_l.jpg",
+        "type": "minor",
+        "value": 5,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Six of Pentacles",
+        "symbol": "6️⃣🌱",
+        "meanings": [
+            "관대",
+            "자선 단체",
+            "여수",
+            "부를 나누다",
+            "번영"
+        ],
+        "description": "Six of Pentacles는 관대함, 자선, 주고받는 순환을 나타냅니다. 이는 부와 번영을 다른 사람들과 공유하도록 장려합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-06_6234772038_l.jpg",
+        "type": "minor",
+        "value": 6,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Seven of Pentacles",
+        "symbol": "7️⃣🌱",
+        "meanings": [
+            "장기적인 관점",
+            "지속 가능한 결과",
+            "인내",
+            "투자",
+            "인내심"
+        ],
+        "description": "Seven of Pentacles는 인내와 장기 계획의 필요성을 나타냅니다. 이는 귀하가 노력과 투자를 키우는 과정에 있으며 지속 가능한 결과가 곧 나타날 것임을 암시합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-07_6234250873_l.jpg",
+        "type": "minor",
+        "value": 7,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Eight of Pentacles",
+        "symbol": "8️⃣🌱",
+        "meanings": [
+            "기술 개발",
+            "노력",
+            "인내",
+            "세부 사항에 대한 관심",
+            "약속"
+        ],
+        "description": "Eight of Pentacles는 헌신, 노력, 기술 습득에 대한 헌신을 나타냅니다. 계속해서 세부 사항에 주의를 기울이도록 권장합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-08_6234777816_l.jpg",
+        "type": "minor",
+        "value": 8,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Nine of Pentacles",
+        "symbol": "9️⃣🌱",
+        "meanings": [
+            "풍부",
+            "독립",
+            "사치",
+            "자급자족",
+            "재무적 안정성"
+        ],
+        "description": "Nine of Pentacles는 풍요, 사치, 자급자족, 재정적 독립을 상징합니다. 이 카드는 당신이 인생에서 풍요를 창조하기 위해 열심히 일했으며 이제 물질적 성공을 누릴 시간임을 암시합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-09_6234255825_l.jpg",
+        "type": "minor",
+        "value": 9,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Ten of Pentacles",
+        "symbol": "🔟🌱",
+        "meanings": [
+            "재산",
+            "재정적 안정",
+            "가족",
+            "계승",
+            "안정"
+        ],
+        "description": "펜타클 10개는 부, 재정적 안정, 가족을 의미합니다. 이는 안정되고 풍요로운 시기를 암시하며 상속을 받거나 장기적인 재정적 안정을 확립하는 것을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-10_6234259139_l.jpg",
+        "type": "minor",
+        "value": 10,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Page of Pentacles",
+        "symbol": "📚🌱",
+        "meanings": [
+            "표명",
+            "재정적 기회",
+            "기술 개발",
+            "봉납",
+            "큰 뜻"
+        ],
+        "description": "펜타클 페이지는 특히 금융이나 직업 분야에서 새로운 기회의 잠재력을 나타냅니다. 이는 헌신, 야망, 새로운 기술 개발을 장려합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-11-page_6234261387_l.jpg",
+        "type": "minor",
+        "value": 11,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Knight of Pentacles",
+        "symbol": "🐎🌱",
+        "meanings": [
+            "능률",
+            "루틴",
+            "보수주의",
+            "질서 있는",
+            "신뢰할 수 있음"
+        ],
+        "description": "Knight of Pentacles는 작업에 대한 체계적이고 안정적이며 효율적인 접근 방식을 나타냅니다. 이는 일상적인 일을 고수하고 노력의 일관성을 유지하도록 권장합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-12-knight_6234264177_l.jpg",
+        "type": "minor",
+        "value": 12,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Queen of Pentacles",
+        "symbol": "👸🌱",
+        "meanings": [
+            "육성",
+            "재정적 안정",
+            "실용적인 사항",
+            "관대",
+            "접지"
+        ],
+        "description": "펜타클의 여왕은 자신과 다른 사람을 위한 안정, 관대함, 실질적인 지원을 장려하는 양육적이고 기반이 있는 에너지를 나타냅니다.",
+        "image": "rider-waite-minor-arcana---pentacles-13-queen_6234266673_l.jpg",
+        "type": "minor",
+        "value": 13,
+        "suit": "pentacles"
+    },
+    {
+        "name": "King of Pentacles",
+        "symbol": "🤴🌱",
+        "meanings": [
+            "재산",
+            "사업",
+            "지도",
+            "보안",
+            "풍부"
+        ],
+        "description": "King of Pentacles는 재정적 안정과 안보를 달성한 성공적인 리더를 나타냅니다. 이 카드는 당신이 실용적이고 체계적이며 꿈을 현실로 만들도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-14-king_6234270179_l.jpg",
+        "type": "minor",
+        "value": 14,
+        "suit": "pentacles"
+    },
+    {
+        "name": "The Fool Reversed",
+        "symbol": "🃏⬇️",
+        "meanings": [
+            "무모함",
+            "순진함",
+            "무책임",
+            "위험 감수",
+            "방향성 부족"
+        ],
+        "description": "The Fool Reversed는 결정을 내리기 전에 주의와 신중한 고려가 필요함을 시사합니다. 무모한 행동에 대해 경고하고 행동하기 전에 생각하도록 권장합니다.",
+        "image": "rider-waite-major-arcana-00-the-fool_6234580670_l.jpg",
+        "type": "major",
+        "value": 0,
+        "suit": null
+    },
+    {
+        "name": "The Magician Reversed",
+        "symbol": "🎩⬇️",
+        "meanings": [
+            "시장 조작",
+            "잘못된 계획",
+            "아직 개발되지 않은 재능",
+            "놓친 기회",
+            "기만"
+        ],
+        "description": "The Magician Reversed는 잘못된 계획이나 조작으로 인해 기회를 놓칠 수 있음을 암시합니다. 이는 귀하가 잠재력을 최대한 활용하고 속임수를 피하도록 권장합니다.",
+        "image": "rider-waite-major-arcana-01-the-magician_6234582750_l.jpg",
+        "type": "major",
+        "value": 1,
+        "suit": null
+    },
+    {
+        "name": "The High Priestess Reversed",
+        "symbol": "👸⬇️",
+        "meanings": [
+            "기미",
+            "직관 부족",
+            "억압된 감정",
+            "무지",
+            "자기 인식 부족"
+        ],
+        "description": "대제사장은 당신이 직관에 귀를 기울이지 않고 내면의 지혜를 무시하고 있음을 암시합니다. 또한 억압된 감정이나 숨겨진 비밀을 나타낼 수도 있습니다.",
+        "image": "rider-waite-major-arcana-02-the-high-priestess_6234585244_l.jpg",
+        "type": "major",
+        "value": 2,
+        "suit": null
+    },
+    {
+        "name": "The Empress Reversed",
+        "symbol": "👑⬇️",
+        "meanings": [
+            "다른 사람에 대한 의존",
+            "자기 관리 부족",
+            "질식하는 사랑",
+            "불모",
+            "재정적 어려움"
+        ],
+        "description": "Empress Reversed는 자기 관리와 독립의 필요성을 암시하고 질식하는 사랑이나 재정적 어려움에 대해 경고합니다.",
+        "image": "rider-waite-major-arcana-03-the-empress_6234588362_l.jpg",
+        "type": "major",
+        "value": 3,
+        "suit": null
+    },
+    {
+        "name": "The Emperor Reversed",
+        "symbol": "👑⬇️",
+        "meanings": [
+            "지배",
+            "과도한 통제",
+            "규율의 부족",
+            "굽힐 수 없음",
+            "혼돈"
+        ],
+        "description": "역전된 황제는 권력의 오용, 규율의 부족, 경직성을 암시합니다. 또한 혼란스러운 상황이나 권위가 부족함을 나타낼 수도 있습니다.",
+        "image": "rider-waite-major-arcana-04-the-emperor_6234066109_l.jpg",
+        "type": "major",
+        "value": 4,
+        "suit": null
+    },
+    {
+        "name": "The Hierophant Reversed",
+        "symbol": "🔮⬇️",
+        "meanings": [
+            "반항",
+            "자유",
+            "현상 유지에 도전하다",
+            "틀에 얽매이지 않음",
+            "개인적인 신념"
+        ],
+        "description": "Hierophant Reversed는 기존 관습에서 벗어나 현상 유지에 도전하고 자신만의 독특한 길이나 신념을 따르는 것을 나타냅니다.",
+        "image": "rider-waite-major-arcana-05-the-hierophant_6234068727_l.jpg",
+        "type": "major",
+        "value": 5,
+        "suit": null
+    },
+    {
+        "name": "The Lovers Reversed",
+        "symbol": "💑⬇️",
+        "meanings": [
+            "불균형",
+            "가치의 불일치",
+            "불일치",
+            "불안정",
+            "착란"
+        ],
+        "description": "Lovers Reversed는 관계의 불균형과 부조화 또는 개인적 가치의 불일치를 암시합니다. 이는 개인적인 관계와 가치에 대한 성찰과 재평가를 장려합니다.",
+        "image": "rider-waite-major-arcana-06-the-lovers_6234595528_l.jpg",
+        "type": "major",
+        "value": 6,
+        "suit": null
+    },
+    {
+        "name": "The Chariot Reversed",
+        "symbol": "🛡️⬇️",
+        "meanings": [
+            "통제력 부족",
+            "침략",
+            "장애물",
+            "저항",
+            "자기 의심"
+        ],
+        "description": "Chariot Reversed는 통제력이나 방향성이 부족하고 공격 가능성이 있으며 자기 의심을 암시합니다. 이는 자신의 길과 장애물을 재평가하고 결단력과 자신감을 가지고 통제력을 회복하라는 요청입니다.",
+        "image": "rider-waite-major-arcana-07-the-chariot_6234072405_l.jpg",
+        "type": "major",
+        "value": 7,
+        "suit": null
+    },
+    {
+        "name": "Strength Reversed",
+        "symbol": "💪⬇️",
+        "meanings": [
+            "자기 의심",
+            "자기 훈련의 부족",
+            "불안정",
+            "충동성",
+            "압도되는 느낌"
+        ],
+        "description": "역전된 힘 카드는 당신이 자기 의심, 규율 부족, 압도감을 ​​느끼고 있을 수 있음을 나타냅니다. 내면의 힘을 찾고 두려움에 맞서도록 격려합니다.",
+        "image": "rider-waite-major-arcana-08-strength_6234598040_l.jpg",
+        "type": "major",
+        "value": 8,
+        "suit": null
+    },
+    {
+        "name": "The Hermit Reversed",
+        "symbol": "🧙‍♂️⬇️",
+        "meanings": [
+            "격리",
+            "외로움",
+            "철수",
+            "단절",
+            "조언을 무시함"
+        ],
+        "description": "Hermit Reversed는 과도한 고립, 철수 또는 다른 사람의 조언과 지혜를 무시하는 기간을 암시합니다. 이제 세상과 다시 연결하고 지도를 구해야 할 때일 수도 있습니다.",
+        "image": "rider-waite-major-arcana-09-the-hermit_6234075619_l.jpg",
+        "type": "major",
+        "value": 9,
+        "suit": null
+    },
+    {
+        "name": "Wheel of Fortune Reversed",
+        "symbol": "🎡⬇️",
+        "meanings": [
+            "불행",
+            "변화에 대한 저항",
+            "통제력 부족",
+            "원하지 않는 결과",
+            "지연"
+        ],
+        "description": "Wheel of Fortune Reversed는 불운이 따르거나 예상치 못한 변화를 경험할 수 있음을 암시합니다. 그것은 당신이 저항을 버리고 삶의 순환을 받아들이도록 격려합니다.",
+        "image": "rider-waite-major-arcana-10-wheel-of-fortune_6234602206_l.jpg",
+        "type": "major",
+        "value": 10,
+        "suit": null
+    },
+    {
+        "name": "Justice Reversed",
+        "symbol": "⚖️⬇️",
+        "meanings": [
+            "불공정",
+            "책임감 부족",
+            "부정직",
+            "결과 회피",
+            "부당"
+        ],
+        "description": "역방향 정의 카드는 불공평, 부정직 또는 결과 회피의 상황을 암시합니다. 이는 책임이 부족하거나 부당한 결과를 나타낼 수 있습니다.",
+        "image": "rider-waite-major-arcana-11-justice_6234605714_l.jpg",
+        "type": "major",
+        "value": 11,
+        "suit": null
+    },
+    {
+        "name": "The Hanged Man Reversed",
+        "symbol": "🙃⬇️",
+        "meanings": [
+            "변화에 대한 저항",
+            "침체",
+            "우유 부단",
+            "지연",
+            "자기희생"
+        ],
+        "description": "거꾸로 매달린 남자(Hanged Man Reversed)는 필요한 변화에 대한 저항, 희생에 대한 두려움, 우유부단과 지연의 기간을 암시합니다. 그것은 당신이 바꿀 수 없는 것들을 놓아버리고 받아들이도록 격려합니다.",
+        "image": "rider-waite-major-arcana-12-the-hanged-man_6234084897_l.jpg",
+        "type": "major",
+        "value": 12,
+        "suit": null
+    },
+    {
+        "name": "Death Reversed",
+        "symbol": "💀⬇️",
+        "meanings": [
+            "변화에 대한 저항",
+            "변화에 대한 두려움",
+            "침체",
+            "계속 나아갈 수 없음"
+        ],
+        "description": "역전된 죽음(Death Reversed) 카드는 당신이 변화에 저항하거나 두려워하여 침체로 이어질 수 있음을 나타냅니다. 이러한 두려움에 맞서고 변화에 따른 변화를 받아들이도록 격려합니다.",
+        "image": "rider-waite-major-arcana-13-death_6234086467_l.jpg",
+        "type": "major",
+        "value": 13,
+        "suit": null
+    },
+    {
+        "name": "Temperance Reversed",
+        "symbol": "⚖️⬇️",
+        "meanings": [
+            "불균형",
+            "과잉",
+            "장기적인 비전이 부족함",
+            "조바심",
+            "돌진"
+        ],
+        "description": "역전된 절제 카드는 조바심이나 성급한 결정으로 인해 균형이나 조화가 부족함을 나타냅니다. 속도를 늦추고 인내심을 갖고 행동의 장기적인 결과를 고려하도록 권장합니다.",
+        "image": "rider-waite-major-arcana-14-temperance_6234088279_l.jpg",
+        "type": "major",
+        "value": 14,
+        "suit": null
+    },
+    {
+        "name": "The Devil Reversed",
+        "symbol": "😈⬇️",
+        "meanings": [
+            "속보",
+            "전력 회수",
+            "중독 극복",
+            "유혹에 저항하다",
+            "개인적 성장"
+        ],
+        "description": "Devil Reversed는 속박과 한계에서 벗어나는 것을 나타냅니다. 이는 부정적인 습관과 중독을 극복하고 개인적인 힘을 되찾는 것을 의미합니다.",
+        "image": "rider-waite-major-arcana-15-the-devil_6234090311_l.jpg",
+        "type": "major",
+        "value": 15,
+        "suit": null
+    },
+    {
+        "name": "The Tower Reversed",
+        "symbol": "🏰⬇️",
+        "meanings": [
+            "변화에 대한 두려움",
+            "개인적인 변화",
+            "기피",
+            "재난을 지연시키다",
+            "변화에 대한 저항"
+        ],
+        "description": "Tower Reversed는 당신이 종종 두려움 때문에 필요한 변화에 저항하거나 지연하고 있음을 암시합니다. 개인의 성장과 변화를 위해 이러한 변화에 정면으로 직면하도록 권장합니다.",
+        "image": "rider-waite-major-arcana-16-the-tower_6234092237_l.jpg",
+        "type": "major",
+        "value": 16,
+        "suit": null
+    },
+    {
+        "name": "The Star Reversed",
+        "symbol": "⭐⬇️",
+        "meanings": [
+            "믿음의 부족",
+            "절망",
+            "자기 의심",
+            "단절",
+            "불안정"
+        ],
+        "description": "The Star Reversed는 자기 의심과 불안의 기간을 암시합니다. 내면의 자아와 다시 연결되고 자신감을 되찾으라는 알림입니다.",
+        "image": "rider-waite-major-arcana-17-the-star_6234094083_l.jpg",
+        "type": "major",
+        "value": 17,
+        "suit": null
+    },
+    {
+        "name": "The Moon Reversed",
+        "symbol": "🌙⬇️",
+        "meanings": [
+            "두려움의 해방",
+            "내면의 혼란",
+            "억압된 감정",
+            "환상을 드러내다",
+            "직관력 증가"
+        ],
+        "description": "반전된 달은 내면의 혼란과 억압된 감정의 시간을 암시합니다. 두려움과 환상을 버리고 자신의 직관을 믿으라는 요청입니다.",
+        "image": "rider-waite-major-arcana-18-the-moon_6234620480_l.jpg",
+        "type": "major",
+        "value": 18,
+        "suit": null
+    },
+    {
+        "name": "The Sun Reversed",
+        "symbol": "☀️⬇️",
+        "meanings": [
+            "일시적 우울증",
+            "성공의 부족",
+            "부정성",
+            "내면의 아이"
+        ],
+        "description": "Sun Reversed는 부정적이거나 우울한 기간, 또는 성공이 부족한 기간을 암시합니다. 그것은 당신이 내면의 아이와 다시 연결되고 삶에서 기쁨과 긍정을 찾도록 격려합니다.",
+        "image": "rider-waite-major-arcana-19-the-sun_6234097611_l.jpg",
+        "type": "major",
+        "value": 19,
+        "suit": null
+    },
+    {
+        "name": "Judgement Reversed",
+        "symbol": "⚖️⬇️",
+        "meanings": [
+            "자기 의심",
+            "책임회피",
+            "전화를 무시하는 중",
+            "부정",
+            "해결되지 않은 문제"
+        ],
+        "description": "뒤집힌 판단 카드는 당신이 자기 의심을 경험하거나 책임을 회피하고 있을 수 있음을 나타냅니다. 이는 해결되지 않은 문제에 직면하고 내면의 부름에 귀를 기울이도록 권장합니다.",
+        "image": "rider-waite-major-arcana-20-judgement_6234099599_l.jpg",
+        "type": "major",
+        "value": 20,
+        "suit": null
+    },
+    {
+        "name": "The World Reversed",
+        "symbol": "🌍⬇️",
+        "meanings": [
+            "불완전한 폐쇄",
+            "성취감 부족",
+            "침체",
+            "지연",
+            "변화에 대한 저항"
+        ],
+        "description": "The World Reversed는 당신이 완성과 성취를 위해 노력하고 있지만 지연, 저항 또는 종결 부족에 직면할 수 있음을 시사합니다. 목표와 접근 방식을 재평가하도록 권장합니다.",
+        "image": "rider-waite-major-arcana-21-the-world_6234101445_l.jpg",
+        "type": "major",
+        "value": 21,
+        "suit": null
+    },
+    {
+        "name": "Ace of Wands Reversed",
+        "symbol": "🔥⬇️",
+        "meanings": [
+            "동기 부여 부족",
+            "지연된 시작",
+            "에너지 부족",
+            "놓친 기회",
+            "염세주의"
+        ],
+        "description": "역방향 완드 에이스(Ace of Wands)는 동기 부여나 에너지 부족, 새로운 시작의 지연, 기회 상실을 나타냅니다. 이는 당신의 열정과 낙관주의를 다시 불붙일 것을 권장합니다.",
+        "image": "rider-waite-minor-arcana---wands-01-ace_6234634378_l.jpg",
+        "type": "minor",
+        "value": 1,
+        "suit": "wands"
+    },
+    {
+        "name": "Two of Wands Reversed",
+        "symbol": "2️⃣🔥⬇️",
+        "meanings": [
+            "알 수 없는 것에 대한 두려움",
+            "계획 부족",
+            "예상치 못한 지연",
+            "진행 부족",
+            "우유 부단"
+        ],
+        "description": "Two of Wands Reversed는 미지의 것에 대한 두려움, 계획 부족, 예상치 못한 지연 또는 우유부단함을 경험할 수 있음을 시사합니다. 계획을 재평가하고 다른 경로를 고려하라는 요청입니다.",
+        "image": "rider-waite-minor-arcana---wands-02_6234636276_l.jpg",
+        "type": "minor",
+        "value": 2,
+        "suit": "wands"
+    },
+    {
+        "name": "Three of Wands Reversed",
+        "symbol": "3⃣⬇️",
+        "meanings": [
+            "지연",
+            "좌절",
+            "통찰력 부족",
+            "놓친 기회",
+            "실망"
+        ],
+        "description": "역방향 Three of Wands는 지연이나 좌절을 경험할 수 있음을 암시하며, 기회를 놓치지 않도록 보다 효과적으로 계획을 세울 것을 권장합니다.",
+        "image": "rider-waite-minor-arcana---wands-03_6234113573_l.jpg",
+        "type": "minor",
+        "value": 3,
+        "suit": "wands"
+    },
+    {
+        "name": "Four of Wands Reversed",
+        "symbol": "4️⃣🔥⬇️",
+        "meanings": [
+            "안정성 부족",
+            "가정 갈등",
+            "의사소통의 단절",
+            "불안정",
+            "조화의 부족"
+        ],
+        "description": "Four of Wands가 거꾸로 표시된 것은 가정이나 지역 사회에 조화가 부족하거나 변화가 있음을 나타냅니다. 또한 의사소통의 실패나 불안정성을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---wands-04_6234115553_l.jpg",
+        "type": "minor",
+        "value": 4,
+        "suit": "wands"
+    },
+    {
+        "name": "Five of Wands Reversed",
+        "symbol": "5⃣⬇️",
+        "meanings": [
+            "갈등 방지",
+            "불일치 해결",
+            "조화",
+            "협력",
+            "타협"
+        ],
+        "description": "Five of Wands Reversed는 갈등을 피하고 조화를 이루기 위해 노력하고 있음을 나타냅니다. 이는 협력과 타협을 장려합니다.",
+        "image": "rider-waite-minor-arcana---wands-05_6234117635_l.jpg",
+        "type": "minor",
+        "value": 5,
+        "suit": "wands"
+    },
+    {
+        "name": "Six of Wands Reversed",
+        "symbol": "6⃣⬇️",
+        "meanings": [
+            "자기 의심",
+            "인식 부족",
+            "처벌",
+            "지연된 보상",
+            "이기주의"
+        ],
+        "description": "역방향 Six of Wands는 자신의 능력을 의심하거나 목표 달성이 지연될 수 있음을 나타냅니다. 이는 또한 인식 부족이나 부풀려진 자아를 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---wands-06_6234119573_l.jpg",
+        "type": "minor",
+        "value": 6,
+        "suit": "wands"
+    },
+    {
+        "name": "Seven of Wands Reversed",
+        "symbol": "7⃣⬇️",
+        "meanings": [
+            "압도되는 느낌",
+            "기피",
+            "자신감 부족",
+            "포기하다",
+            "방어적이다"
+        ],
+        "description": "Seven of Wands Reversed는 당신이 압도감을 ​​느끼고 자신감이 부족할 수 있음을 암시합니다. 또한 갈등이나 도전을 피하려는 경향을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---wands-07_6234645990_l.jpg",
+        "type": "minor",
+        "value": 7,
+        "suit": "wands"
+    },
+    {
+        "name": "Eight of Wands Reversed",
+        "symbol": "8⃣⬇️",
+        "meanings": [
+            "지연",
+            "좌절",
+            "저항",
+            "느린 진행",
+            "동기 부여 부족"
+        ],
+        "description": "Eight of Wands Reversed는 경로에 지연이나 장애물이 있을 수 있음을 나타냅니다. 이는 인내심과 끈기를 북돋우며, 진전은 느리지만 여전히 진행되고 있음을 상기시켜 줍니다.",
+        "image": "rider-waite-minor-arcana---wands-08_6234123431_l.jpg",
+        "type": "minor",
+        "value": 8,
+        "suit": "wands"
+    },
+    {
+        "name": "Nine of Wands Reversed",
+        "symbol": "9⃣⬇️",
+        "meanings": [
+            "방어력",
+            "편집병",
+            "번 아웃",
+            "고집",
+            "변화에 대한 저항"
+        ],
+        "description": "Nine of Wands가 거꾸로 표시된 것은 당신이 방어적이거나 편집증적이거나 변화에 저항하는 느낌을 가질 수 있음을 나타냅니다. 또한 소진이나 완고함을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---wands-09_6234125333_l.jpg",
+        "type": "minor",
+        "value": 9,
+        "suit": "wands"
+    },
+    {
+        "name": "Ten of Wands Reversed",
+        "symbol": "🔟⬇️",
+        "meanings": [
+            "부담 해소",
+            "부하를 가볍게",
+            "대표단",
+            "스트레스 해소"
+        ],
+        "description": "Ten of Wands Reversed는 당신을 짓누르고 있던 부담과 책임에서 벗어나기 시작했음을 암시합니다. 이제 작업을 위임하고 부담을 줄여야 할 때입니다.",
+        "image": "rider-waite-minor-arcana---wands-10_6234651626_l.jpg",
+        "type": "minor",
+        "value": 10,
+        "suit": "wands"
+    },
+    {
+        "name": "Page of Wands Reversed",
+        "symbol": "📜⬇️",
+        "meanings": [
+            "지연",
+            "좌절",
+            "방향성 부족",
+            "충동성",
+            "비현실적인 목표"
+        ],
+        "description": "거꾸로 된 Page of Wands는 지연이나 좌절을 경험할 수 있으며 목표나 방향을 재평가해야 할 수도 있음을 나타냅니다.",
+        "image": "rider-waite-minor-arcana---wands-11-page_6234129705_l.jpg",
+        "type": "minor",
+        "value": 11,
+        "suit": "wands"
+    },
+    {
+        "name": "Knight of Wands Reversed",
+        "symbol": "🐎⬇️",
+        "meanings": [
+            "충동성",
+            "무모함",
+            "방향성 부족",
+            "비현실적인 목표",
+            "좌절"
+        ],
+        "description": "반전된 Knight of Wands는 당신이 충동적으로 행동하고 행동의 결과를 완전히 고려하지 않고 있음을 나타냅니다. 이는 또한 좌절감과 방향 부족을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---wands-12-knight_6234131585_l.jpg",
+        "type": "minor",
+        "value": 12,
+        "suit": "wands"
+    },
+    {
+        "name": "Queen of Wands Reversed",
+        "symbol": "👸🔥⬇️",
+        "meanings": [
+            "자기 의심",
+            "불안정",
+            "내향성",
+            "질투",
+            "의존"
+        ],
+        "description": "반전된 지팡이의 여왕은 자기 의심과 불안의 기간을 암시합니다. 이는 내향성, 질투 또는 타인에 대한 의존의 시기를 나타낼 수 있습니다. 자신감과 독립성을 회복하라는 부르심입니다.",
+        "image": "rider-waite-minor-arcana---wands-13-queen_6234133349_l.jpg",
+        "type": "minor",
+        "value": 13,
+        "suit": "wands"
+    },
+    {
+        "name": "King of Wands Reversed",
+        "symbol": "🤴⬇️",
+        "meanings": [
+            "충동성",
+            "높은 기대",
+            "포학",
+            "무자비함",
+            "성급한 결정"
+        ],
+        "description": "King of Wands의 반대는 충동적인 행동을 통제하고, 기대치를 관리하고, 성급한 결정을 피해야 할 필요성을 시사합니다. 또한 지배적이거나 무자비한 사람을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---wands-14-king_6234659884_l.jpg",
+        "type": "minor",
+        "value": 14,
+        "suit": "wands"
+    },
+    {
+        "name": "Ace of Cups Reversed",
+        "symbol": "🏆⬇️",
+        "meanings": [
+            "억압된 감정",
+            "정서적 불안정",
+            "차단된 창의성",
+            "실현되지 않은 잠재력"
+        ],
+        "description": "거꾸로 된 Ace of Cups는 당신이 감정을 억누르고 있거나 감정적 삶이나 창의성의 막힘으로 어려움을 겪고 있을 수 있음을 암시합니다. 내면의 자아와 다시 연결되고 자신의 감정을 공개적으로 표현하라는 요청입니다.",
+        "image": "rider-waite-minor-arcana---cups-01-ace_6234141143_l.jpg",
+        "type": "minor",
+        "value": 1,
+        "suit": "cups"
+    },
+    {
+        "name": "Two of Cups Reversed",
+        "symbol": "2️⃣🍷⬇️",
+        "meanings": [
+            "관계의 불균형",
+            "잘못된 의사소통",
+            "분리",
+            "갈등",
+            "붕괴"
+        ],
+        "description": "Two of Cups Reversed는 가까운 관계에 불균형이나 갈등이 있을 수 있음을 암시합니다. 모든 문제를 해결하기 위해 열린 의사소통과 이해를 장려합니다.",
+        "image": "rider-waite-minor-arcana---cups-02_6234669216_l.jpg",
+        "type": "minor",
+        "value": 2,
+        "suit": "cups"
+    },
+    {
+        "name": "Three of Cups Reversed",
+        "symbol": "3️⃣🍷⬇️",
+        "meanings": [
+            "격리",
+            "잡담",
+            "갈등",
+            "과도한 파티",
+            "팀워크 부족"
+        ],
+        "description": "거꾸로 된 Three of Cups는 고독이나 철수의 필요성을 암시합니다. 또한 친구나 동료 간의 험담, 갈등, 협력 부족을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---cups-03_6234672074_l.jpg",
+        "type": "minor",
+        "value": 3,
+        "suit": "cups"
+    },
+    {
+        "name": "Four of Cups Reversed",
+        "symbol": "4️⃣🔄",
+        "meanings": [
+            "새로운 인식",
+            "수락",
+            "조치를 취하다",
+            "변화 수용"
+        ],
+        "description": "Four of Cups가 뒤집어진 것은 상황에 대한 새로운 인식이나 수용을 암시합니다. 이는 행동을 취하고 변화를 수용하도록 장려합니다.",
+        "image": "rider-waite-minor-arcana---cups-04_6234675624_l.jpg",
+        "type": "minor",
+        "value": 4,
+        "suit": "cups"
+    },
+    {
+        "name": "Five of Cups Reversed",
+        "symbol": "5️⃣🍷⬇️",
+        "meanings": [
+            "수락",
+            "계속해서",
+            "평화를 찾아서",
+            "용서",
+            "희망"
+        ],
+        "description": "Five of Cups Reversed는 치유와 용서의 기간을 암시합니다. 이제 과거의 실망에서 벗어나 희망과 평화를 찾을 때입니다.",
+        "image": "rider-waite-minor-arcana---cups-05_6234679202_l.jpg",
+        "type": "minor",
+        "value": 5,
+        "suit": "cups"
+    },
+    {
+        "name": "Six of Cups Reversed",
+        "symbol": "6️⃣⬇️",
+        "meanings": [
+            "과거에 산다",
+            "순진함",
+            "비현실적",
+            "과거에 갇혀",
+            "과거와의 단절"
+        ],
+        "description": "Six of Cups가 거꾸로 표시된 것은 당신이 과거에 갇혀 현재의 현실을 받아들이지 못할 수도 있음을 암시합니다. 이제 앞으로 나아가 현재를 받아들여야 할 때입니다.",
+        "image": "rider-waite-minor-arcana---cups-06_6234681960_l.jpg",
+        "type": "minor",
+        "value": 6,
+        "suit": "cups"
+    },
+    {
+        "name": "Seven of Cups Reversed",
+        "symbol": "7️⃣⬇️",
+        "meanings": [
+            "명쾌함",
+            "결단력",
+            "현실 확인",
+            "환상 피하기",
+            "유혹을 극복하다"
+        ],
+        "description": "거꾸로 된 Seven of Cups는 당신이 환상을 깨고 정말로 중요한 것에 집중하기 시작했음을 암시합니다. 이제 결정을 내리고 이를 고수해야 할 때입니다.",
+        "image": "rider-waite-minor-arcana---cups-07_6234162753_l.jpg",
+        "type": "minor",
+        "value": 7,
+        "suit": "cups"
+    },
+    {
+        "name": "Eight of Cups Reversed",
+        "symbol": "8️⃣🍷⬇️",
+        "meanings": [
+            "변화에 대한 두려움",
+            "기피",
+            "침체",
+            "문제로부터 도망가기",
+            "개인적인 혼란"
+        ],
+        "description": "Eight of Cups Reversed는 변화나 전진에 대한 두려움을 암시하며, 이는 아마도 개인적인 문제를 정체하거나 회피하게 될 수 있습니다. 이는 자기 성찰을 장려하고 문제에 정면으로 직면하도록 장려합니다.",
+        "image": "rider-waite-minor-arcana---cups-08_6234165989_l.jpg",
+        "type": "minor",
+        "value": 8,
+        "suit": "cups"
+    },
+    {
+        "name": "Nine of Cups Reversed",
+        "symbol": "9️⃣⬇️",
+        "meanings": [
+            "이루어지지 않은 소원",
+            "불만",
+            "감사의 부족",
+            "탐욕",
+            "안일함"
+        ],
+        "description": "거꾸로 된 Nine of Cups는 성취되지 않은 소원, 불만, 감사의 부족의 시간을 암시합니다. 탐욕과 안일함을 경고합니다.",
+        "image": "rider-waite-minor-arcana---cups-09_6234168247_l.jpg",
+        "type": "minor",
+        "value": 9,
+        "suit": "cups"
+    },
+    {
+        "name": "Ten of Cups Reversed",
+        "symbol": "🔟🔄",
+        "meanings": [
+            "깨진 집",
+            "단절",
+            "가치의 불일치",
+            "긴장된 관계",
+            "이루지 못한 꿈"
+        ],
+        "description": "거꾸로 된 10개의 컵은 아마도 잘못된 가치관이나 이루지 못한 꿈으로 인해 관계나 가족의 조화가 붕괴되었음을 암시합니다. 이는 해결과 재정렬을 추구하도록 권장합니다.",
+        "image": "rider-waite-minor-arcana---cups-10_6234171803_l.jpg",
+        "type": "minor",
+        "value": 10,
+        "suit": "cups"
+    },
+    {
+        "name": "Page of Cups Reversed",
+        "symbol": "👦🏻⬇️",
+        "meanings": [
+            "정서적 미성숙",
+            "불안정",
+            "실망",
+            "비현실적인 기대",
+            "크리에이티브 블록"
+        ],
+        "description": "거꾸로 된 컵의 페이지는 불안감과 실망에 직면하고 기대치를 보다 현실적으로 관리해야 할 필요성을 암시합니다. 창의적인 블록을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---cups-11-page_6234174547_l.jpg",
+        "type": "minor",
+        "value": 11,
+        "suit": "cups"
+    },
+    {
+        "name": "Knight of Cups Reversed",
+        "symbol": "🏇⬇️",
+        "meanings": [
+            "과잉 상상력",
+            "비현실적",
+            "질투",
+            "우울",
+            "실망"
+        ],
+        "description": "거꾸로 된 Knight of Cups는 감정이 당신을 너무 많이 통제하도록 허용하고 있음을 암시하고 비현실적인 기대와 기분 변화에 대해 경고합니다.",
+        "image": "rider-waite-minor-arcana---cups-12-knight_6234177439_l.jpg",
+        "type": "minor",
+        "value": 12,
+        "suit": "cups"
+    },
+    {
+        "name": "Queen of Cups Reversed",
+        "symbol": "👸🔄",
+        "meanings": [
+            "정서적 불안정",
+            "불안정",
+            "의존",
+            "질식하는 사랑",
+            "지나치게 민감함"
+        ],
+        "description": "거꾸로 된 컵의 여왕은 감정을 관리하고, 다른 사람에 대한 의존을 피하고, 불안감이나 정서적 불안정감을 해결해야 할 필요성을 암시합니다.",
+        "image": "rider-waite-minor-arcana---cups-13-queen_6234181309_l.jpg",
+        "type": "minor",
+        "value": 13,
+        "suit": "cups"
+    },
+    {
+        "name": "King of Cups Reversed",
+        "symbol": "🤴⬇️",
+        "meanings": [
+            "감정적 조작",
+            "우울",
+            "신뢰할 수 없음",
+            "감정 조절 부족",
+            "부정직"
+        ],
+        "description": "King of Cups의 반대 모양은 감정적 성숙이나 통제력이 부족함을 나타내며 조작이나 부정직함을 나타낼 수도 있습니다. 감성 지능과 정직성을 개발하라는 요청입니다.",
+        "image": "rider-waite-minor-arcana---cups-14-king_6234708876_l.jpg",
+        "type": "minor",
+        "value": 14,
+        "suit": "cups"
+    },
+    {
+        "name": "Ace of Swords Reversed",
+        "symbol": "🗡️⬇️",
+        "meanings": [
+            "착란",
+            "혼돈",
+            "명확성 부족",
+            "잘못된 의사소통",
+            "지연"
+        ],
+        "description": "역방향 검의 에이스는 혼란이나 혼돈의 시기를 암시합니다. 이는 잘못된 의사소통, 명확성 부족 또는 계획 지연을 나타낼 수 있습니다.",
+        "image": "rider-waite-minor-arcana---swords-01-ace_6234712912_l.jpg",
+        "type": "minor",
+        "value": 1,
+        "suit": "swords"
+    },
+    {
+        "name": "Two of Swords Reversed",
+        "symbol": "⚔️⬇️",
+        "meanings": [
+            "우유 부단",
+            "착란",
+            "정보 과부하",
+            "수가 막히게 하다",
+            "기피"
+        ],
+        "description": "Two of Swords가 거꾸로 된 것은 당신이 어려운 결정을 피하고 있거나 정보 과부하로 인해 혼란스러워하고 있음을 암시합니다. 이는 명확성을 추구하고 상황을 정면으로 직면하도록 권장합니다.",
+        "image": "rider-waite-minor-arcana---swords-02_6234716234_l.jpg",
+        "type": "minor",
+        "value": 2,
+        "suit": "swords"
+    },
+    {
+        "name": "Three of Swords Reversed",
+        "symbol": "3⚔️⬇️",
+        "meanings": [
+            "치유",
+            "회복",
+            "용서",
+            "고통의 방출"
+        ],
+        "description": "Three of Swords Reversed는 치유와 회복의 시간을 의미합니다. 이는 당신이 고통과 상심을 극복하기 시작했으며 용서와 감정적 해방을 향한 길에 있다는 것을 암시합니다.",
+        "image": "rider-waite-minor-arcana---swords-03_6234719796_l.jpg",
+        "type": "minor",
+        "value": 3,
+        "suit": "swords"
+    },
+    {
+        "name": "Four of Swords Reversed",
+        "symbol": "⚔️⬇️",
+        "meanings": [
+            "불안",
+            "번아웃",
+            "스트레스",
+            "진행 부족",
+            "휴식이 필요함"
+        ],
+        "description": "반대의 Four of Swords는 자신을 너무 세게 밀고 있어 필요한 휴식과 이완을 허용하지 않을 수 있음을 나타냅니다. 정신적, 육체적 건강을 돌보아야 한다는 점을 상기시켜 줍니다.",
+        "image": "rider-waite-minor-arcana---swords-04_6234722694_l.jpg",
+        "type": "minor",
+        "value": 4,
+        "suit": "swords"
+    },
+    {
+        "name": "Five of Swords Reversed",
+        "symbol": "5⚔️⬇️",
+        "meanings": [
+            "화해",
+            "수정하기",
+            "계속해서",
+            "과거의 실수로부터 배우기",
+            "용서"
+        ],
+        "description": "Five of Swords Reversed는 화해와 용서의 시간을 암시합니다. 과거의 실수로부터 배우고, 수정하고, 앞으로 나아갈 시간입니다.",
+        "image": "rider-waite-minor-arcana---swords-05_6234201033_l.jpg",
+        "type": "minor",
+        "value": 5,
+        "suit": "swords"
+    },
+    {
+        "name": "Six of Swords Reversed",
+        "symbol": "6⚔️⬇️",
+        "meanings": [
+            "변화에 대한 저항",
+            "계속 진행할 수 없습니다.",
+            "과거 수하물 운반",
+            "침체",
+            "막힌 느낌"
+        ],
+        "description": "Six of Swords Reversed는 당신이 필요한 변화에 저항하거나 과거 상황에서 벗어나기가 어렵다는 것을 암시합니다. 그것은 더 이상 당신에게 도움이 되지 않는 것을 버리고 성장과 변화의 잠재력을 받아들이도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---swords-06_6234729032_l.jpg",
+        "type": "minor",
+        "value": 6,
+        "suit": "swords"
+    },
+    {
+        "name": "Seven of Swords Reversed",
+        "symbol": "7⚔️⬇️",
+        "meanings": [
+            "책임을 받아들이다",
+            "잘못을 인정함",
+            "비밀을 밝히다",
+            "속임수에서 벗어나다"
+        ],
+        "description": "Seven of Swords Reversed는 고백하고, 책임을 받아들이고, 속임수나 조작에서 벗어나는 시간을 암시합니다.",
+        "image": "rider-waite-minor-arcana---swords-07_6234207565_l.jpg",
+        "type": "minor",
+        "value": 7,
+        "suit": "swords"
+    },
+    {
+        "name": "Eight of Swords Reversed",
+        "symbol": "8⚔️⬇️",
+        "meanings": [
+            "자기 제한적 신념",
+            "갇혀있는 느낌",
+            "피해자의 사고방식",
+            "자신감 부족",
+            "미지의 것에 대한 두려움"
+        ],
+        "description": "Eight of Swords가 거꾸로 된 것은 당신이 자신의 믿음이나 두려움에 갇혀 있거나 제한받고 있다는 느낌을 받을 수 있음을 암시합니다. 이는 당신이 스스로 부과한 제한에서 벗어나 자신감을 되찾도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---swords-08_6234210379_l.jpg",
+        "type": "minor",
+        "value": 8,
+        "suit": "swords"
+    },
+    {
+        "name": "Nine of Swords Reversed",
+        "symbol": "9⚔️⬇️",
+        "meanings": [
+            "내면의 혼란",
+            "뿌리깊은 두려움",
+            "불안",
+            "우울증",
+            "악몽"
+        ],
+        "description": "역방향의 Nine of Swords는 스트레스, 불안, 두려움의 기간을 나타냅니다. 이는 걱정이 당신을 사로잡도록 허용하여 부정적인 생각의 순환과 심지어 우울증까지 초래할 수 있음을 시사합니다.",
+        "image": "rider-waite-minor-arcana---swords-09_6234213789_l.jpg",
+        "type": "minor",
+        "value": 9,
+        "suit": "swords"
+    },
+    {
+        "name": "Ten of Swords Reversed",
+        "symbol": "🔟⚔️⬇️",
+        "meanings": [
+            "회복",
+            "재건",
+            "피할 수 없는 종말에 저항하다",
+            "파멸에 대한 두려움",
+            "장기간의 고통"
+        ],
+        "description": "Ten of Swords Reversed는 마침내 고통과 상처를 풀고 앞으로 나아갈 준비가 되었음을 암시합니다. 또한 결말이나 파멸에 대한 두려움, 또는 놓아주기에 대한 저항을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---swords-10_6234741256_l.jpg",
+        "type": "minor",
+        "value": 10,
+        "suit": "swords"
+    },
+    {
+        "name": "Page of Swords Reversed",
+        "symbol": "🚶‍♂️⚔️⬇️",
+        "meanings": [
+            "성급한 행동",
+            "잡담",
+            "기만",
+            "계획 부족",
+            "잘못된 의사소통"
+        ],
+        "description": "거꾸로 된 Page of Swords는 당신이 깊이 생각하지 않고 성급하게 행동하고 있을 수도 있음을 시사합니다. 또한 험담, 속임수 또는 잘못된 의사소통을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---swords-11-page_6234743864_l.jpg",
+        "type": "minor",
+        "value": 11,
+        "suit": "swords"
+    },
+    {
+        "name": "Knight of Swords Reversed",
+        "symbol": "🗡️⬇️",
+        "meanings": [
+            "충동성",
+            "불안",
+            "무모함",
+            "결과에 대한 무시",
+            "방향성 부족"
+        ],
+        "description": "거꾸로 된 Knight of Swords는 충동적이고 무모한 경향을 암시합니다. 행동하기 전에 생각하고 잠재적인 결과를 고려하는 것이 좋습니다.",
+        "image": "rider-waite-minor-arcana---swords-12-knight_6234222761_l.jpg",
+        "type": "minor",
+        "value": 12,
+        "suit": "swords"
+    },
+    {
+        "name": "Queen of Swords Reversed",
+        "symbol": "👸⚔️⬇️",
+        "meanings": [
+            "지나치게 감정적임",
+            "신랄",
+            "원한",
+            "잡담",
+            "잘못된 의사소통"
+        ],
+        "description": "검의 여왕의 역방향은 감정이 판단을 흐리게 하여 잘못된 의사소통이나 분노로 이어질 수 있음을 암시합니다. 마음을 비우고 자신의 감정을 솔직하고 직접적으로 전달하는 것이 중요합니다.",
+        "image": "rider-waite-minor-arcana---swords-13-queen_6234749846_l.jpg",
+        "type": "minor",
+        "value": 13,
+        "suit": "swords"
+    },
+    {
+        "name": "King of Swords Reversed",
+        "symbol": "🤴⚔️⬇️",
+        "meanings": [
+            "시장 조작",
+            "포학",
+            "권력 남용",
+            "무자비함",
+            "냉정"
+        ],
+        "description": "거꾸로 된 검의 왕은 권력의 오용, 조작, 감성 지능의 부족을 나타냅니다. 무자비하거나 냉담해지는 것을 경고합니다.",
+        "image": "rider-waite-minor-arcana---swords-14-king_6234228441_l.jpg",
+        "type": "minor",
+        "value": 14,
+        "suit": "swords"
+    },
+    {
+        "name": "Ace of Pentacles Reversed",
+        "symbol": "🔱⬇️",
+        "meanings": [
+            "놓친 기회",
+            "계획 부족",
+            "재정적 손실",
+            "불안정"
+        ],
+        "description": "Ace of Pentacles Reversed는 재정적으로 불안정하거나 기회를 놓친 기간을 암시합니다. 이는 신중한 계획과 잠재적 위험에 대한 고려를 장려합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-01-ace_6234755746_l.jpg",
+        "type": "minor",
+        "value": 1,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Two of Pentacles Reversed",
+        "symbol": "2⃣⬇️",
+        "meanings": [
+            "불균형",
+            "압도하다",
+            "해체",
+            "재정적 혼란"
+        ],
+        "description": "Two of Pentacles Reversed는 당신이 한 번에 너무 많은 것을 저글링하고 압도감을 ​​느낄 수 있음을 암시합니다. 이는 우선순위를 재평가하고 삶의 균형을 다시 가져오라는 신호입니다.",
+        "image": "rider-waite-minor-arcana---pentacles-02_6234759442_l.jpg",
+        "type": "minor",
+        "value": 2,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Three of Pentacles Reversed",
+        "symbol": "3⃣⬇️",
+        "meanings": [
+            "팀워크 부족",
+            "무질서",
+            "잘못된 계획",
+            "정렬 불량",
+            "분쟁"
+        ],
+        "description": "거꾸로 된 Three of Pentacles는 조화가 부족하거나 팀워크가 붕괴되었음을 나타냅니다. 이는 목표를 향해 노력하고 있지만 조정과 의사소통이 부족함을 나타낼 수 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-03_6234238151_l.jpg",
+        "type": "minor",
+        "value": 3,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Four of Pentacles Reversed",
+        "symbol": "4⃣⬇️",
+        "meanings": [
+            "풀어 주다",
+            "관대",
+            "자유로운 영혼",
+            "분리",
+            "불안정"
+        ],
+        "description": "뒤집어진 4개의 펜타클은 놓아주고, 관대해야 하며, 물질적 소유물이나 상황을 너무 꽉 붙잡지 말아야 함을 암시합니다. 불안감을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-04_6234766364_l.jpg",
+        "type": "minor",
+        "value": 4,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Five of Pentacles Reversed",
+        "symbol": "5⃣⬇️",
+        "meanings": [
+            "회복",
+            "영적 성장",
+            "건강 개선",
+            "긍정적인 변화",
+            "고난을 극복하다"
+        ],
+        "description": "다섯 개의 펜타클이 반전된 것은 재정적 또는 건강 문제로부터의 회복, 영적 성장, 긍정적인 변화를 의미합니다. 고난과 역경을 이겨낼 것을 암시합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-05_6234768838_l.jpg",
+        "type": "minor",
+        "value": 5,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Six of Pentacles Reversed",
+        "symbol": "6⃣⬇️",
+        "meanings": [
+            "빚",
+            "이기주의",
+            "일방적인 자선",
+            "미지급 대출",
+            "재정적 불균형"
+        ],
+        "description": "거꾸로 된 Six of Pentacles는 재정적 불균형, 부채 또는 이기심의 기간을 암시합니다. 또한 일방적인 자선 활동이나 미지급 대출을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-06_6234772038_l.jpg",
+        "type": "minor",
+        "value": 6,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Seven of Pentacles Reversed",
+        "symbol": "7⬇️",
+        "meanings": [
+            "장기적인 비전이 부족함",
+            "제한된 성공 또는 보상",
+            "조바심",
+            "노력 부족",
+            "보상받지 못한 노력"
+        ],
+        "description": "Seven of Pentacles Reversed는 진행 상황이나 보상이 부족하여 좌절감을 느낄 수 있음을 암시합니다. 이는 장기적인 목표에 대한 인내심, 노력 및 재평가를 장려합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-07_6234250873_l.jpg",
+        "type": "minor",
+        "value": 7,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Eight of Pentacles Reversed",
+        "symbol": "8⃣⬇️",
+        "meanings": [
+            "집중력 부족",
+            "완벽주의",
+            "보상 없이 일하라",
+            "지나치게 상세함"
+        ],
+        "description": "Eight of Pentacles가 거꾸로 표시된 것은 작은 세부 사항에 너무 집중하여 더 큰 그림을 놓칠 수 있음을 나타냅니다. 이는 또한 노력에 대한 보상이 부족하거나 발전을 방해하는 완벽주의 경향을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-08_6234777816_l.jpg",
+        "type": "minor",
+        "value": 8,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Nine of Pentacles Reversed",
+        "symbol": "9⃣⬇️",
+        "meanings": [
+            "업무에 대한 과잉 투자",
+            "재정적 불안정",
+            "자급자족 부족",
+            "격리",
+            "불안정"
+        ],
+        "description": "거꾸로 된 Nine of Pentacles는 개인 생활에 해를 끼칠 정도로 일에 과도하게 투자하거나 재정적 불안정을 경험할 수 있음을 나타냅니다. 균형을 추구하고 자급자족할 수 있도록 격려합니다.",
+        "image": "rider-waite-minor-arcana---pentacles-09_6234255825_l.jpg",
+        "type": "minor",
+        "value": 9,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Ten of Pentacles Reversed",
+        "symbol": "🔟⬇️",
+        "meanings": [
+            "재정적 실패",
+            "외로움",
+            "깨진 가족",
+            "안정성 부족",
+            "상속 문제"
+        ],
+        "description": "10개의 펜타클이 뒤집어진 것은 재정적 불안정이나 가족 불화의 기간을 암시합니다. 또한 상속이나 고립감과 관련된 문제를 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-10_6234259139_l.jpg",
+        "type": "minor",
+        "value": 10,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Page of Pentacles Reversed",
+        "symbol": "📜⬇️",
+        "meanings": [
+            "진행 부족",
+            "미루는 습관",
+            "집중력 부족",
+            "놓친 기회",
+            "방향성 부족"
+        ],
+        "description": "거꾸로 된 펜타클 페이지는 집중하고, 미루는 것을 피하고, 기회를 포착해야 함을 시사합니다. 또한 방향이나 진행이 부족함을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-11-page_6234261387_l.jpg",
+        "type": "minor",
+        "value": 11,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Knight of Pentacles Reversed",
+        "symbol": "🐎⬇️",
+        "meanings": [
+            "게으름",
+            "진행 부족",
+            "침체",
+            "미루는 습관",
+            "변화에 대한 저항"
+        ],
+        "description": "거꾸로 된 Knight of Pentacles는 정체되어 있거나 변화에 저항하는 시기를 암시합니다. 이는 미루는 습관, 게으름, 재정적 또는 물질적 세계의 진전 부족을 나타낼 수 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-12-knight_6234264177_l.jpg",
+        "type": "minor",
+        "value": 12,
+        "suit": "pentacles"
+    },
+    {
+        "name": "Queen of Pentacles Reversed",
+        "symbol": "👸🔄🌱",
+        "meanings": [
+            "재정적 불안",
+            "의존",
+            "유물론",
+            "소홀히 하다",
+            "불균형"
+        ],
+        "description": "반전된 펜타클의 여왕은 특히 재정과 물질적 소유 분야에서 삶의 균형을 회복해야 할 필요성을 암시합니다. 이는 또한 다른 사람에게 지나치게 의존하는 경향이 있거나 개인적인 필요와 책임을 무시하는 경향을 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-13-queen_6234266673_l.jpg",
+        "type": "minor",
+        "value": 13,
+        "suit": "pentacles"
+    },
+    {
+        "name": "King of Pentacles Reversed",
+        "symbol": "🤴⬇️",
+        "meanings": [
+            "재정적으로 무책임하다",
+            "부에 대한 집착",
+            "고집",
+            "통제력 부족",
+            "물질주의적"
+        ],
+        "description": "거꾸로 된 King of Pentacles는 권력, 부 또는 자원의 오용을 암시합니다. 또한 완고하거나 물질주의적인 태도를 나타낼 수도 있습니다.",
+        "image": "rider-waite-minor-arcana---pentacles-14-king_6234270179_l.jpg",
+        "type": "minor",
+        "value": 14,
+        "suit": "pentacles"
+    }
+]
