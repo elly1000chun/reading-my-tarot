@@ -115,6 +115,27 @@
     </div>
   </div>
 
+  <!-- Card Details Modal -->
+  <div id="detailsModal" class="hidden fixed inset-0 z-50 bg-black/70 p-4">
+    <div class="mx-auto flex h-full max-w-3xl flex-col rounded-lg bg-gray-800 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-gray-700 px-6 py-4">
+        <h2 id="detailsModalTitle" class="text-xl font-semibold text-purple-400">Card Details</h2>
+        <button
+          id="detailsModalClose"
+          class="rounded-lg bg-purple-600 px-4 py-2 text-sm text-white transition-colors hover:bg-purple-700"
+          type="button"
+        >
+          Close
+        </button>
+      </div>
+      <iframe
+        id="detailsModalFrame"
+        class="min-h-0 flex-1 rounded-b-lg bg-gray-900"
+        title="Card details"
+      ></iframe>
+    </div>
+  </div>
+
 
   
 <script type="module">
@@ -166,6 +187,10 @@ const spreadSelection = document.getElementById("spreadSelection");
 const newReadingBtn = document.getElementById("newReadingBtn");
 const spreadButtons = document.querySelectorAll(".spread-btn");
 const languageButtons = document.querySelectorAll(".language-btn");
+const detailsModal = document.getElementById("detailsModal");
+const detailsModalTitle = document.getElementById("detailsModalTitle");
+const detailsModalFrame = document.getElementById("detailsModalFrame");
+const detailsModalClose = document.getElementById("detailsModalClose");
 
 function registerSpreads(tarotInstance) {
   tarotInstance.addSpread("single", {
@@ -257,11 +282,15 @@ async function setLanguage(language) {
 function createCardElement(card, position) {
   const cardDiv = document.createElement("div");
   const isReversed = card.name.includes("Reversed");
+  const detailsHtml = card["details-html"];
   const cardVisual = card.image
     ? `<img src="./decks/images/${card.image}" alt="${card.name}" class="mx-auto mb-4 h-56 w-auto rounded-md shadow-lg transition-transform duration-500 ${
         isReversed ? "rotate-180" : ""
       }">`
     : `<div class="text-4xl mb-4">${card.symbol}</div>`;
+  const detailsButton = detailsHtml
+    ? `<button class="show-details-btn mt-4 w-full rounded-lg bg-purple-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-purple-700" type="button" data-card-name="${card.name}" data-details-html="${detailsHtml}">Show Details</button>`
+    : "";
 
   cardDiv.className =
     "bg-gray-800 p-6 rounded-lg transform transition-all duration-500 hover:scale-105 fade-in";
@@ -276,9 +305,21 @@ function createCardElement(card, position) {
                         ? card.meanings.join(", ")
                         : card.meanings[0]
                     }</p>
+                    ${detailsButton}
                 </div>
             `;
   return cardDiv;
+}
+
+function openDetailsModal(cardName, detailsHtml) {
+  detailsModalTitle.textContent = `${cardName} Details`;
+  detailsModalFrame.src = `./decks/ko/details-html/${encodeURIComponent(detailsHtml)}`;
+  detailsModal.classList.remove("hidden");
+}
+
+function closeDetailsModal() {
+  detailsModal.classList.add("hidden");
+  detailsModalFrame.removeAttribute("src");
 }
 
 function localizeReading(reading, language) {
@@ -395,6 +436,23 @@ languageButtons.forEach((button) => {
       console.error("Failed to switch language:", error);
     });
   });
+});
+
+spreadContainer.addEventListener("click", (event) => {
+  const button = event.target.closest(".show-details-btn");
+  if (!button) {
+    return;
+  }
+
+  openDetailsModal(button.dataset.cardName, button.dataset.detailsHtml);
+});
+
+detailsModalClose.addEventListener("click", closeDetailsModal);
+
+detailsModal.addEventListener("click", (event) => {
+  if (event.target === detailsModal) {
+    closeDetailsModal();
+  }
 });
 
   

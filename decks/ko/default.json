@@ -12,7 +12,8 @@
         "image": "rider-waite-major-arcana-00-the-fool_6234580670_l.jpg",
         "type": "major",
         "value": 0,
-        "suit": null
+        "suit": null,
+        "details-html": "The Fool.html"
     },
     {
         "name": "The Magician",
@@ -27,7 +28,8 @@
         "image": "rider-waite-major-arcana-01-the-magician_6234582750_l.jpg",
         "type": "major",
         "value": 1,
-        "suit": null
+        "suit": null,
+        "details-html": "The Magician.html"
     },
     {
         "name": "The High Priestess",
@@ -43,7 +45,8 @@
         "image": "rider-waite-major-arcana-02-the-high-priestess_6234585244_l.jpg",
         "type": "major",
         "value": 2,
-        "suit": null
+        "suit": null,
+        "details-html": "The High Priestess.html"
     },
     {
         "name": "The Empress",
@@ -59,7 +62,8 @@
         "image": "rider-waite-major-arcana-03-the-empress_6234588362_l.jpg",
         "type": "major",
         "value": 3,
-        "suit": null
+        "suit": null,
+        "details-html": "The Empress.html"
     },
     {
         "name": "The Emperor",
@@ -75,7 +79,8 @@
         "image": "rider-waite-major-arcana-04-the-emperor_6234066109_l.jpg",
         "type": "major",
         "value": 4,
-        "suit": null
+        "suit": null,
+        "details-html": "The Emperor.html"
     },
     {
         "name": "The Hierophant",
@@ -91,7 +96,8 @@
         "image": "rider-waite-major-arcana-05-the-hierophant_6234068727_l.jpg",
         "type": "major",
         "value": 5,
-        "suit": null
+        "suit": null,
+        "details-html": "The Hierophant.html"
     },
     {
         "name": "The Lovers",
@@ -107,7 +113,8 @@
         "image": "rider-waite-major-arcana-06-the-lovers_6234595528_l.jpg",
         "type": "major",
         "value": 6,
-        "suit": null
+        "suit": null,
+        "details-html": "The Lovers.html"
     },
     {
         "name": "The Chariot",
@@ -123,7 +130,8 @@
         "image": "rider-waite-major-arcana-07-the-chariot_6234072405_l.jpg",
         "type": "major",
         "value": 7,
-        "suit": null
+        "suit": null,
+        "details-html": "The Chariot.html"
     },
     {
         "name": "Strength",
@@ -139,7 +147,8 @@
         "image": "rider-waite-major-arcana-08-strength_6234598040_l.jpg",
         "type": "major",
         "value": 8,
-        "suit": null
+        "suit": null,
+        "details-html": "Strength.html"
     },
     {
         "name": "The Hermit",
@@ -154,7 +163,8 @@
         "image": "rider-waite-major-arcana-09-the-hermit_6234075619_l.jpg",
         "type": "major",
         "value": 9,
-        "suit": null
+        "suit": null,
+        "details-html": "The Hermit.html"
     },
     {
         "name": "Wheel of Fortune",
@@ -170,7 +180,8 @@
         "image": "rider-waite-major-arcana-10-wheel-of-fortune_6234602206_l.jpg",
         "type": "major",
         "value": 10,
-        "suit": null
+        "suit": null,
+        "details-html": "Wheel of Fortune.html"
     },
     {
         "name": "Justice",
@@ -186,7 +197,8 @@
         "image": "rider-waite-major-arcana-11-justice_6234605714_l.jpg",
         "type": "major",
         "value": 11,
-        "suit": null
+        "suit": null,
+        "details-html": "Justice.html"
     },
     {
         "name": "The Hanged Man",
@@ -202,7 +214,8 @@
         "image": "rider-waite-major-arcana-12-the-hanged-man_6234084897_l.jpg",
         "type": "major",
         "value": 12,
-        "suit": null
+        "suit": null,
+        "details-html": "The Hanged Man.html"
     },
     {
         "name": "Death",
@@ -217,7 +230,8 @@
         "image": "rider-waite-major-arcana-13-death_6234086467_l.jpg",
         "type": "major",
         "value": 13,
-        "suit": null
+        "suit": null,
+        "details-html": "Death.html"
     },
     {
         "name": "Temperance",
@@ -233,7 +247,8 @@
         "image": "rider-waite-major-arcana-14-temperance_6234088279_l.jpg",
         "type": "major",
         "value": 14,
-        "suit": null
+        "suit": null,
+        "details-html": "Temperance.html"
     },
     {
         "name": "The Devil",
@@ -249,7 +264,8 @@
         "image": "rider-waite-major-arcana-15-the-devil_6234090311_l.jpg",
         "type": "major",
         "value": 15,
-        "suit": null
+        "suit": null,
+        "details-html": "The Devil.html"
     },
     {
         "name": "The Tower",
@@ -265,7 +281,8 @@
         "image": "rider-waite-major-arcana-16-the-tower_6234092237_l.jpg",
         "type": "major",
         "value": 16,
-        "suit": null
+        "suit": null,
+        "details-html": "The Tower.html"
     },
     {
         "name": "The Star",
@@ -282,7 +299,8 @@
         "image": "rider-waite-major-arcana-17-the-star_6234094083_l.jpg",
         "type": "major",
         "value": 17,
-        "suit": null
+        "suit": null,
+        "details-html": "The Star.html"
     },
     {
         "name": "The Moon",
@@ -298,7 +316,8 @@
         "image": "rider-waite-major-arcana-18-the-moon_6234620480_l.jpg",
         "type": "major",
         "value": 18,
-        "suit": null
+        "suit": null,
+        "details-html": "The Moon.html"
     },
     {
         "name": "The Sun",
@@ -314,7 +333,8 @@
         "image": "rider-waite-major-arcana-19-the-sun_6234097611_l.jpg",
         "type": "major",
         "value": 19,
-        "suit": null
+        "suit": null,
+        "details-html": "The Sun.html"
     },
     {
         "name": "Judgement",
@@ -330,7 +350,8 @@
         "image": "rider-waite-major-arcana-20-judgement_6234099599_l.jpg",
         "type": "major",
         "value": 20,
-        "suit": null
+        "suit": null,
+        "details-html": "Judgement.html"
     },
     {
         "name": "The World",
@@ -346,7 +367,8 @@
         "image": "rider-waite-major-arcana-21-the-world_6234101445_l.jpg",
         "type": "major",
         "value": 21,
-        "suit": null
+        "suit": null,
+        "details-html": "The world.html"
     },
     {
         "name": "Ace of Wands",
@@ -362,7 +384,8 @@
         "image": "rider-waite-minor-arcana---wands-01-ace_6234634378_l.jpg",
         "type": "minor",
         "value": 1,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "Ace of Wands.html"
     },
     {
         "name": "Two of Wands",
@@ -378,7 +401,8 @@
         "image": "rider-waite-minor-arcana---wands-02_6234636276_l.jpg",
         "type": "minor",
         "value": 2,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "TWO OF WANDS.html"
     },
     {
         "name": "Three of Wands",
@@ -394,7 +418,8 @@
         "image": "rider-waite-minor-arcana---wands-03_6234113573_l.jpg",
         "type": "minor",
         "value": 3,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "THREE OF WANDS.html"
     },
     {
         "name": "Four of Wands",
@@ -410,7 +435,8 @@
         "image": "rider-waite-minor-arcana---wands-04_6234115553_l.jpg",
         "type": "minor",
         "value": 4,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "FOUR OF WANDS.html"
     },
     {
         "name": "Five of Wands",
@@ -426,7 +452,8 @@
         "image": "rider-waite-minor-arcana---wands-05_6234117635_l.jpg",
         "type": "minor",
         "value": 5,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "FIVE OF WANDS.html"
     },
     {
         "name": "Six of Wands",
@@ -442,7 +469,8 @@
         "image": "rider-waite-minor-arcana---wands-06_6234119573_l.jpg",
         "type": "minor",
         "value": 6,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "SIX OF WANDS.html"
     },
     {
         "name": "Seven of Wands",
@@ -458,7 +486,8 @@
         "image": "rider-waite-minor-arcana---wands-07_6234645990_l.jpg",
         "type": "minor",
         "value": 7,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "SEVEN OF WANDS.html"
     },
     {
         "name": "Eight of Wands",
@@ -474,7 +503,8 @@
         "image": "rider-waite-minor-arcana---wands-08_6234123431_l.jpg",
         "type": "minor",
         "value": 8,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "EIGHT OF WANDS.html"
     },
     {
         "name": "Nine of Wands",
@@ -490,7 +520,8 @@
         "image": "rider-waite-minor-arcana---wands-09_6234125333_l.jpg",
         "type": "minor",
         "value": 9,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "NINE OF WANDS.html"
     },
     {
         "name": "Ten of Wands",
@@ -506,7 +537,8 @@
         "image": "rider-waite-minor-arcana---wands-10_6234651626_l.jpg",
         "type": "minor",
         "value": 10,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "TEN OF WANDS.html"
     },
     {
         "name": "Page of Wands",
@@ -521,7 +553,8 @@
         "image": "rider-waite-minor-arcana---wands-11-page_6234129705_l.jpg",
         "type": "minor",
         "value": 11,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "Page of Wands.html"
     },
     {
         "name": "Knight of Wands",
@@ -537,7 +570,8 @@
         "image": "rider-waite-minor-arcana---wands-12-knight_6234131585_l.jpg",
         "type": "minor",
         "value": 12,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "Knight of Wands.html"
     },
     {
         "name": "Queen of Wands",
@@ -553,7 +587,8 @@
         "image": "rider-waite-minor-arcana---wands-13-queen_6234133349_l.jpg",
         "type": "minor",
         "value": 13,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "Queen of Wands.html"
     },
     {
         "name": "King of Wands",
@@ -569,7 +604,8 @@
         "image": "rider-waite-minor-arcana---wands-14-king_6234659884_l.jpg",
         "type": "minor",
         "value": 14,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "King of Wands.html"
     },
     {
         "name": "Ace of Cups",
@@ -585,7 +621,8 @@
         "image": "rider-waite-minor-arcana---cups-01-ace_6234141143_l.jpg",
         "type": "minor",
         "value": 1,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Ace of Cups.html"
     },
     {
         "name": "Two of Cups",
@@ -601,7 +638,8 @@
         "image": "rider-waite-minor-arcana---cups-02_6234669216_l.jpg",
         "type": "minor",
         "value": 2,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Two of Cups.html"
     },
     {
         "name": "Three of Cups",
@@ -616,7 +654,8 @@
         "image": "rider-waite-minor-arcana---cups-03_6234672074_l.jpg",
         "type": "minor",
         "value": 3,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Three of Cups.html"
     },
     {
         "name": "Four of Cups",
@@ -632,7 +671,8 @@
         "image": "rider-waite-minor-arcana---cups-04_6234675624_l.jpg",
         "type": "minor",
         "value": 4,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Four of Cups.html"
     },
     {
         "name": "Five of Cups",
@@ -648,7 +688,8 @@
         "image": "rider-waite-minor-arcana---cups-05_6234679202_l.jpg",
         "type": "minor",
         "value": 5,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Five of Cups.html"
     },
     {
         "name": "Six of Cups",
@@ -663,7 +704,8 @@
         "image": "rider-waite-minor-arcana---cups-06_6234681960_l.jpg",
         "type": "minor",
         "value": 6,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Six of Cups.html"
     },
     {
         "name": "Seven of Cups",
@@ -679,7 +721,8 @@
         "image": "rider-waite-minor-arcana---cups-07_6234162753_l.jpg",
         "type": "minor",
         "value": 7,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Seven of Cups.html"
     },
     {
         "name": "Eight of Cups",
@@ -695,7 +738,8 @@
         "image": "rider-waite-minor-arcana---cups-08_6234165989_l.jpg",
         "type": "minor",
         "value": 8,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Eight of Cups.html"
     },
     {
         "name": "Nine of Cups",
@@ -711,7 +755,8 @@
         "image": "rider-waite-minor-arcana---cups-09_6234168247_l.jpg",
         "type": "minor",
         "value": 9,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Nine of Cups.html"
     },
     {
         "name": "Ten of Cups",
@@ -727,7 +772,8 @@
         "image": "rider-waite-minor-arcana---cups-10_6234171803_l.jpg",
         "type": "minor",
         "value": 10,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Ten of Cups.html"
     },
     {
         "name": "Page of Cups",
@@ -743,7 +789,8 @@
         "image": "rider-waite-minor-arcana---cups-11-page_6234174547_l.jpg",
         "type": "minor",
         "value": 11,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Page of Cups.html"
     },
     {
         "name": "Knight of Cups",
@@ -759,7 +806,8 @@
         "image": "rider-waite-minor-arcana---cups-12-knight_6234177439_l.jpg",
         "type": "minor",
         "value": 12,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Knight of Cups.html"
     },
     {
         "name": "Queen of Cups",
@@ -775,7 +823,8 @@
         "image": "rider-waite-minor-arcana---cups-13-queen_6234181309_l.jpg",
         "type": "minor",
         "value": 13,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Queen of Cups.html"
     },
     {
         "name": "King of Cups",
@@ -791,7 +840,8 @@
         "image": "rider-waite-minor-arcana---cups-14-king_6234708876_l.jpg",
         "type": "minor",
         "value": 14,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "King of Cups.html"
     },
     {
         "name": "Ace of Swords",
@@ -807,7 +857,8 @@
         "image": "rider-waite-minor-arcana---swords-01-ace_6234712912_l.jpg",
         "type": "minor",
         "value": 1,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Ace of Swords.html"
     },
     {
         "name": "Two of Swords",
@@ -823,7 +874,8 @@
         "image": "rider-waite-minor-arcana---swords-02_6234716234_l.jpg",
         "type": "minor",
         "value": 2,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Two of Swords.html"
     },
     {
         "name": "Three of Swords",
@@ -839,7 +891,8 @@
         "image": "rider-waite-minor-arcana---swords-03_6234719796_l.jpg",
         "type": "minor",
         "value": 3,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Three of Swords.html"
     },
     {
         "name": "Four of Swords",
@@ -855,7 +908,8 @@
         "image": "rider-waite-minor-arcana---swords-04_6234722694_l.jpg",
         "type": "minor",
         "value": 4,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Four of Swords.html"
     },
     {
         "name": "Five of Swords",
@@ -871,7 +925,8 @@
         "image": "rider-waite-minor-arcana---swords-05_6234201033_l.jpg",
         "type": "minor",
         "value": 5,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Five of Swords.html"
     },
     {
         "name": "Six of Swords",
@@ -887,7 +942,8 @@
         "image": "rider-waite-minor-arcana---swords-06_6234729032_l.jpg",
         "type": "minor",
         "value": 6,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Six of Swords.html"
     },
     {
         "name": "Seven of Swords",
@@ -903,7 +959,8 @@
         "image": "rider-waite-minor-arcana---swords-07_6234207565_l.jpg",
         "type": "minor",
         "value": 7,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Seven of Swords.html"
     },
     {
         "name": "Eight of Swords",
@@ -918,7 +975,8 @@
         "image": "rider-waite-minor-arcana---swords-08_6234210379_l.jpg",
         "type": "minor",
         "value": 8,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Eight of Swords.html"
     },
     {
         "name": "Nine of Swords",
@@ -934,7 +992,8 @@
         "image": "rider-waite-minor-arcana---swords-09_6234213789_l.jpg",
         "type": "minor",
         "value": 9,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Nine of Swords.html"
     },
     {
         "name": "Ten of Swords",
@@ -950,7 +1009,8 @@
         "image": "rider-waite-minor-arcana---swords-10_6234741256_l.jpg",
         "type": "minor",
         "value": 10,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Ten of Swords.html"
     },
     {
         "name": "Page of Swords",
@@ -966,7 +1026,8 @@
         "image": "rider-waite-minor-arcana---swords-11-page_6234743864_l.jpg",
         "type": "minor",
         "value": 11,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Page of Swords.html"
     },
     {
         "name": "Knight of Swords",
@@ -982,7 +1043,8 @@
         "image": "rider-waite-minor-arcana---swords-12-knight_6234222761_l.jpg",
         "type": "minor",
         "value": 12,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Knight of Swords.html"
     },
     {
         "name": "Queen of Swords",
@@ -998,7 +1060,8 @@
         "image": "rider-waite-minor-arcana---swords-13-queen_6234749846_l.jpg",
         "type": "minor",
         "value": 13,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Queen of Swords.html"
     },
     {
         "name": "King of Swords",
@@ -1014,7 +1077,8 @@
         "image": "rider-waite-minor-arcana---swords-14-king_6234228441_l.jpg",
         "type": "minor",
         "value": 14,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "King of Swords.html"
     },
     {
         "name": "Ace of Pentacles",
@@ -1030,7 +1094,8 @@
         "image": "rider-waite-minor-arcana---pentacles-01-ace_6234755746_l.jpg",
         "type": "minor",
         "value": 1,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Ace of Pentacles.html"
     },
     {
         "name": "Two of Pentacles",
@@ -1046,7 +1111,8 @@
         "image": "rider-waite-minor-arcana---pentacles-02_6234759442_l.jpg",
         "type": "minor",
         "value": 2,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Two of Pentacles.html"
     },
     {
         "name": "Three of Pentacles",
@@ -1061,7 +1127,8 @@
         "image": "rider-waite-minor-arcana---pentacles-03_6234238151_l.jpg",
         "type": "minor",
         "value": 3,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Three of Pentacles.html"
     },
     {
         "name": "Four of Pentacles",
@@ -1077,7 +1144,8 @@
         "image": "rider-waite-minor-arcana---pentacles-04_6234766364_l.jpg",
         "type": "minor",
         "value": 4,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Four of Pentacles.html"
     },
     {
         "name": "Five of Pentacles",
@@ -1093,7 +1161,8 @@
         "image": "rider-waite-minor-arcana---pentacles-05_6234768838_l.jpg",
         "type": "minor",
         "value": 5,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Five of Pentacles.html"
     },
     {
         "name": "Six of Pentacles",
@@ -1109,7 +1178,8 @@
         "image": "rider-waite-minor-arcana---pentacles-06_6234772038_l.jpg",
         "type": "minor",
         "value": 6,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Six of Pentacles.html"
     },
     {
         "name": "Seven of Pentacles",
@@ -1125,7 +1195,8 @@
         "image": "rider-waite-minor-arcana---pentacles-07_6234250873_l.jpg",
         "type": "minor",
         "value": 7,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Seven of Pentacles.html"
     },
     {
         "name": "Eight of Pentacles",
@@ -1141,7 +1212,8 @@
         "image": "rider-waite-minor-arcana---pentacles-08_6234777816_l.jpg",
         "type": "minor",
         "value": 8,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Eight of Pentacles.html"
     },
     {
         "name": "Nine of Pentacles",
@@ -1157,7 +1229,8 @@
         "image": "rider-waite-minor-arcana---pentacles-09_6234255825_l.jpg",
         "type": "minor",
         "value": 9,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Nine of Pentacles.html"
     },
     {
         "name": "Ten of Pentacles",
@@ -1173,7 +1246,8 @@
         "image": "rider-waite-minor-arcana---pentacles-10_6234259139_l.jpg",
         "type": "minor",
         "value": 10,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Ten of Pentacles.html"
     },
     {
         "name": "Page of Pentacles",
@@ -1189,7 +1263,8 @@
         "image": "rider-waite-minor-arcana---pentacles-11-page_6234261387_l.jpg",
         "type": "minor",
         "value": 11,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Page of Pentacles.html"
     },
     {
         "name": "Knight of Pentacles",
@@ -1205,7 +1280,8 @@
         "image": "rider-waite-minor-arcana---pentacles-12-knight_6234264177_l.jpg",
         "type": "minor",
         "value": 12,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Knight of Pentacles.html"
     },
     {
         "name": "Queen of Pentacles",
@@ -1221,7 +1297,8 @@
         "image": "rider-waite-minor-arcana---pentacles-13-queen_6234266673_l.jpg",
         "type": "minor",
         "value": 13,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Queen of Pentacles.html"
     },
     {
         "name": "King of Pentacles",
@@ -1237,7 +1314,8 @@
         "image": "rider-waite-minor-arcana---pentacles-14-king_6234270179_l.jpg",
         "type": "minor",
         "value": 14,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "King of Pentacles.html"
     },
     {
         "name": "The Fool Reversed",
@@ -1253,7 +1331,8 @@
         "image": "rider-waite-major-arcana-00-the-fool_6234580670_l.jpg",
         "type": "major",
         "value": 0,
-        "suit": null
+        "suit": null,
+        "details-html": "The Fool.html"
     },
     {
         "name": "The Magician Reversed",
@@ -1269,7 +1348,8 @@
         "image": "rider-waite-major-arcana-01-the-magician_6234582750_l.jpg",
         "type": "major",
         "value": 1,
-        "suit": null
+        "suit": null,
+        "details-html": "The Magician.html"
     },
     {
         "name": "The High Priestess Reversed",
@@ -1285,7 +1365,8 @@
         "image": "rider-waite-major-arcana-02-the-high-priestess_6234585244_l.jpg",
         "type": "major",
         "value": 2,
-        "suit": null
+        "suit": null,
+        "details-html": "The High Priestess.html"
     },
     {
         "name": "The Empress Reversed",
@@ -1301,7 +1382,8 @@
         "image": "rider-waite-major-arcana-03-the-empress_6234588362_l.jpg",
         "type": "major",
         "value": 3,
-        "suit": null
+        "suit": null,
+        "details-html": "The Empress.html"
     },
     {
         "name": "The Emperor Reversed",
@@ -1317,7 +1399,8 @@
         "image": "rider-waite-major-arcana-04-the-emperor_6234066109_l.jpg",
         "type": "major",
         "value": 4,
-        "suit": null
+        "suit": null,
+        "details-html": "The Emperor.html"
     },
     {
         "name": "The Hierophant Reversed",
@@ -1333,7 +1416,8 @@
         "image": "rider-waite-major-arcana-05-the-hierophant_6234068727_l.jpg",
         "type": "major",
         "value": 5,
-        "suit": null
+        "suit": null,
+        "details-html": "The Hierophant.html"
     },
     {
         "name": "The Lovers Reversed",
@@ -1349,7 +1433,8 @@
         "image": "rider-waite-major-arcana-06-the-lovers_6234595528_l.jpg",
         "type": "major",
         "value": 6,
-        "suit": null
+        "suit": null,
+        "details-html": "The Lovers.html"
     },
     {
         "name": "The Chariot Reversed",
@@ -1365,7 +1450,8 @@
         "image": "rider-waite-major-arcana-07-the-chariot_6234072405_l.jpg",
         "type": "major",
         "value": 7,
-        "suit": null
+        "suit": null,
+        "details-html": "The Chariot.html"
     },
     {
         "name": "Strength Reversed",
@@ -1381,7 +1467,8 @@
         "image": "rider-waite-major-arcana-08-strength_6234598040_l.jpg",
         "type": "major",
         "value": 8,
-        "suit": null
+        "suit": null,
+        "details-html": "Strength.html"
     },
     {
         "name": "The Hermit Reversed",
@@ -1397,7 +1484,8 @@
         "image": "rider-waite-major-arcana-09-the-hermit_6234075619_l.jpg",
         "type": "major",
         "value": 9,
-        "suit": null
+        "suit": null,
+        "details-html": "The Hermit.html"
     },
     {
         "name": "Wheel of Fortune Reversed",
@@ -1413,7 +1501,8 @@
         "image": "rider-waite-major-arcana-10-wheel-of-fortune_6234602206_l.jpg",
         "type": "major",
         "value": 10,
-        "suit": null
+        "suit": null,
+        "details-html": "Wheel of Fortune.html"
     },
     {
         "name": "Justice Reversed",
@@ -1429,7 +1518,8 @@
         "image": "rider-waite-major-arcana-11-justice_6234605714_l.jpg",
         "type": "major",
         "value": 11,
-        "suit": null
+        "suit": null,
+        "details-html": "Justice.html"
     },
     {
         "name": "The Hanged Man Reversed",
@@ -1445,7 +1535,8 @@
         "image": "rider-waite-major-arcana-12-the-hanged-man_6234084897_l.jpg",
         "type": "major",
         "value": 12,
-        "suit": null
+        "suit": null,
+        "details-html": "The Hanged Man.html"
     },
     {
         "name": "Death Reversed",
@@ -1460,7 +1551,8 @@
         "image": "rider-waite-major-arcana-13-death_6234086467_l.jpg",
         "type": "major",
         "value": 13,
-        "suit": null
+        "suit": null,
+        "details-html": "Death.html"
     },
     {
         "name": "Temperance Reversed",
@@ -1476,7 +1568,8 @@
         "image": "rider-waite-major-arcana-14-temperance_6234088279_l.jpg",
         "type": "major",
         "value": 14,
-        "suit": null
+        "suit": null,
+        "details-html": "Temperance.html"
     },
     {
         "name": "The Devil Reversed",
@@ -1492,7 +1585,8 @@
         "image": "rider-waite-major-arcana-15-the-devil_6234090311_l.jpg",
         "type": "major",
         "value": 15,
-        "suit": null
+        "suit": null,
+        "details-html": "The Devil.html"
     },
     {
         "name": "The Tower Reversed",
@@ -1508,7 +1602,8 @@
         "image": "rider-waite-major-arcana-16-the-tower_6234092237_l.jpg",
         "type": "major",
         "value": 16,
-        "suit": null
+        "suit": null,
+        "details-html": "The Tower.html"
     },
     {
         "name": "The Star Reversed",
@@ -1524,7 +1619,8 @@
         "image": "rider-waite-major-arcana-17-the-star_6234094083_l.jpg",
         "type": "major",
         "value": 17,
-        "suit": null
+        "suit": null,
+        "details-html": "The Star.html"
     },
     {
         "name": "The Moon Reversed",
@@ -1540,7 +1636,8 @@
         "image": "rider-waite-major-arcana-18-the-moon_6234620480_l.jpg",
         "type": "major",
         "value": 18,
-        "suit": null
+        "suit": null,
+        "details-html": "The Moon.html"
     },
     {
         "name": "The Sun Reversed",
@@ -1555,7 +1652,8 @@
         "image": "rider-waite-major-arcana-19-the-sun_6234097611_l.jpg",
         "type": "major",
         "value": 19,
-        "suit": null
+        "suit": null,
+        "details-html": "The Sun.html"
     },
     {
         "name": "Judgement Reversed",
@@ -1571,7 +1669,8 @@
         "image": "rider-waite-major-arcana-20-judgement_6234099599_l.jpg",
         "type": "major",
         "value": 20,
-        "suit": null
+        "suit": null,
+        "details-html": "Judgement.html"
     },
     {
         "name": "The World Reversed",
@@ -1587,7 +1686,8 @@
         "image": "rider-waite-major-arcana-21-the-world_6234101445_l.jpg",
         "type": "major",
         "value": 21,
-        "suit": null
+        "suit": null,
+        "details-html": "The world.html"
     },
     {
         "name": "Ace of Wands Reversed",
@@ -1603,7 +1703,8 @@
         "image": "rider-waite-minor-arcana---wands-01-ace_6234634378_l.jpg",
         "type": "minor",
         "value": 1,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "Ace of Wands.html"
     },
     {
         "name": "Two of Wands Reversed",
@@ -1619,7 +1720,8 @@
         "image": "rider-waite-minor-arcana---wands-02_6234636276_l.jpg",
         "type": "minor",
         "value": 2,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "TWO OF WANDS.html"
     },
     {
         "name": "Three of Wands Reversed",
@@ -1635,7 +1737,8 @@
         "image": "rider-waite-minor-arcana---wands-03_6234113573_l.jpg",
         "type": "minor",
         "value": 3,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "THREE OF WANDS.html"
     },
     {
         "name": "Four of Wands Reversed",
@@ -1651,7 +1754,8 @@
         "image": "rider-waite-minor-arcana---wands-04_6234115553_l.jpg",
         "type": "minor",
         "value": 4,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "FOUR OF WANDS.html"
     },
     {
         "name": "Five of Wands Reversed",
@@ -1667,7 +1771,8 @@
         "image": "rider-waite-minor-arcana---wands-05_6234117635_l.jpg",
         "type": "minor",
         "value": 5,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "FIVE OF WANDS.html"
     },
     {
         "name": "Six of Wands Reversed",
@@ -1683,7 +1788,8 @@
         "image": "rider-waite-minor-arcana---wands-06_6234119573_l.jpg",
         "type": "minor",
         "value": 6,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "SIX OF WANDS.html"
     },
     {
         "name": "Seven of Wands Reversed",
@@ -1699,7 +1805,8 @@
         "image": "rider-waite-minor-arcana---wands-07_6234645990_l.jpg",
         "type": "minor",
         "value": 7,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "SEVEN OF WANDS.html"
     },
     {
         "name": "Eight of Wands Reversed",
@@ -1715,7 +1822,8 @@
         "image": "rider-waite-minor-arcana---wands-08_6234123431_l.jpg",
         "type": "minor",
         "value": 8,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "EIGHT OF WANDS.html"
     },
     {
         "name": "Nine of Wands Reversed",
@@ -1731,7 +1839,8 @@
         "image": "rider-waite-minor-arcana---wands-09_6234125333_l.jpg",
         "type": "minor",
         "value": 9,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "NINE OF WANDS.html"
     },
     {
         "name": "Ten of Wands Reversed",
@@ -1746,7 +1855,8 @@
         "image": "rider-waite-minor-arcana---wands-10_6234651626_l.jpg",
         "type": "minor",
         "value": 10,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "TEN OF WANDS.html"
     },
     {
         "name": "Page of Wands Reversed",
@@ -1762,7 +1872,8 @@
         "image": "rider-waite-minor-arcana---wands-11-page_6234129705_l.jpg",
         "type": "minor",
         "value": 11,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "Page of Wands.html"
     },
     {
         "name": "Knight of Wands Reversed",
@@ -1778,7 +1889,8 @@
         "image": "rider-waite-minor-arcana---wands-12-knight_6234131585_l.jpg",
         "type": "minor",
         "value": 12,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "Knight of Wands.html"
     },
     {
         "name": "Queen of Wands Reversed",
@@ -1794,7 +1906,8 @@
         "image": "rider-waite-minor-arcana---wands-13-queen_6234133349_l.jpg",
         "type": "minor",
         "value": 13,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "Queen of Wands.html"
     },
     {
         "name": "King of Wands Reversed",
@@ -1810,7 +1923,8 @@
         "image": "rider-waite-minor-arcana---wands-14-king_6234659884_l.jpg",
         "type": "minor",
         "value": 14,
-        "suit": "wands"
+        "suit": "wands",
+        "details-html": "King of Wands.html"
     },
     {
         "name": "Ace of Cups Reversed",
@@ -1825,7 +1939,8 @@
         "image": "rider-waite-minor-arcana---cups-01-ace_6234141143_l.jpg",
         "type": "minor",
         "value": 1,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Ace of Cups.html"
     },
     {
         "name": "Two of Cups Reversed",
@@ -1841,7 +1956,8 @@
         "image": "rider-waite-minor-arcana---cups-02_6234669216_l.jpg",
         "type": "minor",
         "value": 2,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Two of Cups.html"
     },
     {
         "name": "Three of Cups Reversed",
@@ -1857,7 +1973,8 @@
         "image": "rider-waite-minor-arcana---cups-03_6234672074_l.jpg",
         "type": "minor",
         "value": 3,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Three of Cups.html"
     },
     {
         "name": "Four of Cups Reversed",
@@ -1872,7 +1989,8 @@
         "image": "rider-waite-minor-arcana---cups-04_6234675624_l.jpg",
         "type": "minor",
         "value": 4,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Four of Cups.html"
     },
     {
         "name": "Five of Cups Reversed",
@@ -1888,7 +2006,8 @@
         "image": "rider-waite-minor-arcana---cups-05_6234679202_l.jpg",
         "type": "minor",
         "value": 5,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Five of Cups.html"
     },
     {
         "name": "Six of Cups Reversed",
@@ -1904,7 +2023,8 @@
         "image": "rider-waite-minor-arcana---cups-06_6234681960_l.jpg",
         "type": "minor",
         "value": 6,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Six of Cups.html"
     },
     {
         "name": "Seven of Cups Reversed",
@@ -1920,7 +2040,8 @@
         "image": "rider-waite-minor-arcana---cups-07_6234162753_l.jpg",
         "type": "minor",
         "value": 7,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Seven of Cups.html"
     },
     {
         "name": "Eight of Cups Reversed",
@@ -1936,7 +2057,8 @@
         "image": "rider-waite-minor-arcana---cups-08_6234165989_l.jpg",
         "type": "minor",
         "value": 8,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Eight of Cups.html"
     },
     {
         "name": "Nine of Cups Reversed",
@@ -1952,7 +2074,8 @@
         "image": "rider-waite-minor-arcana---cups-09_6234168247_l.jpg",
         "type": "minor",
         "value": 9,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Nine of Cups.html"
     },
     {
         "name": "Ten of Cups Reversed",
@@ -1968,7 +2091,8 @@
         "image": "rider-waite-minor-arcana---cups-10_6234171803_l.jpg",
         "type": "minor",
         "value": 10,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Ten of Cups.html"
     },
     {
         "name": "Page of Cups Reversed",
@@ -1984,7 +2108,8 @@
         "image": "rider-waite-minor-arcana---cups-11-page_6234174547_l.jpg",
         "type": "minor",
         "value": 11,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Page of Cups.html"
     },
     {
         "name": "Knight of Cups Reversed",
@@ -2000,7 +2125,8 @@
         "image": "rider-waite-minor-arcana---cups-12-knight_6234177439_l.jpg",
         "type": "minor",
         "value": 12,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Knight of Cups.html"
     },
     {
         "name": "Queen of Cups Reversed",
@@ -2016,7 +2142,8 @@
         "image": "rider-waite-minor-arcana---cups-13-queen_6234181309_l.jpg",
         "type": "minor",
         "value": 13,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "Queen of Cups.html"
     },
     {
         "name": "King of Cups Reversed",
@@ -2032,7 +2159,8 @@
         "image": "rider-waite-minor-arcana---cups-14-king_6234708876_l.jpg",
         "type": "minor",
         "value": 14,
-        "suit": "cups"
+        "suit": "cups",
+        "details-html": "King of Cups.html"
     },
     {
         "name": "Ace of Swords Reversed",
@@ -2048,7 +2176,8 @@
         "image": "rider-waite-minor-arcana---swords-01-ace_6234712912_l.jpg",
         "type": "minor",
         "value": 1,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Ace of Swords.html"
     },
     {
         "name": "Two of Swords Reversed",
@@ -2064,7 +2193,8 @@
         "image": "rider-waite-minor-arcana---swords-02_6234716234_l.jpg",
         "type": "minor",
         "value": 2,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Two of Swords.html"
     },
     {
         "name": "Three of Swords Reversed",
@@ -2079,7 +2209,8 @@
         "image": "rider-waite-minor-arcana---swords-03_6234719796_l.jpg",
         "type": "minor",
         "value": 3,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Three of Swords.html"
     },
     {
         "name": "Four of Swords Reversed",
@@ -2095,7 +2226,8 @@
         "image": "rider-waite-minor-arcana---swords-04_6234722694_l.jpg",
         "type": "minor",
         "value": 4,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Four of Swords.html"
     },
     {
         "name": "Five of Swords Reversed",
@@ -2111,7 +2243,8 @@
         "image": "rider-waite-minor-arcana---swords-05_6234201033_l.jpg",
         "type": "minor",
         "value": 5,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Five of Swords.html"
     },
     {
         "name": "Six of Swords Reversed",
@@ -2127,7 +2260,8 @@
         "image": "rider-waite-minor-arcana---swords-06_6234729032_l.jpg",
         "type": "minor",
         "value": 6,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Six of Swords.html"
     },
     {
         "name": "Seven of Swords Reversed",
@@ -2142,7 +2276,8 @@
         "image": "rider-waite-minor-arcana---swords-07_6234207565_l.jpg",
         "type": "minor",
         "value": 7,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Seven of Swords.html"
     },
     {
         "name": "Eight of Swords Reversed",
@@ -2158,7 +2293,8 @@
         "image": "rider-waite-minor-arcana---swords-08_6234210379_l.jpg",
         "type": "minor",
         "value": 8,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Eight of Swords.html"
     },
     {
         "name": "Nine of Swords Reversed",
@@ -2174,7 +2310,8 @@
         "image": "rider-waite-minor-arcana---swords-09_6234213789_l.jpg",
         "type": "minor",
         "value": 9,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Nine of Swords.html"
     },
     {
         "name": "Ten of Swords Reversed",
@@ -2190,7 +2327,8 @@
         "image": "rider-waite-minor-arcana---swords-10_6234741256_l.jpg",
         "type": "minor",
         "value": 10,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Ten of Swords.html"
     },
     {
         "name": "Page of Swords Reversed",
@@ -2206,7 +2344,8 @@
         "image": "rider-waite-minor-arcana---swords-11-page_6234743864_l.jpg",
         "type": "minor",
         "value": 11,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Page of Swords.html"
     },
     {
         "name": "Knight of Swords Reversed",
@@ -2222,7 +2361,8 @@
         "image": "rider-waite-minor-arcana---swords-12-knight_6234222761_l.jpg",
         "type": "minor",
         "value": 12,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Knight of Swords.html"
     },
     {
         "name": "Queen of Swords Reversed",
@@ -2238,7 +2378,8 @@
         "image": "rider-waite-minor-arcana---swords-13-queen_6234749846_l.jpg",
         "type": "minor",
         "value": 13,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "Queen of Swords.html"
     },
     {
         "name": "King of Swords Reversed",
@@ -2254,7 +2395,8 @@
         "image": "rider-waite-minor-arcana---swords-14-king_6234228441_l.jpg",
         "type": "minor",
         "value": 14,
-        "suit": "swords"
+        "suit": "swords",
+        "details-html": "King of Swords.html"
     },
     {
         "name": "Ace of Pentacles Reversed",
@@ -2269,7 +2411,8 @@
         "image": "rider-waite-minor-arcana---pentacles-01-ace_6234755746_l.jpg",
         "type": "minor",
         "value": 1,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Ace of Pentacles.html"
     },
     {
         "name": "Two of Pentacles Reversed",
@@ -2284,7 +2427,8 @@
         "image": "rider-waite-minor-arcana---pentacles-02_6234759442_l.jpg",
         "type": "minor",
         "value": 2,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Two of Pentacles.html"
     },
     {
         "name": "Three of Pentacles Reversed",
@@ -2300,7 +2444,8 @@
         "image": "rider-waite-minor-arcana---pentacles-03_6234238151_l.jpg",
         "type": "minor",
         "value": 3,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Three of Pentacles.html"
     },
     {
         "name": "Four of Pentacles Reversed",
@@ -2316,7 +2461,8 @@
         "image": "rider-waite-minor-arcana---pentacles-04_6234766364_l.jpg",
         "type": "minor",
         "value": 4,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Four of Pentacles.html"
     },
     {
         "name": "Five of Pentacles Reversed",
@@ -2332,7 +2478,8 @@
         "image": "rider-waite-minor-arcana---pentacles-05_6234768838_l.jpg",
         "type": "minor",
         "value": 5,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Five of Pentacles.html"
     },
     {
         "name": "Six of Pentacles Reversed",
@@ -2348,7 +2495,8 @@
         "image": "rider-waite-minor-arcana---pentacles-06_6234772038_l.jpg",
         "type": "minor",
         "value": 6,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Six of Pentacles.html"
     },
     {
         "name": "Seven of Pentacles Reversed",
@@ -2364,7 +2512,8 @@
         "image": "rider-waite-minor-arcana---pentacles-07_6234250873_l.jpg",
         "type": "minor",
         "value": 7,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Seven of Pentacles.html"
     },
     {
         "name": "Eight of Pentacles Reversed",
@@ -2379,7 +2528,8 @@
         "image": "rider-waite-minor-arcana---pentacles-08_6234777816_l.jpg",
         "type": "minor",
         "value": 8,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Eight of Pentacles.html"
     },
     {
         "name": "Nine of Pentacles Reversed",
@@ -2395,7 +2545,8 @@
         "image": "rider-waite-minor-arcana---pentacles-09_6234255825_l.jpg",
         "type": "minor",
         "value": 9,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Nine of Pentacles.html"
     },
     {
         "name": "Ten of Pentacles Reversed",
@@ -2411,7 +2562,8 @@
         "image": "rider-waite-minor-arcana---pentacles-10_6234259139_l.jpg",
         "type": "minor",
         "value": 10,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Ten of Pentacles.html"
     },
     {
         "name": "Page of Pentacles Reversed",
@@ -2427,7 +2579,8 @@
         "image": "rider-waite-minor-arcana---pentacles-11-page_6234261387_l.jpg",
         "type": "minor",
         "value": 11,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Page of Pentacles.html"
     },
     {
         "name": "Knight of Pentacles Reversed",
@@ -2443,7 +2596,8 @@
         "image": "rider-waite-minor-arcana---pentacles-12-knight_6234264177_l.jpg",
         "type": "minor",
         "value": 12,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Knight of Pentacles.html"
     },
     {
         "name": "Queen of Pentacles Reversed",
@@ -2459,7 +2613,8 @@
         "image": "rider-waite-minor-arcana---pentacles-13-queen_6234266673_l.jpg",
         "type": "minor",
         "value": 13,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "Queen of Pentacles.html"
     },
     {
         "name": "King of Pentacles Reversed",
@@ -2475,6 +2630,7 @@
         "image": "rider-waite-minor-arcana---pentacles-14-king_6234270179_l.jpg",
         "type": "minor",
         "value": 14,
-        "suit": "pentacles"
+        "suit": "pentacles",
+        "details-html": "King of Pentacles.html"
     }
 ]
