@@ -2,8 +2,13 @@ import { readdir, readFile } from "node:fs/promises";
 
 import { describe, expect, it } from "vitest";
 
-const deckFiles = ["decks/en/default.json", "decks/en/waites.json"];
+const deckFiles = [
+  "decks/en/default.json",
+  "decks/en/waites.json",
+  "decks/ko/default.json"
+];
 const minorSuits = new Set(["wands", "cups", "swords", "pentacles"]);
+const localizedMetadataFields = ["name", "symbol", "image", "type", "value", "suit"];
 
 const loadDeck = async (filePath) => {
   const fileUrl = new URL(`../${filePath}`, import.meta.url);
@@ -71,5 +76,25 @@ describe.each(deckFiles)("deck schema: %s", (deckFile) => {
       expect(uprightCard).toBeDefined();
       expect(card.image).toBe(uprightCard.image);
     }
+  });
+});
+
+describe("localized deck parity", () => {
+  it("keeps Korean default deck metadata aligned with English default deck", async () => {
+    const englishDeck = await loadDeck("decks/en/default.json");
+    const koreanDeck = await loadDeck("decks/ko/default.json");
+
+    expect(koreanDeck).toHaveLength(englishDeck.length);
+
+    koreanDeck.forEach((koreanCard, index) => {
+      const englishCard = englishDeck[index];
+
+      for (const field of localizedMetadataFields) {
+        expect(koreanCard[field]).toEqual(englishCard[field]);
+      }
+
+      expect(koreanCard.meanings).not.toEqual(englishCard.meanings);
+      expect(koreanCard.description).not.toBe(englishCard.description);
+    });
   });
 });
