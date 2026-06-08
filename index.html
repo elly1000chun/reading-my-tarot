@@ -174,12 +174,19 @@ const spreadButtons = document.querySelectorAll(".spread-btn");
 // Helper function to create card element
 function createCardElement(card, position) {
   const cardDiv = document.createElement("div");
+  const isReversed = card.name.includes("Reversed");
+  const cardVisual = card.image
+    ? `<img src="./decks/images/${card.image}" alt="${card.name}" class="mx-auto mb-4 h-56 w-auto rounded-md shadow-lg transition-transform duration-500 ${
+        isReversed ? "rotate-180" : ""
+      }">`
+    : `<div class="text-4xl mb-4">${card.symbol}</div>`;
+
   cardDiv.className =
     "bg-gray-800 p-6 rounded-lg transform transition-all duration-500 hover:scale-105 fade-in";
   cardDiv.innerHTML = `
                 <h3 class="text-lg font-semibold text-purple-400 mb-2">${position}</h3>
                 <div class="card-content bg-gray-700 p-4 rounded-lg">
-                    <div class="text-4xl mb-4">${card.symbol}</div>
+                    ${cardVisual}
                     <h4 class="text-xl mb-2">${card.name}</h4>
                     <p class="text-gray-400 mb-2">${card.description}</p>
                     <p class="text-purple-300 italic">${

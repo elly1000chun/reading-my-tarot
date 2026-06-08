@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 
 import { describe, expect, it } from "vitest";
 
@@ -15,6 +15,11 @@ const expectNonEmptyString = (value) => {
   expect(value.trim().length).toBeGreaterThan(0);
 };
 
+const loadImageFilenames = async () => {
+  const imageDir = new URL("../decks/images/", import.meta.url);
+  return new Set(await readdir(imageDir));
+};
+
 describe.each(deckFiles)("deck schema: %s", (deckFile) => {
   it("contains a complete upright and reversed deck", async () => {
     const deck = await loadDeck(deckFile);
@@ -27,11 +32,14 @@ describe.each(deckFiles)("deck schema: %s", (deckFile) => {
 
   it("has valid card fields", async () => {
     const deck = await loadDeck(deckFile);
+    const imageFilenames = await loadImageFilenames();
 
     for (const card of deck) {
       expectNonEmptyString(card.name);
       expectNonEmptyString(card.symbol);
       expectNonEmptyString(card.description);
+      expectNonEmptyString(card.image);
+      expect(imageFilenames.has(card.image)).toBe(true);
 
       expect(Array.isArray(card.meanings)).toBe(true);
       expect(card.meanings.length).toBeGreaterThan(0);
@@ -49,6 +57,19 @@ describe.each(deckFiles)("deck schema: %s", (deckFile) => {
         expect(card.value).toBeGreaterThanOrEqual(1);
         expect(card.value).toBeLessThanOrEqual(14);
       }
+    }
+  });
+
+  it("uses the same image for upright and reversed card pairs", async () => {
+    const deck = await loadDeck(deckFile);
+    const cardsByName = new Map(deck.map((card) => [card.name, card]));
+
+    for (const card of deck.filter((card) => card.name.endsWith(" Reversed"))) {
+      const uprightName = card.name.replace(/ Reversed$/, "");
+      const uprightCard = cardsByName.get(uprightName);
+
+      expect(uprightCard).toBeDefined();
+      expect(card.image).toBe(uprightCard.image);
     }
   });
 });
