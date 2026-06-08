@@ -129,6 +129,11 @@ let currentLanguage = "ko";
 let tarot = null;
 let viewToken = 0;
 let languageLoadToken = 0;
+let currentReading = [];
+let currentSpreadType = null;
+
+const deckCache = new Map();
+const cardLookupByLanguage = new Map();
 
 // Load an existing tarot deck via fetch.
 async function fetchDeck(language) {
@@ -137,6 +142,20 @@ async function fetchDeck(language) {
     throw new Error(`HTTP error! Status: ${response.status}`);
   }
   return response.json();
+}
+
+async function getDeck(language) {
+  if (deckCache.has(language)) {
+    return deckCache.get(language);
+  }
+
+  const deck = await fetchDeck(language);
+  deckCache.set(language, deck);
+  cardLookupByLanguage.set(
+    language,
+    new Map(deck.map((card) => [card.name, card]))
+  );
+  return deck;
 }
 
 // DOM Elements
@@ -186,6 +205,8 @@ function initializeTarot(deck) {
 
 function resetReadingView() {
   viewToken += 1;
+  currentReading = [];
+  currentSpreadType = null;
   loadingAnimation.classList.add("hidden");
   readingResults.classList.add("hidden");
   newReadingBtn.classList.add("hidden");
@@ -214,12 +235,22 @@ async function setLanguage(language) {
   viewToken += 1;
   currentLanguage = language;
   updateLanguageButtons();
-  const deck = await fetchDeck(language);
+  const deck = await getDeck(language);
   if (token !== languageLoadToken) {
     return;
   }
   initializeTarot(deck);
-  resetReadingView();
+
+  if (currentReading.length > 0) {
+    currentReading = localizeReading(currentReading, language);
+    setupSpreadGrid(currentSpreadType);
+    renderReading(currentReading);
+    loadingAnimation.classList.add("hidden");
+    newReadingBtn.classList.remove("hidden");
+    return;
+  }
+
+  loadingAnimation.classList.add("hidden");
 }
 
 // Helper function to create card element
@@ -250,9 +281,40 @@ function createCardElement(card, position) {
   return cardDiv;
 }
 
+function localizeReading(reading, language) {
+  const cardLookup = cardLookupByLanguage.get(language);
+
+  return reading.map(({ position, card }) => ({
+    position,
+    card: cardLookup?.get(card.name) || card
+  }));
+}
+
+function setupSpreadGrid(spreadType) {
+  if (spreadType === "single") {
+    spreadContainer.className = "grid gap-6";
+  } else if (spreadType === "Three-Card Spread") {
+    spreadContainer.className = "grid grid-cols-1 md:grid-cols-3 gap-6";
+  } else if (spreadType === "celtic-cross") {
+    spreadContainer.className =
+      "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
+  }
+}
+
+function renderReading(reading) {
+  spreadContainer.innerHTML = "";
+  reading.forEach(({ position, card }) => {
+    spreadContainer.appendChild(createCardElement(card, position));
+  });
+  readingResults.classList.remove("hidden");
+}
+
 // Function to perform reading
 async function performReading(spreadType) {
   const token = viewToken;
+  currentSpreadType = spreadType;
+  currentReading = [];
+
   // Show loading animation
   loadingAnimation.classList.remove("hidden");
   readingResults.classList.add("hidden");
@@ -268,17 +330,10 @@ async function performReading(spreadType) {
 
   // Get reading
   const reading = tarot.doReading(spreadType);
+  currentReading = reading;
 
   // Setup grid based on spread type
-
-  if (spreadType === "single") {
-    spreadContainer.className = "grid gap-6";
-  } else if (spreadType === "Three-Card Spread") {
-    spreadContainer.className = "grid grid-cols-1 md:grid-cols-3 gap-6";
-  } else if (spreadType === "celtic-cross") {
-    spreadContainer.className =
-      "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6";
-  }
+  setupSpreadGrid(spreadType);
 
   // Hide loading and show results
   loadingAnimation.classList.add("hidden");
@@ -290,7 +345,10 @@ async function performReading(spreadType) {
     if (token !== viewToken) {
       return;
     }
-    const cardElement = createCardElement(reading[i].card, reading[i].position);
+    const cardElement = createCardElement(
+      currentReading[i].card,
+      currentReading[i].position
+    );
     spreadContainer.appendChild(cardElement);
   }
 
@@ -324,6 +382,8 @@ spreadButtons.forEach((button, index) => {
 });
 
 newReadingBtn.addEventListener("click", () => {
+  currentReading = [];
+  currentSpreadType = null;
   readingResults.classList.add("hidden");
   newReadingBtn.classList.add("hidden");
   spreadSelection.classList.remove("hidden");
