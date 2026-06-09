@@ -10,7 +10,7 @@
 - **Current Spread Tracking**: View the most recent spread and cards drawn for a convenient reference.
 - **Detailed Deck Information**: Retrieve full deck details, including card counts and each card’s metadata.
 
-## Goul
+## Goal
 - Codex 활용
    - 프로젝트 구조 분석하여 문서로 저장
    - 테스트 코드 추가
