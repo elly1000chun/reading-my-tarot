@@ -10,6 +10,18 @@
 - **Current Spread Tracking**: View the most recent spread and cards drawn for a convenient reference.
 - **Detailed Deck Information**: Retrieve full deck details, including card counts and each card’s metadata.
 
+## Goul
+- Codex 활용
+   - 프로젝트 구조 분석하여 문서로 저장
+   - 테스트 코드 추가
+      - 테스트 코드가 없는 프로젝트이므로, 테스트 프레임워크부터 선정해야함
+   - 버그 수정, Refactoring 등 코드 수정
+   - 위 과정에서 AGENTS.md 파일 생성 및 관리, Skill 또는 템플릿 생성 및 관리 등을 파악
+ - 기능 추가
+   - 카드 이미지 표시
+   - 한국어 지원
+   - 상세 카드 해석 표시
+
 ## New Features
  - **Display Card Images**: 카드 이미지를 표시 (2026-06-08)
  - **Support Korean**: 한국어 지원 (2026-06-08)
@@ -18,13 +30,6 @@
 ## Other Changes
  - Added test code
  - Refactoring
-
-## ToDos
-- 프로젝트 구조 분석하여 문서로 저장
-- 테스트 코드 추가
-  - 테스트 코드가 없는 프로젝트이므로, 테스트 프레임워크부터 선정해야함
-- 버그 수정, Refactoring 등 코드 수정
-- 위 과정에서 AGENTS.md 파일 생성 및 관리, Skill 또는 템플릿 생성 및 관리 등을 파악
 
 ## Usage
  - In Local
