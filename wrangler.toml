@@ -31,4 +31,4 @@ persist = true
 head_sampling_rate = 1
 
 [placement]
-region = "ap-northeast-2"
+region = "aws:ap-northeast-2"
