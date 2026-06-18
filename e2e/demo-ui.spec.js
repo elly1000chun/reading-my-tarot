@@ -50,6 +50,9 @@ test.describe("Mystic Tarot demo UI", () => {
     await expect(page.locator("#interpretationSummary")).toContainText(
       "What should I focus on today?"
     );
+    await expect(page.locator("#interpretationStatus")).toContainText(
+      /Local summary shown|로컬 요약을 유지/
+    );
     await expect(page.locator("#spreadContainer .card-content")).toHaveCount(1);
     await expect(page.getByRole("button", { name: "New Reading" })).toBeVisible();
 
@@ -76,15 +79,16 @@ test.describe("Mystic Tarot demo UI", () => {
   test("replaces the local summary with an AI interpretation when available", async ({
     page
   }) => {
-    let requestPayload;
+    const requestPayloads = [];
 
     await page.route("**/api/interpret-reading", async (route) => {
-      requestPayload = route.request().postDataJSON();
+      const requestPayload = route.request().postDataJSON();
+      requestPayloads.push(requestPayload);
       await route.fulfill({
         status: 200,
         contentType: "application/json",
         body: JSON.stringify({
-          summary: "AI summary: focus on one practical next step.",
+          summary: `AI summary for ${requestPayload.language}: focus on one practical next step.`,
           source: "ai"
         })
       });
@@ -97,15 +101,18 @@ test.describe("Mystic Tarot demo UI", () => {
     await page.getByRole("button", { name: /Single Card/ }).click();
 
     await expect(page.locator("#interpretationSummary")).toContainText(
-      "AI summary: focus on one practical next step."
+      "AI summary for en: focus on one practical next step."
     );
-    expect(requestPayload).toMatchObject({
+    await expect(page.locator("#interpretationStatus")).toHaveText(
+      "AI interpretation applied."
+    );
+    expect(requestPayloads[0]).toMatchObject({
       question: "How can I move forward with this decision?",
       language: "en",
       spreadType: "single"
     });
-    expect(requestPayload.cards).toHaveLength(1);
-    expect(requestPayload.cards[0]).toEqual(
+    expect(requestPayloads[0].cards).toHaveLength(1);
+    expect(requestPayloads[0].cards[0]).toEqual(
       expect.objectContaining({
         position: "Your card",
         name: expect.any(String),
@@ -113,5 +120,19 @@ test.describe("Mystic Tarot demo UI", () => {
         description: expect.any(String)
       })
     );
+
+    await page.locator('[data-language="ko"]').click();
+
+    await expect(page.locator("#interpretationSummary")).toContainText(
+      "AI summary for ko: focus on one practical next step."
+    );
+    await expect(page.locator("#interpretationStatus")).toHaveText(
+      "AI 해석이 적용되었습니다."
+    );
+    expect(requestPayloads.at(-1)).toMatchObject({
+      question: "How can I move forward with this decision?",
+      language: "ko",
+      spreadType: "single"
+    });
   });
 });

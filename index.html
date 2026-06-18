@@ -132,6 +132,7 @@
           Reading summary
         </h2>
         <p id="interpretationSummary" class="leading-7 text-gray-200"></p>
+        <p id="interpretationStatus" class="mt-4 text-sm text-purple-200" aria-live="polite"></p>
       </section>
       <div id="spreadContainer" class="grid gap-6">
         <!-- Cards will be inserted here -->
@@ -184,6 +185,12 @@ const copyByLanguage = {
     defaultQuestion: "What message do I need right now?",
     loadingText: "Consulting the cards...",
     interpretationTitle: "Reading summary",
+    interpretationLocalStatus:
+      "Local summary shown while AI checks for an expanded interpretation.",
+    interpretationAiLoading: "Checking for AI interpretation...",
+    interpretationAiReady: "AI interpretation applied.",
+    interpretationFallbackStatus:
+      "Local summary shown. AI interpretation is unavailable right now.",
     fallbackTheme: "the message available in the cards"
   },
   ko: {
@@ -196,6 +203,12 @@ const copyByLanguage = {
     defaultQuestion: "지금 나에게 필요한 메시지는 무엇인가요?",
     loadingText: "카드의 메시지를 살펴보는 중...",
     interpretationTitle: "리딩 요약",
+    interpretationLocalStatus:
+      "AI 해석을 확인하는 동안 로컬 요약을 먼저 표시합니다.",
+    interpretationAiLoading: "AI 해석을 확인하는 중...",
+    interpretationAiReady: "AI 해석이 적용되었습니다.",
+    interpretationFallbackStatus:
+      "AI 해석을 사용할 수 없어 로컬 요약을 유지합니다.",
     fallbackTheme: "카드가 보여주는 메시지"
   }
 };
@@ -240,6 +253,7 @@ const readingResults = document.getElementById("readingResults");
 const interpretationPanel = document.getElementById("interpretationPanel");
 const interpretationTitle = document.getElementById("interpretationTitle");
 const interpretationSummary = document.getElementById("interpretationSummary");
+const interpretationStatus = document.getElementById("interpretationStatus");
 const spreadContainer = document.getElementById("spreadContainer");
 const spreadSelection = document.getElementById("spreadSelection");
 const newReadingBtn = document.getElementById("newReadingBtn");
@@ -423,27 +437,65 @@ async function requestAiInterpretation(payload) {
 }
 
 async function updateInterpretationFromAi(token, payload) {
+  const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
+  setInterpretationStatus(copy.interpretationAiLoading);
+
   try {
     const result = await requestAiInterpretation(payload);
     if (token !== viewToken) {
       return;
     }
-    renderInterpretation(result.summary);
+    renderInterpretation(result.summary, copy.interpretationAiReady);
   } catch (error) {
     console.info("Using local tarot interpretation fallback.", error);
+    if (token !== viewToken) {
+      return;
+    }
+    setInterpretationStatus(copy.interpretationFallbackStatus);
   }
 }
 
-function renderInterpretation(summary) {
+function renderInterpretation(summary, statusText = "") {
   const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
   interpretationTitle.textContent = copy.interpretationTitle;
   interpretationSummary.textContent = summary;
+  setInterpretationStatus(statusText);
   interpretationPanel.classList.remove("hidden");
+}
+
+function setInterpretationStatus(statusText) {
+  interpretationStatus.textContent = statusText;
+  interpretationStatus.classList.toggle("hidden", !statusText);
 }
 
 function resetInterpretation() {
   interpretationSummary.textContent = "";
+  setInterpretationStatus("");
   interpretationPanel.classList.add("hidden");
+}
+
+function renderLocalInterpretation() {
+  const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
+  renderInterpretation(
+    createLocalInterpretation({
+      question: currentQuestion,
+      spreadType: currentSpreadType,
+      reading: currentReading,
+      language: currentLanguage
+    }),
+    copy.interpretationLocalStatus
+  );
+}
+
+function requestAiInterpretationForCurrentReading(token) {
+  const interpretationPayload = createAiInterpretationPayload({
+    question: currentQuestion,
+    spreadType: currentSpreadType,
+    reading: currentReading,
+    language: currentLanguage
+  });
+
+  updateInterpretationFromAi(token, interpretationPayload);
 }
 
 async function setLanguage(language) {
@@ -466,15 +518,9 @@ async function setLanguage(language) {
     currentReading = localizeReading(currentReading, language);
     currentQuestion = getCurrentQuestion();
     setupSpreadGrid(currentSpreadType);
-    renderInterpretation(
-      createLocalInterpretation({
-        question: currentQuestion,
-        spreadType: currentSpreadType,
-        reading: currentReading,
-        language: currentLanguage
-      })
-    );
+    renderLocalInterpretation();
     renderReading(currentReading);
+    requestAiInterpretationForCurrentReading(viewToken);
     loadingAnimation.classList.add("hidden");
     newReadingBtn.classList.remove("hidden");
     return;
@@ -582,21 +628,8 @@ async function performReading(spreadType) {
 
   // Setup grid based on spread type
   setupSpreadGrid(spreadType);
-  const interpretationPayload = createAiInterpretationPayload({
-    question: currentQuestion,
-    spreadType,
-    reading: currentReading,
-    language: currentLanguage
-  });
-  renderInterpretation(
-    createLocalInterpretation({
-      question: currentQuestion,
-      spreadType,
-      reading: currentReading,
-      language: currentLanguage
-    })
-  );
-  updateInterpretationFromAi(token, interpretationPayload);
+  renderLocalInterpretation();
+  requestAiInterpretationForCurrentReading(token);
 
   // Hide loading and show results
   loadingAnimation.classList.add("hidden");
