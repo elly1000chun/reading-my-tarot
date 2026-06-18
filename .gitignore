@@ -2,3 +2,5 @@
 node_modules
 dist
 decks/ko/source
+playwright-report/
+test-results/
