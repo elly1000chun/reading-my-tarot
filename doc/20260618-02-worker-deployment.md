@@ -29,17 +29,29 @@ npm run worker:dev
 
 ## Cloudflare Setup
 
-Store the OpenAI API key as a Cloudflare secret:
+Store the OpenAI API key as a Worker runtime secret. This value must be attached to the deployed Worker named `reading-my-tarot`; a Cloudflare build variable alone is not enough because the API route reads `env.OPENAI_API_KEY` at request time.
 
 ```bash
 npx wrangler secret put OPENAI_API_KEY
 ```
+
+If the secret was previously added to another Worker, such as an older `reading-my-tarot-api` deployment, add it again for `reading-my-tarot` from this project directory.
+
+The same setting can be added from the Cloudflare dashboard:
+
+1. Open Workers & Pages.
+2. Select `reading-my-tarot`.
+3. Open Settings > Variables and Secrets.
+4. Add `OPENAI_API_KEY` as a Secret, not as a plain text variable.
+5. Save or deploy the updated Worker version when Cloudflare prompts for it.
 
 Build the Cloudflare static assets and deploy the Worker:
 
 ```bash
 npm run worker:deploy
 ```
+
+`wrangler.toml` declares `OPENAI_API_KEY` as a required secret, so `wrangler deploy` validates that the secret exists for the target Worker before deployment.
 
 The Worker uses these non-secret vars from `wrangler.toml`:
 

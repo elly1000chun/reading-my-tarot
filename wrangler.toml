@@ -6,6 +6,9 @@ compatibility_date = "2026-06-18"
 OPENAI_MODEL = "gpt-5.4-mini"
 ALLOWED_ORIGIN = "http://127.0.0.1:54173,http://localhost:54173,https://reading-my-tarot.elly1000chun.workers.dev,https://elly1000chun.github.io"
 
+[secrets]
+required = ["OPENAI_API_KEY"]
+
 [assets]
 directory = "public"
 run_worker_first = ["/api/*"]
