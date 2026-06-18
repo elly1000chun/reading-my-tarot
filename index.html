@@ -133,7 +133,16 @@
           Reading summary
         </h2>
         <p id="interpretationSummary" class="leading-7 text-gray-200"></p>
-        <p id="interpretationStatus" class="mt-4 text-sm text-purple-200" aria-live="polite"></p>
+        <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p id="interpretationStatus" class="text-sm text-purple-200" aria-live="polite"></p>
+          <button
+            id="retryAiInterpretationBtn"
+            class="hidden rounded-lg bg-purple-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-purple-700 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-gray-400"
+            type="button"
+          >
+            Retry AI interpretation
+          </button>
+        </div>
       </section>
       <div id="spreadContainer" class="grid gap-6">
         <!-- Cards will be inserted here -->
@@ -190,6 +199,7 @@ const copyByLanguage = {
     interpretationAiReady: "AI interpretation applied.",
     interpretationFallbackStatus:
       "Local summary shown. AI interpretation is unavailable right now.",
+    retryAiInterpretation: "Retry AI interpretation",
     fallbackTheme: "the message available in the cards"
   },
   ko: {
@@ -216,6 +226,7 @@ let currentLanguage = "ko";
 let tarot = null;
 let viewToken = 0;
 let languageLoadToken = 0;
+let interpretationRequestToken = 0;
 let currentReading = [];
 let currentSpreadType = null;
 let currentQuestion = "";
@@ -280,6 +291,7 @@ const interpretationPanel = document.getElementById("interpretationPanel");
 const interpretationTitle = document.getElementById("interpretationTitle");
 const interpretationSummary = document.getElementById("interpretationSummary");
 const interpretationStatus = document.getElementById("interpretationStatus");
+const retryAiInterpretationBtn = document.getElementById("retryAiInterpretationBtn");
 const spreadContainer = document.getElementById("spreadContainer");
 const spreadSelection = document.getElementById("spreadSelection");
 const newReadingBtn = document.getElementById("newReadingBtn");
@@ -365,6 +377,8 @@ function updateLanguageCopy() {
   questionError.textContent = copy.questionError;
   loadingText.textContent = copy.loadingText;
   interpretationTitle.textContent = copy.interpretationTitle;
+  retryAiInterpretationBtn.textContent =
+    copy.retryAiInterpretation || copyByLanguage.en.retryAiInterpretation;
 }
 
 function getCurrentQuestion() {
@@ -462,22 +476,36 @@ async function requestAiInterpretation(payload) {
   };
 }
 
-async function updateInterpretationFromAi(token, payload) {
+async function updateInterpretationFromAi(viewSnapshot, requestSnapshot, payload) {
   const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
   setInterpretationStatus(copy.interpretationAiLoading);
+  setRetryAiInterpretationLoading(true);
 
   try {
     const result = await requestAiInterpretation(payload);
-    if (token !== viewToken) {
+    if (
+      viewSnapshot !== viewToken ||
+      requestSnapshot !== interpretationRequestToken
+    ) {
       return;
     }
     renderInterpretation(result.summary, copy.interpretationAiReady);
   } catch (error) {
     console.info("Using local tarot interpretation fallback.", error);
-    if (token !== viewToken) {
+    if (
+      viewSnapshot !== viewToken ||
+      requestSnapshot !== interpretationRequestToken
+    ) {
       return;
     }
     setInterpretationStatus(copy.interpretationFallbackStatus);
+  } finally {
+    if (
+      viewSnapshot === viewToken &&
+      requestSnapshot === interpretationRequestToken
+    ) {
+      setRetryAiInterpretationLoading(false);
+    }
   }
 }
 
@@ -494,9 +522,19 @@ function setInterpretationStatus(statusText) {
   interpretationStatus.classList.toggle("hidden", !statusText);
 }
 
+function setRetryAiInterpretationLoading(isLoading) {
+  retryAiInterpretationBtn.disabled = isLoading;
+}
+
+function showRetryAiInterpretationButton() {
+  retryAiInterpretationBtn.classList.toggle("hidden", currentReading.length === 0);
+}
+
 function resetInterpretation() {
   interpretationSummary.textContent = "";
   setInterpretationStatus("");
+  setRetryAiInterpretationLoading(false);
+  retryAiInterpretationBtn.classList.add("hidden");
   interpretationPanel.classList.add("hidden");
 }
 
@@ -511,17 +549,23 @@ function renderLocalInterpretation() {
     }),
     copy.interpretationLocalStatus
   );
+  showRetryAiInterpretationButton();
 }
 
 function requestAiInterpretationForCurrentReading(token) {
+  if (currentReading.length === 0 || !currentSpreadType || !currentQuestion) {
+    return;
+  }
+
   const interpretationPayload = createAiInterpretationPayload({
     question: currentQuestion,
     spreadType: currentSpreadType,
     reading: currentReading,
     language: currentLanguage
   });
+  const requestToken = ++interpretationRequestToken;
 
-  updateInterpretationFromAi(token, interpretationPayload);
+  updateInterpretationFromAi(token, requestToken, interpretationPayload);
 }
 
 async function setLanguage(language) {
@@ -711,6 +755,10 @@ newReadingBtn.addEventListener("click", () => {
   newReadingBtn.classList.add("hidden");
   resetInterpretation();
   spreadSelection.classList.remove("hidden");
+});
+
+retryAiInterpretationBtn.addEventListener("click", () => {
+  requestAiInterpretationForCurrentReading(viewToken);
 });
 
 languageButtons.forEach((button) => {

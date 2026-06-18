@@ -55,6 +55,9 @@ test.describe("Mystic Tarot demo UI", () => {
     );
     await expect(page.locator("#spreadContainer .card-content")).toHaveCount(1);
     await expect(page.getByRole("button", { name: "New Reading" })).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "Retry AI interpretation" })
+    ).toBeVisible();
 
     const languageSelectorBox = await page.locator("#languageSelector").boundingBox();
     const newReadingBox = await page.locator("#newReadingBtn").boundingBox();
@@ -70,6 +73,9 @@ test.describe("Mystic Tarot demo UI", () => {
 
     await expect(page.locator("#readingResults")).toBeHidden();
     await expect(page.locator("#interpretationPanel")).toBeHidden();
+    await expect(
+      page.getByRole("button", { name: "Retry AI interpretation" })
+    ).toBeHidden();
     await expect(page.locator("#spreadSelection")).toBeVisible();
     await expect(page.locator("#questionInput")).toHaveValue(
       "What should I focus on today?"
@@ -140,5 +146,51 @@ test.describe("Mystic Tarot demo UI", () => {
       language: "ko",
       spreadType: "single"
     });
+  });
+
+  test("requests a fresh AI interpretation for the current reading", async ({
+    page
+  }) => {
+    const requestPayloads = [];
+
+    await page.route(
+      "https://worker.example/api/interpret-reading",
+      async (route) => {
+        const requestPayload = route.request().postDataJSON();
+        requestPayloads.push(requestPayload);
+        await route.fulfill({
+          status: 200,
+          contentType: "application/json",
+          body: JSON.stringify({
+            summary: `AI retry attempt ${requestPayloads.length} for ${requestPayload.language}.`,
+            source: "ai"
+          })
+        });
+      }
+    );
+
+    await page.locator('meta[name="ai-api-base-url"]').evaluate((element) => {
+      element.setAttribute("content", "https://worker.example");
+    });
+    await page.getByRole("button", { name: "English" }).click();
+    await page.locator("#questionInput").fill("What is worth revisiting?");
+    await page.getByRole("button", { name: /Single Card/ }).click();
+
+    await expect(page.locator("#interpretationSummary")).toContainText(
+      "AI retry attempt 1 for en."
+    );
+
+    await page.getByRole("button", { name: "Retry AI interpretation" }).click();
+
+    await expect(page.locator("#interpretationSummary")).toContainText(
+      "AI retry attempt 2 for en."
+    );
+    expect(requestPayloads).toHaveLength(2);
+    expect(requestPayloads[1]).toMatchObject({
+      question: "What is worth revisiting?",
+      language: "en",
+      spreadType: "single"
+    });
+    expect(requestPayloads[1].cards).toEqual(requestPayloads[0].cards);
   });
 });
