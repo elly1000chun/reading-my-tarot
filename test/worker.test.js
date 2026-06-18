@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 import {
   createOpenAiRequest,
@@ -34,6 +34,10 @@ const createRequest = (body, init = {}) =>
   });
 
 describe("Worker interpret-reading API", () => {
+  beforeEach(() => {
+    vi.spyOn(console, "log").mockImplementation(() => {});
+  });
+
   afterEach(() => {
     vi.unstubAllGlobals();
     vi.restoreAllMocks();
@@ -126,6 +130,47 @@ describe("Worker interpret-reading API", () => {
         effort: "low"
       },
       max_output_tokens: 1600
+    });
+  });
+
+  it("logs OpenAI token usage from the Responses API result", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue(
+        new Response(
+          JSON.stringify({
+            model: "gpt-result",
+            output_text: "A generated tarot summary.",
+            usage: {
+              input_tokens: 100,
+              output_tokens: 40,
+              output_tokens_details: {
+                reasoning_tokens: 12
+              },
+              total_tokens: 140
+            }
+          }),
+          {
+            status: 200,
+            headers: { "Content-Type": "application/json" }
+          }
+        )
+      )
+    );
+
+    const response = await handleRequest(createRequest(createPayload()), {
+      OPENAI_API_KEY: "sk-test",
+      OPENAI_MODEL: "gpt-request",
+      ALLOWED_ORIGIN: "https://example.com"
+    });
+
+    expect(response.status).toBe(200);
+    expect(console.log).toHaveBeenCalledWith("OpenAI usage", {
+      model: "gpt-result",
+      inputTokens: 100,
+      outputTokens: 40,
+      reasoningTokens: 12,
+      totalTokens: 140
     });
   });
 

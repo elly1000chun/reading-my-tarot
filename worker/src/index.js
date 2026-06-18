@@ -5,6 +5,7 @@ const DEFAULT_MAX_OUTPUT_TOKENS = 1600;
 const MAX_QUESTION_LENGTH = 500;
 const MAX_CARDS = 10;
 const LOCAL_DEV_ORIGINS = new Set([
+  "http://127.0.0.1:8787",
   "http://127.0.0.1:54173",
   "http://localhost:54173"
 ]);
@@ -222,6 +223,16 @@ function createOpenAiErrorMessage(status, errorText) {
   return `OpenAI request failed with ${status}.`;
 }
 
+function logOpenAiUsage(model, usage) {
+  console.log("OpenAI usage", {
+    model,
+    inputTokens: usage?.input_tokens ?? null,
+    outputTokens: usage?.output_tokens ?? null,
+    reasoningTokens: usage?.output_tokens_details?.reasoning_tokens ?? null,
+    totalTokens: usage?.total_tokens ?? null
+  });
+}
+
 async function callOpenAi(payload, env) {
   const requestBody = createOpenAiRequest(payload, env.OPENAI_MODEL || DEFAULT_MODEL, {
     reasoningEffort: env.OPENAI_REASONING_EFFORT || DEFAULT_REASONING_EFFORT,
@@ -243,6 +254,8 @@ async function callOpenAi(payload, env) {
   }
 
   const result = await response.json();
+  logOpenAiUsage(result.model || requestBody.model, result.usage);
+
   const summary = extractResponseText(result);
   if (
     result?.status === "incomplete" &&
