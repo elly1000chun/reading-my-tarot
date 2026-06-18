@@ -31,4 +31,4 @@ persist = true
 head_sampling_rate = 1
 
 [placement]
-region = "aws:us-east-1"
+region = "gcp:asia-northeast3"
