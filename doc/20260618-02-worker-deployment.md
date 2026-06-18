@@ -29,13 +29,15 @@ npm run worker:dev
 
 ## Cloudflare Setup
 
-Store the OpenAI API key as a Worker runtime secret. This value must be attached to the deployed Worker named `reading-my-tarot`; a Cloudflare build variable alone is not enough because the API route reads `env.OPENAI_API_KEY` at request time.
+Store the OpenAI API key as a Worker runtime secret. This value must be attached to the deployed Worker named `reading-my-tarot` because the API route reads `env.OPENAI_API_KEY` at request time.
 
 ```bash
 npx wrangler secret put OPENAI_API_KEY
 ```
 
 If the secret was previously added to another Worker, such as an older `reading-my-tarot-api` deployment, add it again for `reading-my-tarot` from this project directory.
+
+For Cloudflare Builds, also add `OPENAI_API_KEY` as a secret build variable. The deploy script reads that build-time value and uploads it to the Worker with `wrangler deploy --secrets-file`.
 
 The same setting can be added from the Cloudflare dashboard:
 
@@ -45,13 +47,20 @@ The same setting can be added from the Cloudflare dashboard:
 4. Add `OPENAI_API_KEY` as a Secret, not as a plain text variable.
 5. Save or deploy the updated Worker version when Cloudflare prompts for it.
 
-Build the Cloudflare static assets and deploy the Worker:
+Use these commands in Cloudflare Builds:
+
+```text
+Build command: npm run build:cloudflare
+Deploy command: npm run deploy:cloudflare
+```
+
+For local or manual deployment, run:
 
 ```bash
 npm run worker:deploy
 ```
 
-`wrangler.toml` declares `OPENAI_API_KEY` as a required secret, so `wrangler deploy` validates that the secret exists for the target Worker before deployment.
+`wrangler.toml` declares `OPENAI_API_KEY` as a required secret, so deploys validate that the secret exists for the target Worker before deployment. In Cloudflare Builds, the deploy script writes the build secret to a temporary `.env.production` file, passes it through `--secrets-file`, and deletes the file after Wrangler exits.
 
 The Worker uses these non-secret vars from `wrangler.toml`:
 

@@ -24,13 +24,14 @@
   "scripts": {
     "build": "webpack --config ./src/webpack.config.js",
     "build:cloudflare": "node scripts/prepare-cloudflare.js",
+    "deploy:cloudflare": "node scripts/deploy-cloudflare.js",
     "test": "vitest run test",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",
     "test:e2e:update": "playwright test --update-snapshots",
     "worker:dev": "npm run build:cloudflare && wrangler dev",
-    "worker:deploy": "npm run build:cloudflare && wrangler deploy"
+    "worker:deploy": "npm run build:cloudflare && node scripts/deploy-cloudflare.js"
   },
   "devDependencies": {
     "@babel/core": "^7.24.8",
