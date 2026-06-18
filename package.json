@@ -23,6 +23,7 @@
   },
   "scripts": {
     "build": "webpack --config ./src/webpack.config.js",
+    "build:cloudflare": "node scripts/prepare-cloudflare.js",
     "test": "vitest run test",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
