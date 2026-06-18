@@ -4,3 +4,7 @@ dist
 decks/ko/source
 playwright-report/
 test-results/
+.wrangler/
+.dev.vars*
+.env*
+!.env.example
