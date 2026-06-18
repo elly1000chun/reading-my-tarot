@@ -36,6 +36,7 @@ const createRequest = (body, init = {}) =>
 describe("Worker interpret-reading API", () => {
   afterEach(() => {
     vi.unstubAllGlobals();
+    vi.restoreAllMocks();
   });
 
   it("validates and normalizes a reading payload", () => {
@@ -190,10 +191,21 @@ describe("Worker interpret-reading API", () => {
   });
 
   it("hides upstream OpenAI failure details from clients", async () => {
+    const consoleErrorMock = vi.spyOn(console, "error").mockImplementation(() => {});
+
     vi.stubGlobal(
       "fetch",
       vi.fn().mockResolvedValue(
-        new Response("upstream leaked detail sk-test", { status: 500 })
+        new Response(
+          JSON.stringify({
+            error: {
+              message: "upstream leaked detail sk-test",
+              type: "server_error",
+              code: "upstream_error"
+            }
+          }),
+          { status: 500 }
+        )
       )
     );
 
@@ -206,5 +218,9 @@ describe("Worker interpret-reading API", () => {
     expect(response.status).toBe(502);
     expect(body).toContain("Failed to generate AI interpretation.");
     expect(body).not.toContain("sk-test");
+    expect(consoleErrorMock.mock.calls[0][1].message).toBe(
+      "OpenAI request failed with 500 (server_error, upstream_error)."
+    );
+    expect(JSON.stringify(consoleErrorMock.mock.calls)).not.toContain("sk-test");
   });
 });

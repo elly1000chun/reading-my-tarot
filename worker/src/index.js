@@ -204,6 +204,24 @@ function extractResponseText(result) {
   return textParts.join("\n").trim();
 }
 
+function createOpenAiErrorMessage(status, errorText) {
+  try {
+    const upstreamError = JSON.parse(errorText)?.error;
+    const safeDetails = [upstreamError?.type, upstreamError?.code]
+      .filter(Boolean)
+      .map((value) => truncateText(value, 80))
+      .join(", ");
+
+    if (safeDetails) {
+      return `OpenAI request failed with ${status} (${safeDetails}).`;
+    }
+  } catch {
+    // Ignore malformed upstream error bodies and keep the log secret-safe.
+  }
+
+  return `OpenAI request failed with ${status}.`;
+}
+
 async function callOpenAi(payload, env) {
   const requestBody = createOpenAiRequest(payload, env.OPENAI_MODEL || DEFAULT_MODEL, {
     reasoningEffort: env.OPENAI_REASONING_EFFORT || DEFAULT_REASONING_EFFORT,
@@ -221,9 +239,7 @@ async function callOpenAi(payload, env) {
 
   if (!response.ok) {
     const errorText = await response.text();
-    throw new Error(
-      `OpenAI request failed with ${response.status}: ${errorText.slice(0, 300)}`
-    );
+    throw new Error(createOpenAiErrorMessage(response.status, errorText));
   }
 
   const result = await response.json();

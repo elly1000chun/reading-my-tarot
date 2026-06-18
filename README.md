@@ -1,7 +1,9 @@
 # Reading My Tarot
-이 프로젝트에서는 codex를 사용한 개발을 학습하기 위해 임의의 프로젝트를 fork하여 구조 분석 및 코드 개선, 기능 추가 등을 진행합니다.
- - Fork 대상 프로젝트: [Tarot.js](https://github.com/MarketingPipeline/Tarot.js/) 
- - Demo: https://reading-my-tarot.elly1000chun.workers.dev/
+- 이 프로젝트는 codex를 사용한 개발을 학습하기 위해 기존 프로젝트를 fork하여 구조 분석 및 코드 개선, 코드 추가를 진행했습니다.
+   - Fork 대상 프로젝트: [Tarot.js](https://github.com/MarketingPipeline/Tarot.js/) 
+- Demo는 아래에서 제공됩니다.
+   - https://reading-my-tarot.elly1000chun.workers.dev/
+- (2026-06-18) 이제부터 이 앱은 OpenAI API에 기반하여 카드에 대한 해석을 제공합니다.
 
 ## Original Features
 - **Deck Management**: Easily draw, shuffle, and get details about your Tarot deck.
@@ -26,6 +28,7 @@
  - **Display Card Images**: 카드 이미지를 표시 (2026-06-08)
  - **Support Korean**: 한국어 지원 (2026-06-08)
  - **Display Details**: 더 상세한 카드 해석을 제공 (2026-06-08)
+ - **LLM Card Reading**: AI에 기반한 카드 해석을 제공 (2026-06-18)
 
 ## Other Changes
  - Added test code
