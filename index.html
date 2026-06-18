@@ -171,6 +171,8 @@ const deckPaths = {
   ko: "./decks/ko/default.json"
 };
 
+const aiInterpretationEndpoint = "/api/interpret-reading";
+
 const copyByLanguage = {
   en: {
     questionLabel: "What would you like the cards to reflect on?",
@@ -382,6 +384,56 @@ function createLocalInterpretation({ question, spreadType, reading, language }) 
   return `${opening} ${focus} ${closing} Treat this as a reflective guide rather than a fixed prediction.`;
 }
 
+function createAiInterpretationPayload({ question, spreadType, reading, language }) {
+  return {
+    question,
+    language,
+    spreadType,
+    cards: reading.map(({ position, card }) => ({
+      position,
+      name: card.name,
+      meanings: Array.isArray(card.meanings) ? card.meanings : [],
+      description: card.description || ""
+    }))
+  };
+}
+
+async function requestAiInterpretation(payload) {
+  const response = await fetch(aiInterpretationEndpoint, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+
+  if (!response.ok) {
+    throw new Error(`AI interpretation request failed: ${response.status}`);
+  }
+
+  const result = await response.json();
+  if (!result || typeof result.summary !== "string" || !result.summary.trim()) {
+    throw new Error("AI interpretation response did not include a summary");
+  }
+
+  return {
+    summary: result.summary.trim(),
+    source: result.source || "ai"
+  };
+}
+
+async function updateInterpretationFromAi(token, payload) {
+  try {
+    const result = await requestAiInterpretation(payload);
+    if (token !== viewToken) {
+      return;
+    }
+    renderInterpretation(result.summary);
+  } catch (error) {
+    console.info("Using local tarot interpretation fallback.", error);
+  }
+}
+
 function renderInterpretation(summary) {
   const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
   interpretationTitle.textContent = copy.interpretationTitle;
@@ -530,6 +582,12 @@ async function performReading(spreadType) {
 
   // Setup grid based on spread type
   setupSpreadGrid(spreadType);
+  const interpretationPayload = createAiInterpretationPayload({
+    question: currentQuestion,
+    spreadType,
+    reading: currentReading,
+    language: currentLanguage
+  });
   renderInterpretation(
     createLocalInterpretation({
       question: currentQuestion,
@@ -538,6 +596,7 @@ async function performReading(spreadType) {
       language: currentLanguage
     })
   );
+  updateInterpretationFromAi(token, interpretationPayload);
 
   // Hide loading and show results
   loadingAnimation.classList.add("hidden");

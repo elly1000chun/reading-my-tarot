@@ -72,4 +72,46 @@ test.describe("Mystic Tarot demo UI", () => {
       "What should I focus on today?"
     );
   });
+
+  test("replaces the local summary with an AI interpretation when available", async ({
+    page
+  }) => {
+    let requestPayload;
+
+    await page.route("**/api/interpret-reading", async (route) => {
+      requestPayload = route.request().postDataJSON();
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          summary: "AI summary: focus on one practical next step.",
+          source: "ai"
+        })
+      });
+    });
+
+    await page.getByRole("button", { name: "English" }).click();
+    await page
+      .locator("#questionInput")
+      .fill("How can I move forward with this decision?");
+    await page.getByRole("button", { name: /Single Card/ }).click();
+
+    await expect(page.locator("#interpretationSummary")).toContainText(
+      "AI summary: focus on one practical next step."
+    );
+    expect(requestPayload).toMatchObject({
+      question: "How can I move forward with this decision?",
+      language: "en",
+      spreadType: "single"
+    });
+    expect(requestPayload.cards).toHaveLength(1);
+    expect(requestPayload.cards[0]).toEqual(
+      expect.objectContaining({
+        position: "Your card",
+        name: expect.any(String),
+        meanings: expect.any(Array),
+        description: expect.any(String)
+      })
+    );
+  });
 });
