@@ -14,3 +14,6 @@ required = ["OPENAI_API_KEY"]
 [assets]
 directory = "public"
 run_worker_first = ["/api/*"]
+
+[observability]
+enabled = false
