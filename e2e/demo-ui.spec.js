@@ -81,19 +81,25 @@ test.describe("Mystic Tarot demo UI", () => {
   }) => {
     const requestPayloads = [];
 
-    await page.route("**/api/interpret-reading", async (route) => {
-      const requestPayload = route.request().postDataJSON();
-      requestPayloads.push(requestPayload);
-      await route.fulfill({
-        status: 200,
-        contentType: "application/json",
-        body: JSON.stringify({
-          summary: `AI summary for ${requestPayload.language}: focus on one practical next step.`,
-          source: "ai"
-        })
-      });
-    });
+    await page.route(
+      "https://worker.example/api/interpret-reading",
+      async (route) => {
+        const requestPayload = route.request().postDataJSON();
+        requestPayloads.push(requestPayload);
+        await route.fulfill({
+          status: 200,
+          contentType: "application/json",
+          body: JSON.stringify({
+            summary: `AI summary for ${requestPayload.language}: focus on one practical next step.`,
+            source: "ai"
+          })
+        });
+      }
+    );
 
+    await page.locator('meta[name="ai-api-base-url"]').evaluate((element) => {
+      element.setAttribute("content", "https://worker.example");
+    });
     await page.getByRole("button", { name: "English" }).click();
     await page
       .locator("#questionInput")

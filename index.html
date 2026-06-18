@@ -10,6 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Tarot Reading - Discover Your Path">
   <meta property="og:description" content="Get a personalized Tarot reading and discover your path. Explore insights and guidance with Tarot.js. Experience the magic today!">
+  <meta name="ai-api-base-url" content="">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -172,8 +173,6 @@ const deckPaths = {
   ko: "./decks/ko/default.json"
 };
 
-const aiInterpretationEndpoint = "/api/interpret-reading";
-
 const copyByLanguage = {
   en: {
     questionLabel: "What would you like the cards to reflect on?",
@@ -223,6 +222,33 @@ let currentQuestion = "";
 
 const deckCache = new Map();
 const cardLookupByLanguage = new Map();
+
+function getMetaContent(name) {
+  return document.querySelector(`meta[name="${name}"]`)?.content.trim() || "";
+}
+
+function getRuntimeConfig() {
+  return globalThis.READING_MY_TAROT_CONFIG || {};
+}
+
+function getAiInterpretationEndpoint() {
+  const runtimeConfig = getRuntimeConfig();
+  const configuredEndpoint =
+    runtimeConfig.aiInterpretationEndpoint ||
+    getMetaContent("ai-interpretation-endpoint");
+
+  if (configuredEndpoint) {
+    return configuredEndpoint;
+  }
+
+  const configuredBaseUrl =
+    runtimeConfig.aiApiBaseUrl || getMetaContent("ai-api-base-url");
+
+  return new URL(
+    "/api/interpret-reading",
+    configuredBaseUrl || window.location.origin
+  ).toString();
+}
 
 // Load an existing tarot deck via fetch.
 async function fetchDeck(language) {
@@ -413,7 +439,7 @@ function createAiInterpretationPayload({ question, spreadType, reading, language
 }
 
 async function requestAiInterpretation(payload) {
-  const response = await fetch(aiInterpretationEndpoint, {
+  const response = await fetch(getAiInterpretationEndpoint(), {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
