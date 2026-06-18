@@ -4,3 +4,10 @@ dist
 decks/ko/source
 public
 .wrangler
+playwright-report/
+test-results/
+.wrangler/
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example

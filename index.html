@@ -10,6 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Tarot Reading - Discover Your Path">
   <meta property="og:description" content="Get a personalized Tarot reading and discover your path. Explore insights and guidance with Tarot.js. Experience the magic today!">
+  <meta name="ai-api-base-url" content="">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -82,6 +83,24 @@
       </div>
     </header>
 
+    <!-- Question Input -->
+    <section class="max-w-2xl mx-auto bg-gray-800 rounded-lg p-6 mb-6 fade-in" id="questionSection">
+      <label id="questionLabel" class="mb-3 block text-lg font-semibold text-purple-300" for="questionInput">
+        What would you like the cards to reflect on?
+      </label>
+      <textarea
+        id="questionInput"
+        class="min-h-28 w-full resize-y rounded-lg border border-gray-700 bg-gray-900 px-4 py-3 text-white placeholder:text-gray-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/40"
+        maxlength="500"
+        placeholder="Ask about a situation, choice, relationship, or the energy around today."
+        aria-describedby="questionHelpText questionError"
+      ></textarea>
+      <p id="questionHelpText" class="mt-3 text-sm text-gray-400">
+        Optional. If you leave this blank, the reading will focus on the message you need right now.
+      </p>
+      <p id="questionError" class="mt-2 hidden text-sm text-red-300"></p>
+    </section>
+
     <!-- Spread Selection -->
     <div class="max-w-2xl mx-auto bg-gray-800 rounded-lg p-6 mb-8 fade-in" id="spreadSelection">
       <h2 class="text-xl mb-4 text-center">Choose Your Spread</h2>
@@ -104,11 +123,18 @@
     <!-- Loading Animation -->
     <div id="loadingAnimation" class="hidden text-center py-8 fade-in">
       <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-purple-500"></div>
-      <p class="mt-4 text-purple-400">Consulting the cards...</p>
+      <p id="loadingText" class="mt-4 text-purple-400">Consulting the cards...</p>
     </div>
 
     <!-- Reading Results -->
     <div id="readingResults" class="hidden max-w-4xl mx-auto fade-in">
+      <section id="interpretationPanel" class="hidden mb-8 rounded-lg bg-gray-800 p-6 text-left shadow-lg">
+        <h2 id="interpretationTitle" class="mb-3 text-xl font-semibold text-purple-300">
+          Reading summary
+        </h2>
+        <p id="interpretationSummary" class="leading-7 text-gray-200"></p>
+        <p id="interpretationStatus" class="mt-4 text-sm text-purple-200" aria-live="polite"></p>
+      </section>
       <div id="spreadContainer" class="grid gap-6">
         <!-- Cards will be inserted here -->
       </div>
@@ -147,15 +173,82 @@ const deckPaths = {
   ko: "./decks/ko/default.json"
 };
 
+const copyByLanguage = {
+  en: {
+    questionLabel: "What would you like the cards to reflect on?",
+    questionPlaceholder:
+      "Ask about a situation, choice, relationship, or the energy around today.",
+    questionHelpText:
+      "Optional. If you leave this blank, the reading will focus on the message you need right now.",
+    questionError: "Please keep your question under 500 characters.",
+    defaultQuestion: "What message do I need right now?",
+    loadingText: "Consulting the cards...",
+    interpretationTitle: "Reading summary",
+    interpretationLocalStatus:
+      "Local summary shown while AI checks for an expanded interpretation.",
+    interpretationAiLoading: "Checking for AI interpretation...",
+    interpretationAiReady: "AI interpretation applied.",
+    interpretationFallbackStatus:
+      "Local summary shown. AI interpretation is unavailable right now.",
+    fallbackTheme: "the message available in the cards"
+  },
+  ko: {
+    questionLabel: "카드에게 어떤 질문을 건네고 싶나요?",
+    questionPlaceholder:
+      "상황, 선택, 관계, 오늘의 흐름 등 궁금한 내용을 적어보세요.",
+    questionHelpText:
+      "선택 사항입니다. 비워두면 지금 나에게 필요한 메시지를 기준으로 리딩합니다.",
+    questionError: "질문은 500자 이내로 입력해주세요.",
+    defaultQuestion: "지금 나에게 필요한 메시지는 무엇인가요?",
+    loadingText: "카드의 메시지를 살펴보는 중...",
+    interpretationTitle: "리딩 요약",
+    interpretationLocalStatus:
+      "AI 해석을 확인하는 동안 로컬 요약을 먼저 표시합니다.",
+    interpretationAiLoading: "AI 해석을 확인하는 중...",
+    interpretationAiReady: "AI 해석이 적용되었습니다.",
+    interpretationFallbackStatus:
+      "AI 해석을 사용할 수 없어 로컬 요약을 유지합니다.",
+    fallbackTheme: "카드가 보여주는 메시지"
+  }
+};
+
 let currentLanguage = "ko";
 let tarot = null;
 let viewToken = 0;
 let languageLoadToken = 0;
 let currentReading = [];
 let currentSpreadType = null;
+let currentQuestion = "";
 
 const deckCache = new Map();
 const cardLookupByLanguage = new Map();
+
+function getMetaContent(name) {
+  return document.querySelector(`meta[name="${name}"]`)?.content.trim() || "";
+}
+
+function getRuntimeConfig() {
+  return globalThis.READING_MY_TAROT_CONFIG || {};
+}
+
+function getAiInterpretationEndpoint() {
+  const runtimeConfig = getRuntimeConfig();
+  const configuredEndpoint =
+    runtimeConfig.aiInterpretationEndpoint ||
+    getMetaContent("ai-interpretation-endpoint");
+
+  if (configuredEndpoint) {
+    return configuredEndpoint;
+  }
+
+  const configuredBaseUrl =
+    runtimeConfig.aiApiBaseUrl || getMetaContent("ai-api-base-url");
+
+  return new URL(
+    "/api/interpret-reading",
+    configuredBaseUrl || window.location.origin
+  ).toString();
+}
 
 // Load an existing tarot deck via fetch.
 async function fetchDeck(language) {
@@ -183,11 +276,20 @@ async function getDeck(language) {
 // DOM Elements
 const loadingAnimation = document.getElementById("loadingAnimation");
 const readingResults = document.getElementById("readingResults");
+const interpretationPanel = document.getElementById("interpretationPanel");
+const interpretationTitle = document.getElementById("interpretationTitle");
+const interpretationSummary = document.getElementById("interpretationSummary");
+const interpretationStatus = document.getElementById("interpretationStatus");
 const spreadContainer = document.getElementById("spreadContainer");
 const spreadSelection = document.getElementById("spreadSelection");
 const newReadingBtn = document.getElementById("newReadingBtn");
 const spreadButtons = document.querySelectorAll(".spread-btn");
 const languageButtons = document.querySelectorAll(".language-btn");
+const questionInput = document.getElementById("questionInput");
+const questionLabel = document.getElementById("questionLabel");
+const questionHelpText = document.getElementById("questionHelpText");
+const questionError = document.getElementById("questionError");
+const loadingText = document.getElementById("loadingText");
 const detailsModal = document.getElementById("detailsModal");
 const detailsModalTitle = document.getElementById("detailsModalTitle");
 const detailsModalFrame = document.getElementById("detailsModalFrame");
@@ -233,9 +335,11 @@ function resetReadingView() {
   viewToken += 1;
   currentReading = [];
   currentSpreadType = null;
+  currentQuestion = "";
   loadingAnimation.classList.add("hidden");
   readingResults.classList.add("hidden");
   newReadingBtn.classList.add("hidden");
+  resetInterpretation();
   spreadContainer.innerHTML = "";
   spreadSelection.classList.remove("hidden", "fade-out");
   spreadSelection.classList.add("fade-in");
@@ -252,6 +356,174 @@ function updateLanguageButtons() {
   });
 }
 
+function updateLanguageCopy() {
+  const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
+  questionLabel.textContent = copy.questionLabel;
+  questionInput.placeholder = copy.questionPlaceholder;
+  questionInput.setAttribute("aria-label", copy.questionLabel);
+  questionHelpText.textContent = copy.questionHelpText;
+  questionError.textContent = copy.questionError;
+  loadingText.textContent = copy.loadingText;
+  interpretationTitle.textContent = copy.interpretationTitle;
+}
+
+function getCurrentQuestion() {
+  const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
+  return questionInput.value.trim() || copy.defaultQuestion;
+}
+
+function getCardMeaning(card) {
+  if (Array.isArray(card.meanings) && card.meanings.length > 0) {
+    return card.meanings[0];
+  }
+
+  return card.description || card.name;
+}
+
+function getReadingThemes(reading, language) {
+  const copy = copyByLanguage[language] || copyByLanguage.en;
+  const themes = reading
+    .map(({ card }) => getCardMeaning(card))
+    .filter(Boolean)
+    .slice(0, 3);
+
+  return themes.length > 0 ? themes.join(", ") : copy.fallbackTheme;
+}
+
+function createLocalInterpretation({ question, spreadType, reading, language }) {
+  const copy = copyByLanguage[language] || copyByLanguage.en;
+  const safeQuestion = question || copy.defaultQuestion;
+  const firstCard = reading[0];
+  const finalCard = reading.length > 1 ? reading[reading.length - 1] : null;
+  const themes = getReadingThemes(reading, language);
+
+  if (!firstCard) {
+    return language === "ko"
+      ? `"${safeQuestion}"에 대한 리딩은 아직 준비되지 않았습니다.`
+      : `The reading for "${safeQuestion}" is not ready yet.`;
+  }
+
+  const firstMeaning = getCardMeaning(firstCard.card);
+
+  if (language === "ko") {
+    const opening = `"${safeQuestion}"에 대한 ${spreadType} 리딩은 ${themes}의 흐름을 보여줍니다.`;
+    const focus = `${firstCard.position} 위치의 ${firstCard.card.name} 카드는 ${firstMeaning}을 중심 메시지로 강조합니다.`;
+    const closing = finalCard
+      ? `마지막으로 ${finalCard.position} 위치의 ${finalCard.card.name} 카드는 이 질문을 바라볼 때 ${getCardMeaning(finalCard.card)}을 함께 살펴보라고 말합니다.`
+      : "이 카드는 지금 가장 먼저 바라봐야 할 마음의 방향을 차분히 짚어줍니다.";
+
+    return `${opening} ${focus} ${closing} 이 요약은 확정된 예언보다 지금의 선택과 감정을 정리하기 위한 참고 메시지로 받아들이면 좋습니다.`;
+  }
+
+  const opening = `For "${safeQuestion}", this ${spreadType} reading points toward ${themes}.`;
+  const focus = `The ${firstCard.position} position brings ${firstCard.card.name}, highlighting ${firstMeaning}.`;
+  const closing = finalCard
+    ? `The reading closes with ${finalCard.card.name} in ${finalCard.position}, inviting you to consider ${getCardMeaning(finalCard.card)} as you respond to the question.`
+    : "This card offers a focused prompt for the first direction to consider.";
+
+  return `${opening} ${focus} ${closing} Treat this as a reflective guide rather than a fixed prediction.`;
+}
+
+function createAiInterpretationPayload({ question, spreadType, reading, language }) {
+  return {
+    question,
+    language,
+    spreadType,
+    cards: reading.map(({ position, card }) => ({
+      position,
+      name: card.name,
+      meanings: Array.isArray(card.meanings) ? card.meanings : [],
+      description: card.description || ""
+    }))
+  };
+}
+
+async function requestAiInterpretation(payload) {
+  const response = await fetch(getAiInterpretationEndpoint(), {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(payload)
+  });
+
+  if (!response.ok) {
+    throw new Error(`AI interpretation request failed: ${response.status}`);
+  }
+
+  const result = await response.json();
+  if (!result || typeof result.summary !== "string" || !result.summary.trim()) {
+    throw new Error("AI interpretation response did not include a summary");
+  }
+
+  return {
+    summary: result.summary.trim(),
+    source: result.source || "ai"
+  };
+}
+
+async function updateInterpretationFromAi(token, payload) {
+  const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
+  setInterpretationStatus(copy.interpretationAiLoading);
+
+  try {
+    const result = await requestAiInterpretation(payload);
+    if (token !== viewToken) {
+      return;
+    }
+    renderInterpretation(result.summary, copy.interpretationAiReady);
+  } catch (error) {
+    console.info("Using local tarot interpretation fallback.", error);
+    if (token !== viewToken) {
+      return;
+    }
+    setInterpretationStatus(copy.interpretationFallbackStatus);
+  }
+}
+
+function renderInterpretation(summary, statusText = "") {
+  const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
+  interpretationTitle.textContent = copy.interpretationTitle;
+  interpretationSummary.textContent = summary;
+  setInterpretationStatus(statusText);
+  interpretationPanel.classList.remove("hidden");
+}
+
+function setInterpretationStatus(statusText) {
+  interpretationStatus.textContent = statusText;
+  interpretationStatus.classList.toggle("hidden", !statusText);
+}
+
+function resetInterpretation() {
+  interpretationSummary.textContent = "";
+  setInterpretationStatus("");
+  interpretationPanel.classList.add("hidden");
+}
+
+function renderLocalInterpretation() {
+  const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
+  renderInterpretation(
+    createLocalInterpretation({
+      question: currentQuestion,
+      spreadType: currentSpreadType,
+      reading: currentReading,
+      language: currentLanguage
+    }),
+    copy.interpretationLocalStatus
+  );
+}
+
+function requestAiInterpretationForCurrentReading(token) {
+  const interpretationPayload = createAiInterpretationPayload({
+    question: currentQuestion,
+    spreadType: currentSpreadType,
+    reading: currentReading,
+    language: currentLanguage
+  });
+
+  updateInterpretationFromAi(token, interpretationPayload);
+}
+
 async function setLanguage(language) {
   if (language === currentLanguage && tarot) {
     return;
@@ -261,6 +533,7 @@ async function setLanguage(language) {
   viewToken += 1;
   currentLanguage = language;
   updateLanguageButtons();
+  updateLanguageCopy();
   const deck = await getDeck(language);
   if (token !== languageLoadToken) {
     return;
@@ -269,8 +542,11 @@ async function setLanguage(language) {
 
   if (currentReading.length > 0) {
     currentReading = localizeReading(currentReading, language);
+    currentQuestion = getCurrentQuestion();
     setupSpreadGrid(currentSpreadType);
+    renderLocalInterpretation();
     renderReading(currentReading);
+    requestAiInterpretationForCurrentReading(viewToken);
     loadingAnimation.classList.add("hidden");
     newReadingBtn.classList.remove("hidden");
     return;
@@ -355,11 +631,13 @@ function renderReading(reading) {
 async function performReading(spreadType) {
   const token = viewToken;
   currentSpreadType = spreadType;
+  currentQuestion = getCurrentQuestion();
   currentReading = [];
 
   // Show loading animation
   loadingAnimation.classList.remove("hidden");
   readingResults.classList.add("hidden");
+  resetInterpretation();
 
   // Clear previous reading
   spreadContainer.innerHTML = "";
@@ -376,6 +654,8 @@ async function performReading(spreadType) {
 
   // Setup grid based on spread type
   setupSpreadGrid(spreadType);
+  renderLocalInterpretation();
+  requestAiInterpretationForCurrentReading(token);
 
   // Hide loading and show results
   loadingAnimation.classList.add("hidden");
@@ -426,8 +706,10 @@ spreadButtons.forEach((button, index) => {
 newReadingBtn.addEventListener("click", () => {
   currentReading = [];
   currentSpreadType = null;
+  currentQuestion = "";
   readingResults.classList.add("hidden");
   newReadingBtn.classList.add("hidden");
+  resetInterpretation();
   spreadSelection.classList.remove("hidden");
 });
 
@@ -460,6 +742,7 @@ detailsModal.addEventListener("click", (event) => {
 (async () => {
   try {
     updateLanguageButtons();
+    updateLanguageCopy();
     await setLanguage(currentLanguage);
 
     // Handle page loader fade-out
@@ -483,8 +766,8 @@ detailsModal.addEventListener("click", (event) => {
       "@type": "WebPage",
       "name": "Tarot Reading - Discover Your Path",
       "description": "Get a personalized Tarot reading and discover your path. Explore insights and guidance with Tarot.js. Experience the magic today!",
-      "url": "https://marketingpipeline.github.io/Tarot.js/demo/",  
-      "mainEntityOfPage": "https://marketingpipeline.github.io/Tarot.js/demo/",
+      "url": "https://reading-my-tarot.elly1000chun.workers.dev/",
+      "mainEntityOfPage": "https://reading-my-tarot.elly1000chun.workers.dev/",
       "author": {
         "@type": "Person",
         "name": "Jared Van Valkengoed"
@@ -493,7 +776,7 @@ detailsModal.addEventListener("click", (event) => {
       "potentialAction": {
         "@type": "Action",
         "name": "Start Tarot Reading",
-        "target": "https://marketingpipeline.github.io/Tarot.js/demo/"
+        "target": "https://reading-my-tarot.elly1000chun.workers.dev/"
       }
     }
 </script>  

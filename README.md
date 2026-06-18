@@ -1,7 +1,7 @@
 # Reading My Tarot
 이 프로젝트에서는 codex를 사용한 개발을 학습하기 위해 임의의 프로젝트를 fork하여 구조 분석 및 코드 개선, 기능 추가 등을 진행합니다.
  - Fork 대상 프로젝트: [Tarot.js](https://github.com/MarketingPipeline/Tarot.js/) 
- - Demo: https://elly1000chun.github.io/reading-my-tarot/
+ - Demo: https://reading-my-tarot.elly1000chun.workers.dev/
 
 ## Original Features
 - **Deck Management**: Easily draw, shuffle, and get details about your Tarot deck.
