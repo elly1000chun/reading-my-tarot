@@ -1,5 +1,7 @@
 const DEFAULT_MODEL = "gpt-5.4-mini";
 const OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses";
+const DEFAULT_REASONING_EFFORT = "low";
+const DEFAULT_MAX_OUTPUT_TOKENS = 1600;
 const MAX_QUESTION_LENGTH = 500;
 const MAX_CARDS = 10;
 const LOCAL_DEV_ORIGINS = new Set([
@@ -139,14 +141,27 @@ function createPrompt(payload) {
   );
 }
 
-function createOpenAiRequest(payload, model = DEFAULT_MODEL) {
+function parsePositiveInteger(value, fallback) {
+  const parsedValue = Number.parseInt(value, 10);
+  return Number.isFinite(parsedValue) && parsedValue > 0 ? parsedValue : fallback;
+}
+
+function createOpenAiRequest(payload, model = DEFAULT_MODEL, options = {}) {
   const isKorean = payload.language === "ko";
   const lengthGuide = isKorean
     ? "Write 5 to 7 Korean sentences."
     : "Write 120 to 180 English words.";
+  const reasoningEffort = options.reasoningEffort || DEFAULT_REASONING_EFFORT;
+  const maxOutputTokens = parsePositiveInteger(
+    options.maxOutputTokens,
+    DEFAULT_MAX_OUTPUT_TOKENS
+  );
 
   return {
     model,
+    reasoning: {
+      effort: reasoningEffort
+    },
     instructions: [
       "You write reflective tarot reading summaries for entertainment and self-reflection.",
       "Return only the final summary text, with no markdown headings or bullet lists.",
@@ -167,7 +182,7 @@ function createOpenAiRequest(payload, model = DEFAULT_MODEL) {
         ]
       }
     ],
-    max_output_tokens: 500,
+    max_output_tokens: maxOutputTokens,
     store: false
   };
 }
@@ -190,15 +205,18 @@ function extractResponseText(result) {
 }
 
 async function callOpenAi(payload, env) {
+  const requestBody = createOpenAiRequest(payload, env.OPENAI_MODEL || DEFAULT_MODEL, {
+    reasoningEffort: env.OPENAI_REASONING_EFFORT || DEFAULT_REASONING_EFFORT,
+    maxOutputTokens: env.OPENAI_MAX_OUTPUT_TOKENS || DEFAULT_MAX_OUTPUT_TOKENS
+  });
+
   const response = await fetch(OPENAI_RESPONSES_URL, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${env.OPENAI_API_KEY}`,
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(
-      createOpenAiRequest(payload, env.OPENAI_MODEL || DEFAULT_MODEL)
-    )
+    body: JSON.stringify(requestBody)
   });
 
   if (!response.ok) {
@@ -210,6 +228,13 @@ async function callOpenAi(payload, env) {
 
   const result = await response.json();
   const summary = extractResponseText(result);
+  if (
+    result?.status === "incomplete" &&
+    result?.incomplete_details?.reason === "max_output_tokens"
+  ) {
+    throw new Error("OpenAI response reached max_output_tokens before completion.");
+  }
+
   if (!summary) {
     throw new Error("OpenAI response did not include text output.");
   }

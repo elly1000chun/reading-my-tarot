@@ -63,7 +63,10 @@ describe("Worker interpret-reading API", () => {
 
     expect(request).toMatchObject({
       model: "gpt-test",
-      max_output_tokens: 500,
+      reasoning: {
+        effort: "low"
+      },
+      max_output_tokens: 1600,
       store: false
     });
     expect(request.instructions).toContain("entertainment and self-reflection");
@@ -115,6 +118,41 @@ describe("Worker interpret-reading API", () => {
         })
       })
     );
+    const [, requestInit] = fetchMock.mock.calls[0];
+    expect(JSON.parse(requestInit.body)).toMatchObject({
+      model: "gpt-test",
+      reasoning: {
+        effort: "low"
+      },
+      max_output_tokens: 1600
+    });
+  });
+
+  it("allows OpenAI reasoning and output limits to be configured", async () => {
+    const fetchMock = vi.fn().mockResolvedValue(
+      new Response(JSON.stringify({ output_text: "Configured summary." }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" }
+      })
+    );
+    vi.stubGlobal("fetch", fetchMock);
+
+    const response = await handleRequest(createRequest(createPayload()), {
+      OPENAI_API_KEY: "sk-test",
+      OPENAI_MODEL: "gpt-test",
+      OPENAI_REASONING_EFFORT: "minimal",
+      OPENAI_MAX_OUTPUT_TOKENS: "2400",
+      ALLOWED_ORIGIN: "https://example.com"
+    });
+
+    expect(response.status).toBe(200);
+    const [, requestInit] = fetchMock.mock.calls[0];
+    expect(JSON.parse(requestInit.body)).toMatchObject({
+      reasoning: {
+        effort: "minimal"
+      },
+      max_output_tokens: 2400
+    });
   });
 
   it("handles preflight requests", async () => {
