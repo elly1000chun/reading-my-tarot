@@ -1,0 +1,5 @@
+name = "reading-my-tarot"
+compatibility_date = "2026-06-18"
+
+[assets]
+directory = "public"
