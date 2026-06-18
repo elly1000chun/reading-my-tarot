@@ -18,6 +18,7 @@ test.describe("Mystic Tarot demo UI", () => {
   }, testInfo) => {
     await expect(page.locator("#languageSelector")).toBeVisible();
     await expect(page.locator("#questionInput")).toBeVisible();
+    await expect(page.locator("#interpretationPanel")).toBeHidden();
     await expect(page.locator("#questionLabel")).toHaveText(
       "카드에게 어떤 질문을 건네고 싶나요?"
     );
@@ -45,6 +46,10 @@ test.describe("Mystic Tarot demo UI", () => {
     await page.getByRole("button", { name: /Single Card/ }).click();
 
     await expect(page.locator("#readingResults")).toBeVisible();
+    await expect(page.locator("#interpretationPanel")).toBeVisible();
+    await expect(page.locator("#interpretationSummary")).toContainText(
+      "What should I focus on today?"
+    );
     await expect(page.locator("#spreadContainer .card-content")).toHaveCount(1);
     await expect(page.getByRole("button", { name: "New Reading" })).toBeVisible();
 
@@ -61,6 +66,7 @@ test.describe("Mystic Tarot demo UI", () => {
     await page.getByRole("button", { name: "New Reading" }).click();
 
     await expect(page.locator("#readingResults")).toBeHidden();
+    await expect(page.locator("#interpretationPanel")).toBeHidden();
     await expect(page.locator("#spreadSelection")).toBeVisible();
     await expect(page.locator("#questionInput")).toHaveValue(
       "What should I focus on today?"

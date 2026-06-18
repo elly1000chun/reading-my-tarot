@@ -127,6 +127,12 @@
 
     <!-- Reading Results -->
     <div id="readingResults" class="hidden max-w-4xl mx-auto fade-in">
+      <section id="interpretationPanel" class="hidden mb-8 rounded-lg bg-gray-800 p-6 text-left shadow-lg">
+        <h2 id="interpretationTitle" class="mb-3 text-xl font-semibold text-purple-300">
+          Reading summary
+        </h2>
+        <p id="interpretationSummary" class="leading-7 text-gray-200"></p>
+      </section>
       <div id="spreadContainer" class="grid gap-6">
         <!-- Cards will be inserted here -->
       </div>
@@ -175,7 +181,8 @@ const copyByLanguage = {
     questionError: "Please keep your question under 500 characters.",
     defaultQuestion: "What message do I need right now?",
     loadingText: "Consulting the cards...",
-    interpretationTitle: "Reading summary"
+    interpretationTitle: "Reading summary",
+    fallbackTheme: "the message available in the cards"
   },
   ko: {
     questionLabel: "카드에게 어떤 질문을 건네고 싶나요?",
@@ -186,7 +193,8 @@ const copyByLanguage = {
     questionError: "질문은 500자 이내로 입력해주세요.",
     defaultQuestion: "지금 나에게 필요한 메시지는 무엇인가요?",
     loadingText: "카드의 메시지를 살펴보는 중...",
-    interpretationTitle: "리딩 요약"
+    interpretationTitle: "리딩 요약",
+    fallbackTheme: "카드가 보여주는 메시지"
   }
 };
 
@@ -227,6 +235,9 @@ async function getDeck(language) {
 // DOM Elements
 const loadingAnimation = document.getElementById("loadingAnimation");
 const readingResults = document.getElementById("readingResults");
+const interpretationPanel = document.getElementById("interpretationPanel");
+const interpretationTitle = document.getElementById("interpretationTitle");
+const interpretationSummary = document.getElementById("interpretationSummary");
 const spreadContainer = document.getElementById("spreadContainer");
 const spreadSelection = document.getElementById("spreadSelection");
 const newReadingBtn = document.getElementById("newReadingBtn");
@@ -286,6 +297,7 @@ function resetReadingView() {
   loadingAnimation.classList.add("hidden");
   readingResults.classList.add("hidden");
   newReadingBtn.classList.add("hidden");
+  resetInterpretation();
   spreadContainer.innerHTML = "";
   spreadSelection.classList.remove("hidden", "fade-out");
   spreadSelection.classList.add("fade-in");
@@ -310,11 +322,76 @@ function updateLanguageCopy() {
   questionHelpText.textContent = copy.questionHelpText;
   questionError.textContent = copy.questionError;
   loadingText.textContent = copy.loadingText;
+  interpretationTitle.textContent = copy.interpretationTitle;
 }
 
 function getCurrentQuestion() {
   const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
   return questionInput.value.trim() || copy.defaultQuestion;
+}
+
+function getCardMeaning(card) {
+  if (Array.isArray(card.meanings) && card.meanings.length > 0) {
+    return card.meanings[0];
+  }
+
+  return card.description || card.name;
+}
+
+function getReadingThemes(reading, language) {
+  const copy = copyByLanguage[language] || copyByLanguage.en;
+  const themes = reading
+    .map(({ card }) => getCardMeaning(card))
+    .filter(Boolean)
+    .slice(0, 3);
+
+  return themes.length > 0 ? themes.join(", ") : copy.fallbackTheme;
+}
+
+function createLocalInterpretation({ question, spreadType, reading, language }) {
+  const copy = copyByLanguage[language] || copyByLanguage.en;
+  const safeQuestion = question || copy.defaultQuestion;
+  const firstCard = reading[0];
+  const finalCard = reading.length > 1 ? reading[reading.length - 1] : null;
+  const themes = getReadingThemes(reading, language);
+
+  if (!firstCard) {
+    return language === "ko"
+      ? `"${safeQuestion}"에 대한 리딩은 아직 준비되지 않았습니다.`
+      : `The reading for "${safeQuestion}" is not ready yet.`;
+  }
+
+  const firstMeaning = getCardMeaning(firstCard.card);
+
+  if (language === "ko") {
+    const opening = `"${safeQuestion}"에 대한 ${spreadType} 리딩은 ${themes}의 흐름을 보여줍니다.`;
+    const focus = `${firstCard.position} 위치의 ${firstCard.card.name} 카드는 ${firstMeaning}을 중심 메시지로 강조합니다.`;
+    const closing = finalCard
+      ? `마지막으로 ${finalCard.position} 위치의 ${finalCard.card.name} 카드는 이 질문을 바라볼 때 ${getCardMeaning(finalCard.card)}을 함께 살펴보라고 말합니다.`
+      : "이 카드는 지금 가장 먼저 바라봐야 할 마음의 방향을 차분히 짚어줍니다.";
+
+    return `${opening} ${focus} ${closing} 이 요약은 확정된 예언보다 지금의 선택과 감정을 정리하기 위한 참고 메시지로 받아들이면 좋습니다.`;
+  }
+
+  const opening = `For "${safeQuestion}", this ${spreadType} reading points toward ${themes}.`;
+  const focus = `The ${firstCard.position} position brings ${firstCard.card.name}, highlighting ${firstMeaning}.`;
+  const closing = finalCard
+    ? `The reading closes with ${finalCard.card.name} in ${finalCard.position}, inviting you to consider ${getCardMeaning(finalCard.card)} as you respond to the question.`
+    : "This card offers a focused prompt for the first direction to consider.";
+
+  return `${opening} ${focus} ${closing} Treat this as a reflective guide rather than a fixed prediction.`;
+}
+
+function renderInterpretation(summary) {
+  const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
+  interpretationTitle.textContent = copy.interpretationTitle;
+  interpretationSummary.textContent = summary;
+  interpretationPanel.classList.remove("hidden");
+}
+
+function resetInterpretation() {
+  interpretationSummary.textContent = "";
+  interpretationPanel.classList.add("hidden");
 }
 
 async function setLanguage(language) {
@@ -335,7 +412,16 @@ async function setLanguage(language) {
 
   if (currentReading.length > 0) {
     currentReading = localizeReading(currentReading, language);
+    currentQuestion = getCurrentQuestion();
     setupSpreadGrid(currentSpreadType);
+    renderInterpretation(
+      createLocalInterpretation({
+        question: currentQuestion,
+        spreadType: currentSpreadType,
+        reading: currentReading,
+        language: currentLanguage
+      })
+    );
     renderReading(currentReading);
     loadingAnimation.classList.add("hidden");
     newReadingBtn.classList.remove("hidden");
@@ -427,6 +513,7 @@ async function performReading(spreadType) {
   // Show loading animation
   loadingAnimation.classList.remove("hidden");
   readingResults.classList.add("hidden");
+  resetInterpretation();
 
   // Clear previous reading
   spreadContainer.innerHTML = "";
@@ -443,6 +530,14 @@ async function performReading(spreadType) {
 
   // Setup grid based on spread type
   setupSpreadGrid(spreadType);
+  renderInterpretation(
+    createLocalInterpretation({
+      question: currentQuestion,
+      spreadType,
+      reading: currentReading,
+      language: currentLanguage
+    })
+  );
 
   // Hide loading and show results
   loadingAnimation.classList.add("hidden");
@@ -496,6 +591,7 @@ newReadingBtn.addEventListener("click", () => {
   currentQuestion = "";
   readingResults.classList.add("hidden");
   newReadingBtn.classList.add("hidden");
+  resetInterpretation();
   spreadSelection.classList.remove("hidden");
 });
 
