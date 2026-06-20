@@ -1,0 +1,116 @@
+:root {
+  color-scheme: dark;
+  --color-bg: #111827;
+  --color-panel: #1f2937;
+  --color-surface: #374151;
+  --color-text: #ffffff;
+  --color-copy: #d1d5db;
+  --color-accent: #c084fc;
+  --color-accent-soft: #d8b4fe;
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.detail-page {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.detail-container {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.detail-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.detail-kicker {
+  margin: 0 0 0.5rem;
+  color: var(--color-accent-soft);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.detail-title {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+.detail-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.detail-section {
+  border-radius: 0.5rem;
+  background: var(--color-panel);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.detail-section-title {
+  margin: 0 0 1rem;
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.detail-copy {
+  margin: 0 0 1rem;
+  color: var(--color-copy);
+  line-height: 1.75rem;
+}
+
+.detail-copy:last-child {
+  margin-bottom: 0;
+}
+
+.detail-list {
+  margin: 0;
+  padding-left: 0;
+  color: var(--color-copy);
+  list-style-position: inside;
+}
+
+.detail-list-item {
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.detail-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.detail-list-item::marker {
+  color: var(--color-accent);
+}
+
+.detail-list-title {
+  display: inline;
+  color: var(--color-accent-soft);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}

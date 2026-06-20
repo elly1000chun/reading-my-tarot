@@ -8,6 +8,9 @@ await mkdir(new URL("./src/", outputDir), { recursive: true });
 await cp(new URL("../index.html", import.meta.url), new URL("./index.html", outputDir));
 await cp(new URL("../favicon.ico", import.meta.url), new URL("./favicon.ico", outputDir));
 await cp(new URL("../src/tarot.js", import.meta.url), new URL("./src/tarot.js", outputDir));
+await cp(new URL("../styles/", import.meta.url), new URL("./styles/", outputDir), {
+  recursive: true
+});
 await cp(new URL("../decks/", import.meta.url), new URL("./decks/", outputDir), {
   recursive: true
 });
