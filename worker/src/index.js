@@ -147,11 +147,23 @@ function parsePositiveInteger(value, fallback) {
   return Number.isFinite(parsedValue) && parsedValue > 0 ? parsedValue : fallback;
 }
 
-function createOpenAiRequest(payload, model = DEFAULT_MODEL, options = {}) {
+function createLengthGuide(payload) {
   const isKorean = payload.language === "ko";
-  const lengthGuide = isKorean
+  const isCelticCross = payload.spreadType === "celtic-cross";
+
+  if (isCelticCross) {
+    return isKorean
+      ? "Write 15 to 21 Korean sentences."
+      : "Write 15 to 21 English sentences.";
+  }
+
+  return isKorean
     ? "Write 5 to 7 Korean sentences."
     : "Write 120 to 180 English words.";
+}
+
+function createOpenAiRequest(payload, model = DEFAULT_MODEL, options = {}) {
+  const lengthGuide = createLengthGuide(payload);
   const reasoningEffort = options.reasoningEffort || DEFAULT_REASONING_EFFORT;
   const maxOutputTokens = parsePositiveInteger(
     options.maxOutputTokens,

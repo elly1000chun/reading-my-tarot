@@ -45,3 +45,5 @@ Pull requests should include a short summary, motivation or linked issue, testin
 ## Data & Build Notes
 
 Deck JSON is runtime data. Keep card objects consistent across files and include at least `name`, `meanings`, and `description`. When changing source or build settings, run `npm run build` and inspect the generated files before submitting.
+
+When changing OpenAI API usage, update `OpenAIUsage.md` in the same change. This includes model IDs, model-selection rationale, request parameters, prompt instructions, payload shape, output length rules, usage logging, fallback behavior, and API endpoint changes.

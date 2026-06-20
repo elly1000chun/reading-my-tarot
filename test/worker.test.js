@@ -78,6 +78,32 @@ describe("Worker interpret-reading API", () => {
     expect(request.input[0].content[0].text).toContain("How can I move forward?");
   });
 
+  it("requests a longer interpretation for Celtic Cross spreads", () => {
+    const koreanRequest = createOpenAiRequest(
+      {
+        ...createPayload(),
+        language: "ko",
+        spreadType: "celtic-cross"
+      },
+      "gpt-test"
+    );
+    const englishRequest = createOpenAiRequest(
+      {
+        ...createPayload(),
+        language: "en",
+        spreadType: "celtic-cross"
+      },
+      "gpt-test"
+    );
+
+    expect(koreanRequest.instructions).toContain(
+      "Write 15 to 21 Korean sentences."
+    );
+    expect(englishRequest.instructions).toContain(
+      "Write 15 to 21 English sentences."
+    );
+  });
+
   it("extracts text from output_text or typed output content", () => {
     expect(extractResponseText({ output_text: "  Direct summary  " }))
       .toBe("Direct summary");

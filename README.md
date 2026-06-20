@@ -30,6 +30,10 @@
  - **Display Details**: 더 상세한 카드 해석을 제공 (2026-06-08)
  - **LLM Card Reading**: AI에 기반한 카드 해석을 제공 (2026-06-18)
 
+## OpenAI API Usage
+
+See [OpenAIUsage.md](./OpenAIUsage.md) for the model choice, prompt, request shape, and usage logging details.
+
 ## Other Changes
  - Added test code
  - Refactoring
