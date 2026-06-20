@@ -438,6 +438,7 @@ async function requestAiInterpretation(payload) {
 async function updateInterpretationFromAi(viewSnapshot, requestSnapshot, payload) {
   const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
   setInterpretationStatus(copy.interpretationAiLoading);
+  hideRetryAiInterpretationButton();
   setRetryAiInterpretationLoading(true);
 
   try {
@@ -449,6 +450,7 @@ async function updateInterpretationFromAi(viewSnapshot, requestSnapshot, payload
       return;
     }
     renderInterpretation(result.summary, copy.interpretationAiReady);
+    hideRetryAiInterpretationButton();
   } catch (error) {
     console.info("Using local tarot interpretation fallback.", error);
     if (
@@ -458,6 +460,7 @@ async function updateInterpretationFromAi(viewSnapshot, requestSnapshot, payload
       return;
     }
     setInterpretationStatus(copy.interpretationFallbackStatus);
+    showRetryAiInterpretationButton();
   } finally {
     if (
       viewSnapshot === viewToken &&
@@ -489,11 +492,15 @@ function showRetryAiInterpretationButton() {
   retryAiInterpretationBtn.classList.toggle("hidden", currentReading.length === 0);
 }
 
+function hideRetryAiInterpretationButton() {
+  retryAiInterpretationBtn.classList.add("hidden");
+}
+
 function resetInterpretation() {
   interpretationSummary.textContent = "";
   setInterpretationStatus("");
   setRetryAiInterpretationLoading(false);
-  retryAiInterpretationBtn.classList.add("hidden");
+  hideRetryAiInterpretationButton();
   interpretationPanel.classList.add("hidden");
 }
 
@@ -508,7 +515,7 @@ function renderLocalInterpretation() {
     }),
     copy.interpretationLocalStatus
   );
-  showRetryAiInterpretationButton();
+  hideRetryAiInterpretationButton();
 }
 
 function requestAiInterpretationForCurrentReading(token) {

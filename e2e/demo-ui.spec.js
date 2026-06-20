@@ -118,6 +118,9 @@ test.describe("Mystic Tarot demo UI", () => {
     await expect(page.locator("#interpretationStatus")).toHaveText(
       "AI interpretation applied."
     );
+    await expect(
+      page.getByRole("button", { name: "Retry AI interpretation" })
+    ).toBeHidden();
     expect(requestPayloads[0]).toMatchObject({
       question: "How can I move forward with this decision?",
       language: "en",
@@ -158,6 +161,17 @@ test.describe("Mystic Tarot demo UI", () => {
       async (route) => {
         const requestPayload = route.request().postDataJSON();
         requestPayloads.push(requestPayload);
+        if (requestPayloads.length === 1) {
+          await route.fulfill({
+            status: 503,
+            contentType: "application/json",
+            body: JSON.stringify({
+              error: "temporarily unavailable"
+            })
+          });
+          return;
+        }
+
         await route.fulfill({
           status: 200,
           contentType: "application/json",
@@ -176,15 +190,21 @@ test.describe("Mystic Tarot demo UI", () => {
     await page.locator("#questionInput").fill("What is worth revisiting?");
     await page.getByRole("button", { name: /Single Card/ }).click();
 
-    await expect(page.locator("#interpretationSummary")).toContainText(
-      "AI retry attempt 1 for en."
+    await expect(page.locator("#interpretationStatus")).toHaveText(
+      "Local summary shown. AI interpretation is unavailable right now."
     );
+    await expect(
+      page.getByRole("button", { name: "Retry AI interpretation" })
+    ).toBeVisible();
 
     await page.getByRole("button", { name: "Retry AI interpretation" }).click();
 
     await expect(page.locator("#interpretationSummary")).toContainText(
       "AI retry attempt 2 for en."
     );
+    await expect(
+      page.getByRole("button", { name: "Retry AI interpretation" })
+    ).toBeHidden();
     expect(requestPayloads).toHaveLength(2);
     expect(requestPayloads[1]).toMatchObject({
       question: "What is worth revisiting?",
