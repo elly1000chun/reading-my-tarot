@@ -69,6 +69,70 @@ const validateNonEmptyArray = (arr, name) => {
 };
 
 /**
+ * Get a card identity that treats upright and reversed versions as one card
+ * @param {Object} card - TarotCard-like object
+ * @param {number} index - Card index for nameless custom cards
+ * @returns {string} Base identity for draw uniqueness
+ */
+const getCardDrawIdentity = (card, index) => {
+  if (typeof card?.name !== "string" || !card.name.trim()) {
+    return `card-${index}`;
+  }
+
+  return card.name.replace(/\s+Reversed$/i, "").trim();
+};
+
+/**
+ * Check whether a card represents a reversed orientation
+ * @param {Object} card - TarotCard-like object
+ * @returns {boolean} Whether the card is reversed
+ */
+const isReversedCard = (card) =>
+  typeof card?.name === "string" && /\s+Reversed$/i.test(card.name);
+
+/**
+ * Group upright and reversed variants into one physical card
+ * @param {Object[]} deck - TarotCard-like objects
+ * @returns {Array<{upright: Object|null, reversed: Object|null, fallback: Object}>}
+ */
+const createDrawGroups = (deck) => {
+  const groups = new Map();
+
+  deck.forEach((card, index) => {
+    const identity = getCardDrawIdentity(card, index);
+    if (!groups.has(identity)) {
+      groups.set(identity, {
+        upright: null,
+        reversed: null,
+        fallback: card
+      });
+    }
+
+    const group = groups.get(identity);
+    if (isReversedCard(card)) {
+      group.reversed = group.reversed || card;
+    } else {
+      group.upright = group.upright || card;
+    }
+  });
+
+  return Array.from(groups.values());
+};
+
+/**
+ * Choose upright or reversed after the physical card has been drawn
+ * @param {{upright: Object|null, reversed: Object|null, fallback: Object}} group
+ * @returns {Object} Selected TarotCard-like object
+ */
+const chooseCardOrientation = ({ upright, reversed, fallback }) => {
+  if (upright && reversed) {
+    return Math.random() < 0.5 ? reversed : upright;
+  }
+
+  return upright || reversed || fallback;
+};
+
+/**
  * Class representing a Tarot deck and reading system
  */
 class Tarot {
@@ -198,13 +262,17 @@ class Tarot {
       throw new TarotError("Card count must be a positive integer");
     }
 
-    if (count > this.deck.length) {
+    const drawGroups = createDrawGroups(this.deck);
+    const uniqueCardCount = drawGroups.length;
+    if (count > uniqueCardCount) {
       throw new TarotError(
-        `Cannot draw ${count} cards. Only ${this.deck.length} cards available`
+        `Cannot draw ${count} cards. Only ${uniqueCardCount} unique cards available`
       );
     }
 
-    return shuffleArray(this.deck).slice(0, count);
+    return shuffleArray(drawGroups)
+      .slice(0, count)
+      .map((group) => chooseCardOrientation(group));
   }
 
   /**

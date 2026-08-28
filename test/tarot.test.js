@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import Tarot from "../src/tarot.js";
 
@@ -6,6 +6,17 @@ const createDeck = () => [
   { name: "The Fool", meanings: ["New beginnings"] },
   { name: "The Magician", meanings: ["Resourcefulness"] },
   { name: "The High Priestess", meanings: ["Intuition"] }
+];
+
+const createDeckWithReversals = () => [
+  { name: "The Fool", meanings: ["New beginnings"] },
+  { name: "The Fool Reversed", meanings: ["Recklessness"] },
+  { name: "The Magician", meanings: ["Resourcefulness"] }
+];
+
+const createSingleCardDeckWithReversal = () => [
+  { name: "The Fool", meanings: ["New beginnings"] },
+  { name: "The Fool Reversed", meanings: ["Recklessness"] }
 ];
 
 describe("Tarot", () => {
@@ -93,8 +104,61 @@ describe("Tarot", () => {
     tarot.initializeDeck(createDeck());
 
     expect(() => tarot.drawCards(4)).toThrow(
-      "Cannot draw 4 cards. Only 3 cards available"
+      "Cannot draw 4 cards. Only 3 unique cards available"
     );
+  });
+
+  it("does not draw upright and reversed versions of the same card together", () => {
+    const tarot = new Tarot();
+    tarot.initializeDeck(createDeckWithReversals());
+    const randomSpy = vi.spyOn(Math, "random").mockReturnValue(0.99);
+
+    try {
+      const cards = tarot.drawCards(2);
+
+      expect(cards.map((card) => card.name)).toEqual([
+        "The Fool",
+        "The Magician"
+      ]);
+    } finally {
+      randomSpy.mockRestore();
+    }
+  });
+
+  it("chooses card orientation after drawing a unique physical card", () => {
+    const tarot = new Tarot();
+    tarot.initializeDeck(createSingleCardDeckWithReversal());
+    const randomSpy = vi.spyOn(Math, "random");
+
+    try {
+      randomSpy.mockReturnValueOnce(0.25);
+      expect(tarot.drawCards(1).map((card) => card.name)).toEqual([
+        "The Fool Reversed"
+      ]);
+
+      randomSpy.mockReturnValueOnce(0.75);
+      expect(tarot.drawCards(1).map((card) => card.name)).toEqual([
+        "The Fool"
+      ]);
+    } finally {
+      randomSpy.mockRestore();
+    }
+  });
+
+  it("limits draw count by unique card identities", () => {
+    const tarot = new Tarot();
+    tarot.initializeDeck(createDeckWithReversals());
+
+    expect(() => tarot.drawCards(3)).toThrow(
+      "Cannot draw 3 cards. Only 2 unique cards available"
+    );
+  });
+
+  it("keeps nameless custom card entries distinct", () => {
+    const tarot = new Tarot();
+    tarot.initializeDeck([{ symbol: "A" }, { symbol: "B" }]);
+
+    expect(tarot.drawCards(2)).toHaveLength(2);
   });
 
   it("rejects invalid draw counts", () => {
