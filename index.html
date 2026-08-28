@@ -90,6 +90,25 @@
 
     <!-- Reading Results -->
     <div id="readingResults" class="reading-results hidden fade-in">
+      <section
+        id="spreadOverviewPanel"
+        class="spread-overview-panel hidden"
+        aria-labelledby="spreadOverviewTitle"
+      >
+        <h2 id="spreadOverviewTitle" class="spread-overview-title">
+          Spread overview
+        </h2>
+        <div class="spread-overview-layout">
+          <div class="spread-overview-map-shell">
+            <div
+              id="spreadOverviewMap"
+              class="spread-overview-map"
+              aria-label="Spread card layout"
+            ></div>
+          </div>
+          <ol id="spreadOverviewList" class="spread-overview-list"></ol>
+        </div>
+      </section>
       <section id="interpretationPanel" class="interpretation-panel hidden">
         <h2 id="interpretationTitle" class="interpretation-title">
           Reading summary
@@ -162,6 +181,8 @@ const copyByLanguage = {
     interpretationFallbackStatus:
       "Local summary shown. AI interpretation is unavailable right now.",
     retryAiInterpretation: "Retry AI interpretation",
+    spreadOverviewTitle: "Spread overview",
+    spreadOverviewCardLabel: "Card",
     fallbackTheme: "the message available in the cards"
   },
   ko: {
@@ -180,7 +201,44 @@ const copyByLanguage = {
     interpretationAiReady: "AI 해석이 적용되었습니다.",
     interpretationFallbackStatus:
       "AI 해석을 사용할 수 없어 로컬 요약을 유지합니다.",
+    spreadOverviewTitle: "스프레드 배치",
+    spreadOverviewCardLabel: "카드",
     fallbackTheme: "카드가 보여주는 메시지"
+  }
+};
+
+const positionLabelsByLanguage = {
+  en: {
+    single: ["Your card"],
+    "Three-Card Spread": ["Past", "Present", "Future"],
+    "celtic-cross": [
+      "Yourself",
+      "Your obstacle",
+      "Root of the question",
+      "The past",
+      "Hopes/fears",
+      "The future",
+      "Root of the outcome",
+      "Others in the outcome",
+      "Hopes/fears for outcome",
+      "Outcome"
+    ]
+  },
+  ko: {
+    single: ["나의 카드"],
+    "Three-Card Spread": ["과거", "현재", "미래"],
+    "celtic-cross": [
+      "나 자신",
+      "장애물",
+      "질문의 뿌리",
+      "과거",
+      "기대와 두려움",
+      "미래",
+      "결과의 기반",
+      "주변 영향",
+      "결과에 대한 기대와 두려움",
+      "결과"
+    ]
   }
 };
 
@@ -249,6 +307,10 @@ async function getDeck(language) {
 // DOM Elements
 const loadingAnimation = document.getElementById("loadingAnimation");
 const readingResults = document.getElementById("readingResults");
+const spreadOverviewPanel = document.getElementById("spreadOverviewPanel");
+const spreadOverviewTitle = document.getElementById("spreadOverviewTitle");
+const spreadOverviewMap = document.getElementById("spreadOverviewMap");
+const spreadOverviewList = document.getElementById("spreadOverviewList");
 const interpretationPanel = document.getElementById("interpretationPanel");
 const interpretationTitle = document.getElementById("interpretationTitle");
 const interpretationSummary = document.getElementById("interpretationSummary");
@@ -335,6 +397,8 @@ function updateLanguageCopy() {
   questionHelpText.textContent = copy.questionHelpText;
   questionError.textContent = copy.questionError;
   loadingText.textContent = copy.loadingText;
+  spreadOverviewTitle.textContent =
+    copy.spreadOverviewTitle || copyByLanguage.en.spreadOverviewTitle;
   interpretationTitle.textContent = copy.interpretationTitle;
   retryAiInterpretationBtn.textContent =
     copy.retryAiInterpretation || copyByLanguage.en.retryAiInterpretation;
@@ -504,6 +568,12 @@ function resetInterpretation() {
   interpretationPanel.classList.add("hidden");
 }
 
+function resetSpreadOverview() {
+  spreadOverviewMap.innerHTML = "";
+  spreadOverviewList.innerHTML = "";
+  spreadOverviewPanel.classList.add("hidden");
+}
+
 function renderLocalInterpretation() {
   const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
   renderInterpretation(
@@ -617,6 +687,116 @@ function localizeReading(reading, language) {
   }));
 }
 
+function getSpreadOverviewModifier(spreadType) {
+  if (spreadType === "single") {
+    return "single";
+  }
+
+  if (spreadType === "Three-Card Spread") {
+    return "three";
+  }
+
+  if (spreadType === "celtic-cross") {
+    return "celtic";
+  }
+
+  return "default";
+}
+
+function getDisplayPosition(position, index) {
+  return (
+    positionLabelsByLanguage[currentLanguage]?.[currentSpreadType]?.[index] ||
+    position
+  );
+}
+
+function createSpreadOverviewCard({ position, card }, index) {
+  const cardNumber = index + 1;
+  const displayPosition = getDisplayPosition(position, index);
+  const isReversed = card.name.includes("Reversed");
+  const cardTile = document.createElement("div");
+  cardTile.className = `spread-overview-card spread-overview-card--${cardNumber}`;
+  cardTile.setAttribute(
+    "aria-label",
+    `${cardNumber}. ${displayPosition}: ${card.name}`
+  );
+
+  const numberBadge = document.createElement("span");
+  numberBadge.className = "spread-overview-card-number";
+  numberBadge.textContent = cardNumber;
+  cardTile.appendChild(numberBadge);
+
+  if (card.image) {
+    const cardImage = document.createElement("img");
+    cardImage.className = `spread-overview-card-image${
+      isReversed ? " is-reversed" : ""
+    }`;
+    cardImage.src = `./decks/images/${card.image}`;
+    cardImage.alt = `${card.name} - ${displayPosition}`;
+    cardTile.appendChild(cardImage);
+  } else {
+    const symbol = document.createElement("span");
+    symbol.className = "spread-overview-card-symbol";
+    symbol.textContent = card.symbol || "?";
+    cardTile.appendChild(symbol);
+  }
+
+  return cardTile;
+}
+
+function createSpreadOverviewListItem({ position, card }, index) {
+  const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
+  const cardNumber = index + 1;
+  const item = document.createElement("li");
+  item.className = "spread-overview-list-item";
+
+  const number = document.createElement("span");
+  number.className = "spread-overview-list-number";
+  number.textContent = `${copy.spreadOverviewCardLabel || "Card"} ${cardNumber}`;
+
+  const text = document.createElement("span");
+  text.className = "spread-overview-list-text";
+
+  const positionName = document.createElement("span");
+  positionName.className = "spread-overview-position";
+  positionName.textContent = getDisplayPosition(position, index);
+
+  const cardName = document.createElement("span");
+  cardName.className = "spread-overview-card-name";
+  cardName.textContent = card.name;
+
+  text.append(positionName, cardName);
+  item.append(number, text);
+
+  return item;
+}
+
+function renderSpreadOverview(reading) {
+  if (reading.length === 0) {
+    resetSpreadOverview();
+    return;
+  }
+
+  const copy = copyByLanguage[currentLanguage] || copyByLanguage.en;
+  const modifier = getSpreadOverviewModifier(currentSpreadType);
+  spreadOverviewTitle.textContent =
+    copy.spreadOverviewTitle || copyByLanguage.en.spreadOverviewTitle;
+  spreadOverviewMap.className = `spread-overview-map spread-overview-map--${modifier}`;
+  spreadOverviewMap.innerHTML = "";
+  spreadOverviewList.innerHTML = "";
+
+  const mapFragment = document.createDocumentFragment();
+  const listFragment = document.createDocumentFragment();
+  reading.forEach((entry, index) => {
+    mapFragment.appendChild(createSpreadOverviewCard(entry, index));
+    listFragment.appendChild(createSpreadOverviewListItem(entry, index));
+  });
+
+  spreadOverviewMap.appendChild(mapFragment);
+  spreadOverviewList.appendChild(listFragment);
+  spreadOverviewPanel.classList.remove("hidden");
+}
+
 function setupSpreadGrid(spreadType) {
   spreadContainer.className = "spread-results";
 
@@ -630,6 +810,7 @@ function setupSpreadGrid(spreadType) {
 }
 
 function renderReading(reading) {
+  renderSpreadOverview(reading);
   spreadContainer.innerHTML = "";
   reading.forEach(({ position, card }) => {
     spreadContainer.appendChild(createCardElement(card, position));
@@ -648,6 +829,7 @@ async function performReading(spreadType) {
   loadingAnimation.classList.remove("hidden");
   readingResults.classList.add("hidden");
   resetInterpretation();
+  resetSpreadOverview();
 
   // Clear previous reading
   spreadContainer.innerHTML = "";
@@ -664,6 +846,7 @@ async function performReading(spreadType) {
 
   // Setup grid based on spread type
   setupSpreadGrid(spreadType);
+  renderSpreadOverview(reading);
   renderLocalInterpretation();
   requestAiInterpretationForCurrentReading(token);
 
@@ -720,6 +903,7 @@ newReadingBtn.addEventListener("click", () => {
   readingResults.classList.add("hidden");
   newReadingBtn.classList.add("hidden");
   resetInterpretation();
+  resetSpreadOverview();
   spreadSelection.classList.remove("hidden");
 });
 

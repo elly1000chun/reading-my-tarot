@@ -46,6 +46,24 @@ test.describe("Mystic Tarot demo UI", () => {
     await page.getByRole("button", { name: /Single Card/ }).click();
 
     await expect(page.locator("#readingResults")).toBeVisible();
+    await expect(page.locator("#spreadOverviewPanel")).toBeVisible();
+    await expect(
+      page.locator("#spreadOverviewMap .spread-overview-card")
+    ).toHaveCount(1);
+    await expect(page.locator("#spreadOverviewList li")).toHaveCount(1);
+    await expect(
+      page.locator("#readingResults").evaluate((element) => {
+        const overview = element.querySelector("#spreadOverviewPanel");
+        const summary = element.querySelector("#interpretationPanel");
+
+        return Boolean(
+          overview &&
+            summary &&
+            overview.compareDocumentPosition(summary) &
+              Node.DOCUMENT_POSITION_FOLLOWING
+        );
+      })
+    ).resolves.toBe(true);
     await expect(page.locator("#interpretationPanel")).toBeVisible();
     await expect(page.locator("#interpretationSummary")).toContainText(
       "What should I focus on today?"
@@ -72,6 +90,7 @@ test.describe("Mystic Tarot demo UI", () => {
     await page.getByRole("button", { name: "New Reading" }).click();
 
     await expect(page.locator("#readingResults")).toBeHidden();
+    await expect(page.locator("#spreadOverviewPanel")).toBeHidden();
     await expect(page.locator("#interpretationPanel")).toBeHidden();
     await expect(
       page.getByRole("button", { name: "Retry AI interpretation" })
@@ -80,6 +99,26 @@ test.describe("Mystic Tarot demo UI", () => {
     await expect(page.locator("#questionInput")).toHaveValue(
       "What should I focus on today?"
     );
+  });
+
+  test("shows a Celtic Cross spread overview above the reading summary", async ({
+    page
+  }) => {
+    await page.getByRole("button", { name: "English" }).click();
+    await page.getByRole("button", { name: /Celtic Cross/ }).click();
+
+    await expect(page.locator("#spreadOverviewPanel")).toBeVisible();
+    await expect(page.locator("#spreadOverviewTitle")).toHaveText(
+      "Spread overview"
+    );
+    await expect(
+      page.locator("#spreadOverviewMap .spread-overview-card")
+    ).toHaveCount(10);
+    await expect(page.locator("#spreadOverviewList li")).toHaveCount(10);
+    await expect(page.locator("#spreadOverviewList")).toContainText(
+      "Card 10"
+    );
+    await expect(page.locator("#interpretationPanel")).toBeVisible();
   });
 
   test("replaces the local summary with an AI interpretation when available", async ({
