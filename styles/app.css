@@ -306,7 +306,7 @@ button:disabled {
 
 .spread-overview-map-shell {
   overflow-x: auto;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.75rem;
 }
 
 .spread-overview-map {
@@ -343,6 +343,8 @@ button:disabled {
   width: 4.25rem;
   aspect-ratio: 0.62;
   justify-self: center;
+  transform: scale(1.08);
+  transform-origin: center;
   border-radius: 0.375rem;
   background: var(--color-surface);
   box-shadow: var(--shadow-lg);
@@ -394,7 +396,7 @@ button:disabled {
   z-index: 3;
   grid-column: 3;
   grid-row: 3;
-  transform: translateX(55%);
+  transform: translateX(72%) scale(1.08);
 }
 
 .spread-overview-map--celtic .spread-overview-card--3 {
